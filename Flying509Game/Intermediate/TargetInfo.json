@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Flying509Game",
+			"Path": "C:\\Users\\creedy\\Documents\\Unreal Projects\\Flying509Game\\Flying509Game\\Source\\Flying509Game.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Flying509GameEditor",
+			"Path": "C:\\Users\\creedy\\Documents\\Unreal Projects\\Flying509Game\\Flying509Game\\Source\\Flying509GameEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

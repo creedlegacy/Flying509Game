@@ -8,6 +8,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Bullet.h"
 
 //////////////////////////////////////////////////////////////////////////
 // AFlying509GameCharacter
@@ -57,6 +58,8 @@ void AFlying509GameCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
+	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &AFlying509GameCharacter::Shoot);
+
 	PlayerInputComponent->BindAxis("MoveForward", this, &AFlying509GameCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AFlying509GameCharacter::MoveRight);
 
@@ -76,6 +79,15 @@ void AFlying509GameCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &AFlying509GameCharacter::OnResetVR);
 }
 
+
+void AFlying509GameCharacter::Shoot()
+{
+	UE_LOG(LogTemp, Warning, TEXT("SHOOSTED"));
+	FTransform SpawnTransform = GetActorTransform();
+	SpawnTransform.TransformPosition(FVector(0.f, 0.f, 100.f));
+	FActorSpawnParameters SpawnParameters;
+	GetWorld()->SpawnActor<ABullet>(BulletBP, SpawnTransform, SpawnParameters);
+}
 
 void AFlying509GameCharacter::OnResetVR()
 {

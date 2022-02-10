@@ -21,6 +21,9 @@ class AFlying509GameCharacter : public ACharacter
 public:
 	AFlying509GameCharacter();
 
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseTurnRate;
@@ -32,8 +35,30 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Shooting");
 	TSubclassOf<class ABullet> BulletBP;
 
+	UPROPERTY(EditAnywhere, Category = Flying);
+	float MaxPitchLimit;
+	UPROPERTY(EditAnywhere, Category = Flying);
+	float MinPitchLimit;
+	UPROPERTY(EditAnywhere, Category = Flying);
+	float YawTurnScale;
+	UPROPERTY(EditAnywhere, Category = Flying);
+	float BoostFlightSpeed;
+	UPROPERTY(EditAnywhere, Category = Flying);
+	float NormalFlightSpeed;
+
+
 protected:
+	virtual void BeginPlay() override;
+
 	void Shoot();
+
+	void PitchMovement(float Value);
+	void YawMovement(float Value);
+
+	void ForwardFlight();
+
+	void Boost();
+	void StopBoost();
 
 	/** Resets HMD orientation in VR. */
 	void OnResetVR();

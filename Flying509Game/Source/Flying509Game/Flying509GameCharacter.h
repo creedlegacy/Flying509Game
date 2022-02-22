@@ -60,6 +60,9 @@ protected:
 	void Boost();
 	void StopBoost();
 
+	void Dive();
+	void DiveCatch();
+
 	/** Resets HMD orientation in VR. */
 	void OnResetVR();
 

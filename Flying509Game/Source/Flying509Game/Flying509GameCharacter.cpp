@@ -68,6 +68,9 @@ void AFlying509GameCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	PlayerInputComponent->BindAction("Boost", IE_Pressed, this, &AFlying509GameCharacter::Boost);
 	PlayerInputComponent->BindAction("Boost", IE_Released, this, &AFlying509GameCharacter::StopBoost);
 
+	PlayerInputComponent->BindAction("Dive", IE_Pressed, this, &AFlying509GameCharacter::Dive);
+	PlayerInputComponent->BindAction("Dive", IE_Released, this, &AFlying509GameCharacter::DiveCatch);
+
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
 	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
@@ -157,6 +160,18 @@ void AFlying509GameCharacter::Boost()
 void AFlying509GameCharacter::StopBoost()
 {
 	GetCharacterMovement()->MaxFlySpeed = NormalFlightSpeed;
+}
+
+void AFlying509GameCharacter::Dive()
+{
+	GetCharacterMovement()->MovementMode = MOVE_Falling;
+	//SetActorRotation(FRotator(GetActorRotation().Pitch, GetActorRotation().Roll, GetActorRotation().Yaw));
+}
+
+void AFlying509GameCharacter::DiveCatch()
+{
+	
+	GetCharacterMovement()->MovementMode = MOVE_Flying;
 }
 
 void AFlying509GameCharacter::OnResetVR()

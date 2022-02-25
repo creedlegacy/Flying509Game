@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\creedy\\Documents\\Unreal Projects\\Flying509Game\\Flying509Game\\Source\\Flying509Game\\Flying509Game.Build.cs",
-		"C:\\Users\\creedy\\Documents\\Unreal Projects\\Flying509Game\\Flying509Game\\Source\\Flying509Game.Target.cs",
-		"C:\\Users\\creedy\\Documents\\Unreal Projects\\Flying509Game\\Flying509Game\\Source\\Flying509GameEditor.Target.cs"
+		"C:\\Users\\liebeziv\\Documents\\GitHub\\Flying509Game\\Source\\Flying509Game\\Flying509Game.Build.cs",
+		"C:\\Users\\liebeziv\\Documents\\GitHub\\Flying509Game\\Source\\Flying509Game.Target.cs",
+		"C:\\Users\\liebeziv\\Documents\\GitHub\\Flying509Game\\Source\\Flying509GameEditor.Target.cs"
 	],
 	"EngineVersion": "4.26.2"
 }

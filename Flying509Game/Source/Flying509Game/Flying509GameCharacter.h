@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Runtime/Engine/Classes/Components/TimelineComponent.h"
 #include "Flying509GameCharacter.generated.h"
+
 
 UCLASS(config=Game)
 class AFlying509GameCharacter : public ACharacter
@@ -18,6 +20,9 @@ class AFlying509GameCharacter : public ACharacter
 	/** Follow camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FollowCamera;
+
+	class UTimelineComponent* DiveTimeline;
+	class UTimelineComponent* CatchTimeline;
 public:
 	AFlying509GameCharacter();
 
@@ -45,6 +50,32 @@ public:
 	float BoostFlightSpeed;
 	UPROPERTY(EditAnywhere, Category = Flying);
 	float NormalFlightSpeed;
+	UPROPERTY(VisibleAnywhere, Category = Flying);
+	bool IsDiving = false;
+	//UPROPERTY(VisibleAnywhere, Category = Flying);
+	//bool IsForward = true;
+
+	UPROPERTY(EditAnywhere, Category = "Timeline");
+	class UCurveFloat* diveCurve;
+	UPROPERTY(EditAnywhere, Category = "Timeline");
+	class UCurveFloat* catchCurve;
+
+	FOnTimelineFloat DiveInterpFunction{};
+	FOnTimelineFloat CatchInterpFunction{};
+
+	FOnTimelineEvent TimelineFinished{};
+
+	UFUNCTION()
+		void DiveTimelineFloatReturn(float value);
+	UFUNCTION()
+		void DiveCatchTimelineFloatReturn(float value);
+	UFUNCTION()
+		void OnTimelineFinished();
+
+
+
+	FRotator defaultCameraRotation;
+	FVector defaultCameraLocation;
 
 
 protected:

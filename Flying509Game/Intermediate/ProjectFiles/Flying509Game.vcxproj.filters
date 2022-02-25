@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Flying509Game.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{17AD66C9-40BF-419C-95C5-DA407A193FB2}</UniqueIdentifier>
+      <UniqueIdentifier>{EBBD1F55-98F0-44EF-AE08-B9F754A7D599}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Flying509Game.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{A2BA35F1-1FB6-43C3-ADB4-E396A0080145}</UniqueIdentifier>
+      <UniqueIdentifier>{FF8D8291-140B-4018-8B18-60CDD6F71CC7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Flying509Game">
-      <UniqueIdentifier>{9A4CC2B5-21FB-4E6A-8687-D9681D3461D4}</UniqueIdentifier>
+      <UniqueIdentifier>{79D1AFA9-385F-47BB-A86C-5CC975281AA3}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Flying509Game\Bullet.cpp">
       <Filter>Source\Flying509Game</Filter>

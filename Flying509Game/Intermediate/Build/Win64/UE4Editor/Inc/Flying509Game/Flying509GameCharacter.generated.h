@@ -13,10 +13,22 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FLYING509GAME_Flying509GameCharacter_generated_h
 
-#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_SPARSE_DATA
-#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_RPC_WRAPPERS
-#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_INCLASS_NO_PURE_DECLS \
+#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_SPARSE_DATA
+#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnTimelineFinished); \
+	DECLARE_FUNCTION(execDiveCatchTimelineFloatReturn); \
+	DECLARE_FUNCTION(execDiveTimelineFloatReturn);
+
+
+#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnTimelineFinished); \
+	DECLARE_FUNCTION(execDiveCatchTimelineFloatReturn); \
+	DECLARE_FUNCTION(execDiveTimelineFloatReturn);
+
+
+#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFlying509GameCharacter(); \
 	friend struct Z_Construct_UClass_AFlying509GameCharacter_Statics; \
@@ -25,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(AFlying509GameCharacter)
 
 
-#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_INCLASS \
+#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesAFlying509GameCharacter(); \
 	friend struct Z_Construct_UClass_AFlying509GameCharacter_Statics; \
@@ -34,7 +46,7 @@ public: \
 	DECLARE_SERIALIZER(AFlying509GameCharacter)
 
 
-#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_STANDARD_CONSTRUCTORS \
+#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AFlying509GameCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFlying509GameCharacter) \
@@ -47,7 +59,7 @@ private: \
 public:
 
 
-#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_ENHANCED_CONSTRUCTORS \
+#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AFlying509GameCharacter(AFlying509GameCharacter&&); \
@@ -58,32 +70,32 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AFlying509GameCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AFlying509GameCharacter)
 
 
-#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
+#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(AFlying509GameCharacter, CameraBoom); } \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(AFlying509GameCharacter, FollowCamera); }
 
 
-#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_9_PROLOG
-#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_GENERATED_BODY_LEGACY \
+#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_11_PROLOG
+#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
-	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_SPARSE_DATA \
-	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_RPC_WRAPPERS \
-	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_INCLASS \
-	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_STANDARD_CONSTRUCTORS \
+	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_PRIVATE_PROPERTY_OFFSET \
+	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_SPARSE_DATA \
+	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_RPC_WRAPPERS \
+	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_INCLASS \
+	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_GENERATED_BODY \
+#define Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
-	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_SPARSE_DATA \
-	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_INCLASS_NO_PURE_DECLS \
-	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_12_ENHANCED_CONSTRUCTORS \
+	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_PRIVATE_PROPERTY_OFFSET \
+	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_SPARSE_DATA \
+	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_INCLASS_NO_PURE_DECLS \
+	Flying509Game_Source_Flying509Game_Flying509GameCharacter_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -2,6 +2,10 @@
 	"BuildId": "14830424",
 	"Modules": 
 	{
+<<<<<<< Updated upstream
 		"Flying509Game": "UE4Editor-Flying509Game-1716.dll"
+=======
+		"Flying509Game": "UE4Editor-Flying509Game.dll"
+>>>>>>> Stashed changes
 	}
 }

@@ -83,6 +83,9 @@ void AFlying509GameCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	PlayerInputComponent->BindAction("Dive", IE_Pressed, this, &AFlying509GameCharacter::Dive);
 	/*PlayerInputComponent->BindAction("Dive", IE_Released, this, &AFlying509GameCharacter::DiveCatch);*/
 
+	PlayerInputComponent->BindAction("FreeCamera", IE_Pressed, this, &AFlying509GameCharacter::FreeCamera);
+	PlayerInputComponent->BindAction("FreeCamera", IE_Released, this, &AFlying509GameCharacter::FreeCamera);
+
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
 	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
@@ -125,7 +128,8 @@ void AFlying509GameCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	ForwardFlight();
-	/*UE_LOG(LogTemp, Warning, TEXT("%f"), GetCharacterMovement()->Velocity.Z);*/
+	FallVelocityTick();
+	DiveCatchSpeedAdjustment();
 }
 
 
@@ -201,47 +205,72 @@ void AFlying509GameCharacter::YawMovement(float Value)
 
 void AFlying509GameCharacter::ForwardFlight()
 {
-	
-	//**No mouse yaw movement
-	//// find out which way is forward
-	//const FRotator PitchRotation(GetActorRotation().Pitch, 0, 0);
+	if (!IsFreeCam) {
+		//**Forward flight follows mouse yaw movement
+		// find out which way is forward
+		const FRotator Rotation = Controller->GetControlRotation();
+		const FRotator YawRotation(GetActorRotation().Pitch, Rotation.Yaw, 0);
 
-	//// get forward vector
-	///*const FVector Direction = FRotationMatrix(PitchRotation).GetUnitAxis(EAxis::X);*/
-	//const FVector Direction = GetActorForwardVector();
-	//AddMovementInput(Direction, 1);
+		// get forward vector
+		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+		AddMovementInput(Direction, 1);
+	}
+	else {
+		//**No mouse yaw movement
+		// find out which way is forward
+		const FRotator PitchRotation(GetActorRotation().Pitch, 0, 0);
 
+		// get forward vector
+		/*const FVector Direction = FRotationMatrix(PitchRotation).GetUnitAxis(EAxis::X);*/
+		const FVector Direction = GetActorForwardVector();
+		AddMovementInput(Direction, 1);
+	}
+	
+}
 
-	//**Forward flight follows mouse yaw movement
-	// find out which way is forward
-	const FRotator Rotation = Controller->GetControlRotation();
-	const FRotator YawRotation(GetActorRotation().Pitch, Rotation.Yaw, 0);
-
-	// get forward vector
-	const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-	AddMovementInput(Direction, 1);
-	
-	
-	
+void AFlying509GameCharacter::FallVelocityTick()
+{
+	if (IsDiving) {
+		
+		float tickVelocity = fabs(GetCharacterMovement()->Velocity.Z);
+		if (tickVelocity > MaxZVelocity) {
+			MaxZVelocity = tickVelocity;
+		}
+		
+	}
 }
 
 void AFlying509GameCharacter::Boost()
 {
-	GetCharacterMovement()->MaxFlySpeed = BoostFlightSpeed;
+	IsBoosting = true;
+	if (OnDiveCatchSpeed) {
+		GetCharacterMovement()->MaxFlySpeed += BoostFlightSpeed;
+	}
+	else {
+		GetCharacterMovement()->MaxFlySpeed = BoostFlightSpeed;
+	}
+	
 }
 
 void AFlying509GameCharacter::StopBoost()
 {
-	GetCharacterMovement()->MaxFlySpeed = NormalFlightSpeed;
+	IsBoosting = false;
+	if (OnDiveCatchSpeed) {
+		GetCharacterMovement()->MaxFlySpeed -= BoostFlightSpeed;
+	}
+	else {
+		GetCharacterMovement()->MaxFlySpeed = NormalFlightSpeed;
+	}
+	
 }
 
 void AFlying509GameCharacter::Dive()
 {
 	IsDiving = true;
 	GetCharacterMovement()->MovementMode = MOVE_Falling;
+	DiveTimeline->PlayFromStart();
 	/*SetActorRelativeRotation(FRotator(-90, GetActorRotation().Yaw, GetActorRotation().Roll));*/
 	/*CameraBoom->bUsePawnControlRotation = false;*/
-	DiveTimeline->PlayFromStart();
 	/*FollowCamera->SetRelativeRotation(FRotator(0, 0, 0));
 	FollowCamera->SetRelativeLocation(FVector(defaultCameraLocation.X, 0, 0));*/
 
@@ -251,12 +280,41 @@ void AFlying509GameCharacter::DiveCatch()
 {
 	IsDiving = false;
 	GetCharacterMovement()->MovementMode = MOVE_Flying;
+	GetCharacterMovement()->MaxFlySpeed = NormalFlightSpeed * (round(MaxZVelocity) / 200);
+	OnDiveCatchSpeed = true;
+	
 	//CatchTimeline->PlayFromStart();
 	//AddActorLocalRotation(FMath::RInterpTo(FRotator(-90,NULL,NULL), FRotator(60, NULL, NULL), FApp::GetDeltaTime(), 10.0));
 	/*CameraBoom->bUsePawnControlRotation = true;*/
 	/*FollowCamera->SetRelativeRotation(defaultCameraRotation);
 	FollowCamera->SetRelativeLocation(defaultCameraLocation);*/
 }
+
+void AFlying509GameCharacter::DiveCatchSpeedAdjustment()
+{
+	if (OnDiveCatchSpeed) {
+		GetCharacterMovement()->MaxFlySpeed = GetCharacterMovement()->MaxFlySpeed - 1;
+		UE_LOG(LogTemp, Warning, TEXT("%f"), GetCharacterMovement()->MaxFlySpeed);
+		float tempSpeed = IsBoosting ? BoostFlightSpeed : NormalFlightSpeed;
+		if (GetCharacterMovement()->MaxFlySpeed <= tempSpeed) {
+			OnDiveCatchSpeed = false;
+		}
+	}
+}
+
+void AFlying509GameCharacter::FreeCamera()
+{
+	if (!IsFreeCam) {
+		CurrentCameraRotate = CameraBoom->GetComponentRotation();
+	}
+	else {
+		CameraBoom->SetWorldRotation(CurrentCameraRotate);
+		UE_LOG(LogTemp, Warning, TEXT("%f"), CurrentCameraRotate.Yaw);
+	}
+	
+	IsFreeCam = !IsFreeCam;
+}
+
 
 void AFlying509GameCharacter::OnResetVR()
 {

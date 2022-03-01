@@ -50,10 +50,17 @@ public:
 	float BoostFlightSpeed;
 	UPROPERTY(EditAnywhere, Category = Flying);
 	float NormalFlightSpeed;
-	UPROPERTY(VisibleAnywhere, Category = Flying);
+
+
 	bool IsDiving = false;
-	//UPROPERTY(VisibleAnywhere, Category = Flying);
-	//bool IsForward = true;
+	bool IsBoosting = false;
+	bool IsFreeCam = false;
+	// Velocity when the character is diving/falling
+	float MaxZVelocity = 1;
+	// Boolean to tell when the player is still on the speed reached from diving and catching himself
+	bool OnDiveCatchSpeed = false;
+
+	FRotator CurrentCameraRotate = FRotator(0);
 
 	UPROPERTY(EditAnywhere, Category = "Timeline");
 	class UCurveFloat* diveCurve;
@@ -88,11 +95,18 @@ protected:
 
 	void ForwardFlight();
 
+	void FallVelocityTick();
+
 	void Boost();
 	void StopBoost();
 
 	void Dive();
 	void DiveCatch();
+	void DiveCatchSpeedAdjustment();
+
+	void FreeCamera();
+	void FreeCameraOff();
+
 
 	/** Resets HMD orientation in VR. */
 	void OnResetVR();

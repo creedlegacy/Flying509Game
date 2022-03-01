@@ -194,11 +194,6 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_NormalFlightSpeed;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsDiving_MetaData[];
-#endif
-		static void NewProp_IsDiving_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsDiving;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_diveCurve_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_diveCurve;
@@ -309,22 +304,9 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_NormalFlightSpeed = { "NormalFlightSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFlying509GameCharacter, NormalFlightSpeed), METADATA_PARAMS(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_NormalFlightSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_NormalFlightSpeed_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_IsDiving_MetaData[] = {
-		{ "Category", "Flying" },
-		{ "ModuleRelativePath", "Flying509GameCharacter.h" },
-	};
-#endif
-	void Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_IsDiving_SetBit(void* Obj)
-	{
-		((AFlying509GameCharacter*)Obj)->IsDiving = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_IsDiving = { "IsDiving", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AFlying509GameCharacter), &Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_IsDiving_SetBit, METADATA_PARAMS(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_IsDiving_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_IsDiving_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_diveCurve_MetaData[] = {
 		{ "Category", "Timeline" },
-		{ "Comment", "//UPROPERTY(VisibleAnywhere, Category = Flying);\n//bool IsForward = true;\n" },
 		{ "ModuleRelativePath", "Flying509GameCharacter.h" },
-		{ "ToolTip", "UPROPERTY(VisibleAnywhere, Category = Flying);\nbool IsForward = true;" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_diveCurve = { "diveCurve", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFlying509GameCharacter, diveCurve), Z_Construct_UClass_UCurveFloat_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_diveCurve_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_diveCurve_MetaData)) };
@@ -346,7 +328,6 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_YawTurnScale,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_BoostFlightSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_NormalFlightSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_IsDiving,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_diveCurve,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_catchCurve,
 	};
@@ -377,7 +358,7 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFlying509GameCharacter, 3386920944);
+	IMPLEMENT_CLASS(AFlying509GameCharacter, 1659645308);
 	template<> FLYING509GAME_API UClass* StaticClass<AFlying509GameCharacter>()
 	{
 		return AFlying509GameCharacter::StaticClass();

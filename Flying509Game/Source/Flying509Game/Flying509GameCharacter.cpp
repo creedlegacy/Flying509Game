@@ -76,6 +76,7 @@ void AFlying509GameCharacter::SetupPlayerInputComponent(class UInputComponent* P
 
 	PlayerInputComponent->BindAxis("Pitch", this, &AFlying509GameCharacter::PitchMovement);
 	/*PlayerInputComponent->BindAxis("Yaw", this, &AFlying509GameCharacter::MoveRight);*/
+	/*PlayerInputComponent->BindAxis("Roll", this, &AFlying509GameCharacter::RollMovement);*/
 
 	PlayerInputComponent->BindAction("Boost", IE_Pressed, this, &AFlying509GameCharacter::Boost);
 	PlayerInputComponent->BindAction("Boost", IE_Released, this, &AFlying509GameCharacter::StopBoost);
@@ -146,6 +147,7 @@ void AFlying509GameCharacter::DiveTimelineFloatReturn(float value)
 {
 	const FRotator Rotation = Controller->GetControlRotation();
 	SetActorRotation(FMath::Lerp(GetActorRotation(), FRotator(-90, Rotation.Yaw, Rotation.Roll), value));
+	Controller->SetControlRotation(FMath::Lerp(Controller->GetControlRotation(), FRotator(-90, Rotation.Yaw, Rotation.Roll), value));
 	//FMath::RInterpTo(GetActorRotation(), FRotator(-90, 0, 0), FApp::GetDeltaTime(), 0.01)
 }
 
@@ -184,6 +186,7 @@ void AFlying509GameCharacter::PitchMovement(float Value)
 
 void AFlying509GameCharacter::YawMovement(float Value)
 {
+	//**Not used for now
 	if (Value) {
 
 		if (Value < 0.f) {
@@ -198,7 +201,16 @@ void AFlying509GameCharacter::YawMovement(float Value)
 
 		}
 		
-	
+	}
+
+}
+
+void AFlying509GameCharacter::RollMovement(float Value)
+{
+	if (Value) {
+
+		AddActorLocalRotation(FRotator(0, 0, Value));
+
 	}
 
 }
@@ -305,10 +317,10 @@ void AFlying509GameCharacter::DiveCatchSpeedAdjustment()
 void AFlying509GameCharacter::FreeCamera()
 {
 	if (!IsFreeCam) {
-		CurrentCameraRotate = CameraBoom->GetComponentRotation();
+		CurrentCameraRotate = Controller->GetControlRotation();
 	}
 	else {
-		CameraBoom->SetWorldRotation(CurrentCameraRotate);
+		Controller->SetControlRotation(CurrentCameraRotate);
 		UE_LOG(LogTemp, Warning, TEXT("%f"), CurrentCameraRotate.Yaw);
 	}
 	

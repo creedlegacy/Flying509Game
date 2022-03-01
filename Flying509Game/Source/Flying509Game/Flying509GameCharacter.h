@@ -92,6 +92,7 @@ protected:
 
 	void PitchMovement(float Value);
 	void YawMovement(float Value);
+	void RollMovement(float Value);
 
 	void ForwardFlight();
 

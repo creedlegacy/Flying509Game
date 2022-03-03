@@ -68,7 +68,6 @@ Saved/*
 Saved/Logs/*
 Saved/Logs/Flying509Game.log
 Saved/Logs/Windows/EditorPerProjectUserSettings.ini
-*.log
 
 # Compiled source files for the engine to use
 Intermediate/*

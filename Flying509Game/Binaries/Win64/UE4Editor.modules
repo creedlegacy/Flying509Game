@@ -2,6 +2,10 @@
 	"BuildId": "14830424",
 	"Modules": 
 	{
+<<<<<<< HEAD
 		"Flying509Game": "UE4Editor-Flying509Game.dll"
+=======
+		"Flying509Game": "UE4Editor-Flying509Game-9970.dll"
+>>>>>>> parent of afceb56 (Update UE4Editor.modules)
 	}
 }

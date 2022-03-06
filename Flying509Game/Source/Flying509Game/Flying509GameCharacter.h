@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Runtime/Engine/Classes/Components/TimelineComponent.h"
 #include "Flying509GameCharacter.generated.h"
+
 
 UCLASS(config=Game)
 class AFlying509GameCharacter : public ACharacter
@@ -18,6 +20,9 @@ class AFlying509GameCharacter : public ACharacter
 	/** Follow camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FollowCamera;
+
+	class UTimelineComponent* DiveTimeline;
+	class UTimelineComponent* CatchTimeline;
 public:
 	AFlying509GameCharacter();
 
@@ -47,6 +52,39 @@ public:
 	float NormalFlightSpeed;
 
 
+	bool IsDiving = false;
+	bool IsBoosting = false;
+	bool IsFreeCam = false;
+	// Velocity when the character is diving/falling
+	float MaxZVelocity = 1;
+	// Boolean to tell when the player is still on the speed reached from diving and catching himself
+	bool OnDiveCatchSpeed = false;
+
+	FRotator CurrentCameraRotate = FRotator(0);
+
+	UPROPERTY(EditAnywhere, Category = "Timeline");
+	class UCurveFloat* diveCurve;
+	UPROPERTY(EditAnywhere, Category = "Timeline");
+	class UCurveFloat* catchCurve;
+
+	FOnTimelineFloat DiveInterpFunction{};
+	FOnTimelineFloat CatchInterpFunction{};
+
+	FOnTimelineEvent TimelineFinished{};
+
+	UFUNCTION()
+		void DiveTimelineFloatReturn(float value);
+	UFUNCTION()
+		void DiveCatchTimelineFloatReturn(float value);
+	UFUNCTION()
+		void OnTimelineFinished();
+
+
+
+	FRotator defaultCameraRotation;
+	FVector defaultCameraLocation;
+
+
 protected:
 	virtual void BeginPlay() override;
 
@@ -54,14 +92,22 @@ protected:
 
 	void PitchMovement(float Value);
 	void YawMovement(float Value);
+	void RollMovement(float Value);
 
 	void ForwardFlight();
+
+	void FallVelocityTick();
 
 	void Boost();
 	void StopBoost();
 
 	void Dive();
 	void DiveCatch();
+	void DiveCatchSpeedAdjustment();
+
+	void FreeCamera();
+	void FreeCameraOff();
+
 
 	/** Resets HMD orientation in VR. */
 	void OnResetVR();

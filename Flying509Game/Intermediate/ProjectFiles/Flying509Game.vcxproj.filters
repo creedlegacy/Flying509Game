@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Flying509Game.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{17AD66C9-40BF-419C-95C5-DA407A193FB2}</UniqueIdentifier>
+      <UniqueIdentifier>{D60B7981-A36A-4246-805C-B87D6F28C7B7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Flying509Game.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{A2BA35F1-1FB6-43C3-ADB4-E396A0080145}</UniqueIdentifier>
+      <UniqueIdentifier>{D1417E72-B407-47DD-9B39-9FF1ABC8204F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,12 +31,18 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Flying509Game">
-      <UniqueIdentifier>{9A4CC2B5-21FB-4E6A-8687-D9681D3461D4}</UniqueIdentifier>
+      <UniqueIdentifier>{8A1EF7A3-6FA1-4520-A88D-C09619ED4BBF}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Flying509Game\Bullet.cpp">
       <Filter>Source\Flying509Game</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Flying509Game\Bullet.h">
+      <Filter>Source\Flying509Game</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Flying509Game\Collectible.cpp">
+      <Filter>Source\Flying509Game</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Flying509Game\Collectible.h">
       <Filter>Source\Flying509Game</Filter>
     </ClInclude>
     <None Include="..\..\Source\Flying509Game\Flying509Game.Build.cs">
@@ -58,6 +64,12 @@
       <Filter>Source\Flying509Game</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Flying509Game\Flying509GameGameMode.h">
+      <Filter>Source\Flying509Game</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Flying509Game\Flying509GameInstance.cpp">
+      <Filter>Source\Flying509Game</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Flying509Game\Flying509GameInstance.h">
       <Filter>Source\Flying509Game</Filter>
     </ClInclude>
   </ItemGroup>

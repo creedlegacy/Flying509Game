@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeFlying509Game_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x85CCC227,
+				0x62032AB4,
 				0x5F1151CA,
 				METADATA_PARAMS(nullptr, 0)
 			};

@@ -182,6 +182,14 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinPitchLimit;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxRollLimit_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxRollLimit;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinRollLimit_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinRollLimit;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_YawTurnScale_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_YawTurnScale;
@@ -283,6 +291,20 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MinPitchLimit = { "MinPitchLimit", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFlying509GameCharacter, MinPitchLimit), METADATA_PARAMS(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MinPitchLimit_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MinPitchLimit_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MaxRollLimit_MetaData[] = {
+		{ "Category", "Flying" },
+		{ "ModuleRelativePath", "Flying509GameCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MaxRollLimit = { "MaxRollLimit", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFlying509GameCharacter, MaxRollLimit), METADATA_PARAMS(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MaxRollLimit_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MaxRollLimit_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MinRollLimit_MetaData[] = {
+		{ "Category", "Flying" },
+		{ "ModuleRelativePath", "Flying509GameCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MinRollLimit = { "MinRollLimit", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFlying509GameCharacter, MinRollLimit), METADATA_PARAMS(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MinRollLimit_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MinRollLimit_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_YawTurnScale_MetaData[] = {
 		{ "Category", "Flying" },
 		{ "ModuleRelativePath", "Flying509GameCharacter.h" },
@@ -325,6 +347,8 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_BulletBP,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MaxPitchLimit,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MinPitchLimit,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MaxRollLimit,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_MinRollLimit,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_YawTurnScale,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_BoostFlightSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_NormalFlightSpeed,
@@ -358,7 +382,7 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFlying509GameCharacter, 1659645308);
+	IMPLEMENT_CLASS(AFlying509GameCharacter, 638493616);
 	template<> FLYING509GAME_API UClass* StaticClass<AFlying509GameCharacter>()
 	{
 		return AFlying509GameCharacter::StaticClass();

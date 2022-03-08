@@ -45,6 +45,10 @@ public:
 	UPROPERTY(EditAnywhere, Category = Flying);
 	float MinPitchLimit;
 	UPROPERTY(EditAnywhere, Category = Flying);
+	float MaxRollLimit;
+	UPROPERTY(EditAnywhere, Category = Flying);
+	float MinRollLimit;
+	UPROPERTY(EditAnywhere, Category = Flying);
 	float YawTurnScale;
 	UPROPERTY(EditAnywhere, Category = Flying);
 	float BoostFlightSpeed;
@@ -55,6 +59,7 @@ public:
 	bool IsDiving = false;
 	bool IsBoosting = false;
 	bool IsFreeCam = false;
+
 	// Velocity when the character is diving/falling
 	float MaxZVelocity = 1;
 	// Boolean to tell when the player is still on the speed reached from diving and catching himself

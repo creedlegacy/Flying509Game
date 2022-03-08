@@ -21,9 +21,126 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	FLYING509GAME_API UClass* Z_Construct_UClass_ABullet_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UCurveFloat_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AFlying509GameCharacter::execOnTimelineFinished)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnTimelineFinished();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AFlying509GameCharacter::execDiveCatchTimelineFloatReturn)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_value);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->DiveCatchTimelineFloatReturn(Z_Param_value);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AFlying509GameCharacter::execDiveTimelineFloatReturn)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_value);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->DiveTimelineFloatReturn(Z_Param_value);
+		P_NATIVE_END;
+	}
 	void AFlying509GameCharacter::StaticRegisterNativesAFlying509GameCharacter()
 	{
+		UClass* Class = AFlying509GameCharacter::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "DiveCatchTimelineFloatReturn", &AFlying509GameCharacter::execDiveCatchTimelineFloatReturn },
+			{ "DiveTimelineFloatReturn", &AFlying509GameCharacter::execDiveTimelineFloatReturn },
+			{ "OnTimelineFinished", &AFlying509GameCharacter::execOnTimelineFinished },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AFlying509GameCharacter_DiveCatchTimelineFloatReturn_Statics
+	{
+		struct Flying509GameCharacter_eventDiveCatchTimelineFloatReturn_Parms
+		{
+			float value;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_value;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AFlying509GameCharacter_DiveCatchTimelineFloatReturn_Statics::NewProp_value = { "value", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Flying509GameCharacter_eventDiveCatchTimelineFloatReturn_Parms, value), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AFlying509GameCharacter_DiveCatchTimelineFloatReturn_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AFlying509GameCharacter_DiveCatchTimelineFloatReturn_Statics::NewProp_value,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFlying509GameCharacter_DiveCatchTimelineFloatReturn_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Flying509GameCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFlying509GameCharacter_DiveCatchTimelineFloatReturn_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFlying509GameCharacter, nullptr, "DiveCatchTimelineFloatReturn", nullptr, nullptr, sizeof(Flying509GameCharacter_eventDiveCatchTimelineFloatReturn_Parms), Z_Construct_UFunction_AFlying509GameCharacter_DiveCatchTimelineFloatReturn_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AFlying509GameCharacter_DiveCatchTimelineFloatReturn_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFlying509GameCharacter_DiveCatchTimelineFloatReturn_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AFlying509GameCharacter_DiveCatchTimelineFloatReturn_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AFlying509GameCharacter_DiveCatchTimelineFloatReturn()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFlying509GameCharacter_DiveCatchTimelineFloatReturn_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AFlying509GameCharacter_DiveTimelineFloatReturn_Statics
+	{
+		struct Flying509GameCharacter_eventDiveTimelineFloatReturn_Parms
+		{
+			float value;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_value;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AFlying509GameCharacter_DiveTimelineFloatReturn_Statics::NewProp_value = { "value", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Flying509GameCharacter_eventDiveTimelineFloatReturn_Parms, value), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AFlying509GameCharacter_DiveTimelineFloatReturn_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AFlying509GameCharacter_DiveTimelineFloatReturn_Statics::NewProp_value,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFlying509GameCharacter_DiveTimelineFloatReturn_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Flying509GameCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFlying509GameCharacter_DiveTimelineFloatReturn_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFlying509GameCharacter, nullptr, "DiveTimelineFloatReturn", nullptr, nullptr, sizeof(Flying509GameCharacter_eventDiveTimelineFloatReturn_Parms), Z_Construct_UFunction_AFlying509GameCharacter_DiveTimelineFloatReturn_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AFlying509GameCharacter_DiveTimelineFloatReturn_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFlying509GameCharacter_DiveTimelineFloatReturn_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AFlying509GameCharacter_DiveTimelineFloatReturn_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AFlying509GameCharacter_DiveTimelineFloatReturn()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFlying509GameCharacter_DiveTimelineFloatReturn_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AFlying509GameCharacter_OnTimelineFinished_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFlying509GameCharacter_OnTimelineFinished_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Flying509GameCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFlying509GameCharacter_OnTimelineFinished_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFlying509GameCharacter, nullptr, "OnTimelineFinished", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFlying509GameCharacter_OnTimelineFinished_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AFlying509GameCharacter_OnTimelineFinished_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AFlying509GameCharacter_OnTimelineFinished()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFlying509GameCharacter_OnTimelineFinished_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AFlying509GameCharacter_NoRegister()
 	{
@@ -32,6 +149,7 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 	struct Z_Construct_UClass_AFlying509GameCharacter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -75,6 +193,14 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NormalFlightSpeed_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_NormalFlightSpeed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_diveCurve_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_diveCurve;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_catchCurve_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_catchCurve;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -82,6 +208,11 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 	UObject* (*const Z_Construct_UClass_AFlying509GameCharacter_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_ACharacter,
 		(UObject* (*)())Z_Construct_UPackage__Script_Flying509Game,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AFlying509GameCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AFlying509GameCharacter_DiveCatchTimelineFloatReturn, "DiveCatchTimelineFloatReturn" }, // 933224623
+		{ &Z_Construct_UFunction_AFlying509GameCharacter_DiveTimelineFloatReturn, "DiveTimelineFloatReturn" }, // 3515680613
+		{ &Z_Construct_UFunction_AFlying509GameCharacter_OnTimelineFinished, "OnTimelineFinished" }, // 265180464
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFlying509GameCharacter_Statics::Class_MetaDataParams[] = {
@@ -172,6 +303,20 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_NormalFlightSpeed = { "NormalFlightSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFlying509GameCharacter, NormalFlightSpeed), METADATA_PARAMS(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_NormalFlightSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_NormalFlightSpeed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_diveCurve_MetaData[] = {
+		{ "Category", "Timeline" },
+		{ "ModuleRelativePath", "Flying509GameCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_diveCurve = { "diveCurve", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFlying509GameCharacter, diveCurve), Z_Construct_UClass_UCurveFloat_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_diveCurve_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_diveCurve_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_catchCurve_MetaData[] = {
+		{ "Category", "Timeline" },
+		{ "ModuleRelativePath", "Flying509GameCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_catchCurve = { "catchCurve", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFlying509GameCharacter, catchCurve), Z_Construct_UClass_UCurveFloat_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_catchCurve_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_catchCurve_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFlying509GameCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_CameraBoom,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_FollowCamera,
@@ -183,6 +328,8 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_YawTurnScale,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_BoostFlightSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_NormalFlightSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_diveCurve,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlying509GameCharacter_Statics::NewProp_catchCurve,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AFlying509GameCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AFlying509GameCharacter>::IsAbstract,
@@ -192,11 +339,11 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AFlying509GameCharacter_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AFlying509GameCharacter_Statics::PropPointers),
 		0,
 		0x008000A4u,
@@ -211,7 +358,7 @@ void EmptyLinkFunctionForGeneratedCodeFlying509GameCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFlying509GameCharacter, 2459786667);
+	IMPLEMENT_CLASS(AFlying509GameCharacter, 1659645308);
 	template<> FLYING509GAME_API UClass* StaticClass<AFlying509GameCharacter>()
 	{
 		return AFlying509GameCharacter::StaticClass();

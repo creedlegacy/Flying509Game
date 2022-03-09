@@ -1,2 +1,0 @@
-C:\Users\liebeziv\Documents\GitHub\Flying509Game\Intermediate\Build\Win64\UE4Editor\Development\Flying509Game\Definitions.Flying509Game.h
-C:\Users\liebeziv\Documents\GitHub\Flying509Game\Source\Flying509Game\Flying509Game.h

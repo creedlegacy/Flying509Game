@@ -11,6 +11,7 @@
 #include "Math/UnrealMathUtility.h"
 #include "Runtime/Engine/Classes/Components/TimelineComponent.h"
 #include "Bullet.h"
+#include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 
 //////////////////////////////////////////////////////////////////////////
 // AFlying509GameCharacter
@@ -132,6 +133,7 @@ void AFlying509GameCharacter::Tick(float DeltaTime)
 	ForwardFlight();
 	FallVelocityTick();
 	DiveCatchSpeedAdjustment();
+
 }
 
 
@@ -164,23 +166,25 @@ void AFlying509GameCharacter::OnTimelineFinished()
 
 void AFlying509GameCharacter::PitchMovement(float Value)
 {
-	if (Value) {
-		
-		if (Value < 0.f) {
-			if (GetActorRotation().Pitch > MinPitchLimit) {
-				AddActorLocalRotation(FRotator(Value, 0, 0));
-			}
-		}
-		else {
-			if (GetActorRotation().Pitch < MaxPitchLimit) {
-				if (IsDiving) {
-					DiveCatch();
+	if (!UGameplayStatics::IsGamePaused(GetWorld())) {
+		if (Value) {
+
+			if (Value < 0.f) {
+				if (GetActorRotation().Pitch > MinPitchLimit) {
+					AddActorLocalRotation(FRotator(Value, 0, 0));
 				}
-				AddActorLocalRotation(FRotator(Value, 0, 0));
+			}
+			else {
+				if (GetActorRotation().Pitch < MaxPitchLimit) {
+					if (IsDiving) {
+						DiveCatch();
+					}
+					AddActorLocalRotation(FRotator(Value, 0, 0));
+				}
+
 			}
 
 		}
-
 	}
 
 }
@@ -203,44 +207,46 @@ void AFlying509GameCharacter::YawMovement(float Value)
 		}
 		
 	}*/
-	if(!IsDiving){
-		if (Value) {
+	if (!UGameplayStatics::IsGamePaused(GetWorld())) {
+		if (!IsDiving) {
+			if (Value) {
 
-			AddControllerYawInput(Value);
+				AddControllerYawInput(Value);
 
-			if (Value < 0.f) {
-				if (GetActorRotation().Roll > MinRollLimit) {
-					AddActorLocalRotation(FRotator(0, 0, Value));
+				if (Value < 0.f) {
+					if (GetActorRotation().Roll > MinRollLimit) {
+						AddActorLocalRotation(FRotator(0, 0, Value));
+					}
 				}
+				else {
+					if (GetActorRotation().Roll < MaxRollLimit) {
+						AddActorLocalRotation(FRotator(0, 0, Value));
+					}
+
+				}
+
+
+
 			}
 			else {
-				if (GetActorRotation().Roll < MaxRollLimit) {
-					AddActorLocalRotation(FRotator(0, 0, Value));
+				if (GetActorRotation().Roll > 1 || GetActorRotation().Roll < 1) {
+					if (GetActorRotation().Roll > 1) {
+						AddActorLocalRotation(FRotator(0, 0, -1));
+					}
+					else if (GetActorRotation().Roll < -1) {
+						AddActorLocalRotation(FRotator(0, 0, 1));
+					}
+				}
+				else {
+					if (GetActorRotation().Roll > 0) {
+						AddActorLocalRotation(FRotator(0, 0, -0.1));
+					}
+					else if (GetActorRotation().Roll < 0) {
+						AddActorLocalRotation(FRotator(0, 0, 0.1));
+					}
 				}
 
 			}
-
-
-
-		}
-		else {
-			if (GetActorRotation().Roll > 1 || GetActorRotation().Roll < 1) {
-				if (GetActorRotation().Roll > 1) {
-					AddActorLocalRotation(FRotator(0, 0, -1));
-				}
-				else if (GetActorRotation().Roll < -1) {
-					AddActorLocalRotation(FRotator(0, 0, 1));
-				}
-			}
-			else {
-				if (GetActorRotation().Roll > 0) {
-					AddActorLocalRotation(FRotator(0, 0, -0.1));
-				}
-				else if (GetActorRotation().Roll < 0) {
-					AddActorLocalRotation(FRotator(0, 0, 0.1));
-				}
-			}
-
 		}
 	}
 

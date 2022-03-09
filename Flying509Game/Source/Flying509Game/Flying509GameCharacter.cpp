@@ -203,35 +203,45 @@ void AFlying509GameCharacter::YawMovement(float Value)
 		}
 		
 	}*/
-	
-	if (Value) {
-		
-		AddControllerYawInput(Value);
+	if(!IsDiving){
+		if (Value) {
 
-		if (Value < 0.f) {
-			if (GetActorRotation().Roll > MinRollLimit) {
-				AddActorLocalRotation(FRotator(0, 0, Value));
+			AddControllerYawInput(Value);
+
+			if (Value < 0.f) {
+				if (GetActorRotation().Roll > MinRollLimit) {
+					AddActorLocalRotation(FRotator(0, 0, Value));
+				}
 			}
+			else {
+				if (GetActorRotation().Roll < MaxRollLimit) {
+					AddActorLocalRotation(FRotator(0, 0, Value));
+				}
+
+			}
+
+
+
 		}
-		else{
-			if (GetActorRotation().Roll < MaxRollLimit) {
-				AddActorLocalRotation(FRotator(0, 0, Value));
+		else {
+			if (GetActorRotation().Roll > 1 || GetActorRotation().Roll < 1) {
+				if (GetActorRotation().Roll > 1) {
+					AddActorLocalRotation(FRotator(0, 0, -1));
+				}
+				else if (GetActorRotation().Roll < -1) {
+					AddActorLocalRotation(FRotator(0, 0, 1));
+				}
+			}
+			else {
+				if (GetActorRotation().Roll > 0) {
+					AddActorLocalRotation(FRotator(0, 0, -0.1));
+				}
+				else if (GetActorRotation().Roll < 0) {
+					AddActorLocalRotation(FRotator(0, 0, 0.1));
+				}
 			}
 
 		}
-
-
-
-	}
-	else {
-		if (GetActorRotation().Roll > 0.f) {
-			AddActorLocalRotation(FRotator(0, 0, -1));
-		}
-		else if (GetActorRotation().Roll < 0.f) {
-			AddActorLocalRotation(FRotator(0, 0, 1));
-		}
-
-		
 	}
 
 }

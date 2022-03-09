@@ -90,7 +90,8 @@ void AFlying509GameCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
 	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
-	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
+	//PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
+	PlayerInputComponent->BindAxis("Turn", this, &AFlying509GameCharacter::YawMovement);
 	PlayerInputComponent->BindAxis("TurnRate", this, &AFlying509GameCharacter::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AFlying509GameCharacter::LookUpAtRate);
@@ -187,7 +188,7 @@ void AFlying509GameCharacter::PitchMovement(float Value)
 void AFlying509GameCharacter::YawMovement(float Value)
 {
 	//**Not used for now
-	if (Value) {
+	/*if (Value) {
 
 		if (Value < 0.f) {
 			if (GetActorRotation().Roll > -60 ) {
@@ -200,6 +201,36 @@ void AFlying509GameCharacter::YawMovement(float Value)
 			}
 
 		}
+		
+	}*/
+	
+	if (Value) {
+		
+		AddControllerYawInput(Value);
+
+		if (Value < 0.f) {
+			if (GetActorRotation().Roll > MinRollLimit) {
+				AddActorLocalRotation(FRotator(0, 0, Value));
+			}
+		}
+		else{
+			if (GetActorRotation().Roll < MaxRollLimit) {
+				AddActorLocalRotation(FRotator(0, 0, Value));
+			}
+
+		}
+
+
+
+	}
+	else {
+		if (GetActorRotation().Roll > 0.f) {
+			AddActorLocalRotation(FRotator(0, 0, -1));
+		}
+		else if (GetActorRotation().Roll < 0.f) {
+			AddActorLocalRotation(FRotator(0, 0, 1));
+		}
+
 		
 	}
 

@@ -24,7 +24,7 @@ AFlying509GameCharacter::AFlying509GameCharacter()
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 
 	// set our turn rates for input
-	BaseTurnRate = 45.f;
+	BaseTurnRate = 35.f;
 	BaseLookUpRate = 45.f;
 
 	// Don't rotate when the controller rotates. Let that just affect the camera.
@@ -75,10 +75,6 @@ void AFlying509GameCharacter::SetupPlayerInputComponent(class UInputComponent* P
 
 	/*PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &AFlying509GameCharacter::Shoot);*/
 
-	PlayerInputComponent->BindAxis("Pitch", this, &AFlying509GameCharacter::PitchMovement);
-	/*PlayerInputComponent->BindAxis("Yaw", this, &AFlying509GameCharacter::MoveRight);*/
-	/*PlayerInputComponent->BindAxis("Roll", this, &AFlying509GameCharacter::RollMovement);*/
-
 	PlayerInputComponent->BindAction("Boost", IE_Pressed, this, &AFlying509GameCharacter::Boost);
 	PlayerInputComponent->BindAction("Boost", IE_Released, this, &AFlying509GameCharacter::StopBoost);
 
@@ -88,11 +84,18 @@ void AFlying509GameCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	PlayerInputComponent->BindAction("FreeCamera", IE_Pressed, this, &AFlying509GameCharacter::FreeCamera);
 	PlayerInputComponent->BindAction("FreeCamera", IE_Released, this, &AFlying509GameCharacter::FreeCamera);
 
+	PlayerInputComponent->BindAxis("Gamepad", this, &AFlying509GameCharacter::SetGamepad);
+	PlayerInputComponent->BindAxis("Mouse", this, &AFlying509GameCharacter::SetMouse);
+
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
 	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
 	//PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
+	PlayerInputComponent->BindAxis("Pitch", this, &AFlying509GameCharacter::PitchMovement);
+	/*PlayerInputComponent->BindAxis("Yaw", this, &AFlying509GameCharacter::MoveRight);*/
+	/*PlayerInputComponent->BindAxis("Roll", this, &AFlying509GameCharacter::RollMovement);*/
 	PlayerInputComponent->BindAxis("Turn", this, &AFlying509GameCharacter::YawMovement);
+	PlayerInputComponent->BindAxis("TurnGamepad", this, &AFlying509GameCharacter::YawMovementGamepad);
 	PlayerInputComponent->BindAxis("TurnRate", this, &AFlying509GameCharacter::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AFlying509GameCharacter::LookUpAtRate);
@@ -136,6 +139,23 @@ void AFlying509GameCharacter::Tick(float DeltaTime)
 
 }
 
+void AFlying509GameCharacter::SetMouse(float Value)
+{
+	//to detect if using mouse keyboard
+	if ((Value < -0.1 || Value > 0.1) && IsGamepad) {
+		IsGamepad = false;
+	}
+	
+}
+
+void AFlying509GameCharacter::SetGamepad(float Value)
+{
+	//to detect is using controllers
+	if ((Value < -0.1 || Value > 0.1) && !IsGamepad) {
+		IsGamepad = true;
+	}
+	
+}
 
 void AFlying509GameCharacter::Shoot()
 {
@@ -166,22 +186,32 @@ void AFlying509GameCharacter::OnTimelineFinished()
 
 void AFlying509GameCharacter::PitchMovement(float Value)
 {
+	
 	if (!UGameplayStatics::IsGamePaused(GetWorld())) {
 		if (Value) {
+			/*UE_LOG(LogTemp, Warning, TEXT("%f"), Value);*/
+			if (!IsDiving) {
+				if (Value < 0.f) {
+					if (GetActorRotation().Pitch > MinPitchLimit) {
+						AddActorLocalRotation(FRotator(Value, 0, 0));
+					}
+				}
+				else {
+					if (GetActorRotation().Pitch < MaxPitchLimit) {
+						if (IsDiving) {
+							DiveCatch();
+						}
+						AddActorLocalRotation(FRotator(Value, 0, 0));
+					}
 
-			if (Value < 0.f) {
-				if (GetActorRotation().Pitch > MinPitchLimit) {
-					AddActorLocalRotation(FRotator(Value, 0, 0));
 				}
 			}
 			else {
-				if (GetActorRotation().Pitch < MaxPitchLimit) {
-					if (IsDiving) {
-						DiveCatch();
-					}
-					AddActorLocalRotation(FRotator(Value, 0, 0));
+				//0.5 to avoid "micro movement" as in just to make sure the player commits to end dive
+				if (Value > 0.5f) {
+					DiveCatch();
 				}
-
+				
 			}
 
 		}
@@ -207,12 +237,13 @@ void AFlying509GameCharacter::YawMovement(float Value)
 		}
 		
 	}*/
-	if (!UGameplayStatics::IsGamePaused(GetWorld())) {
-		if (!IsDiving) {
-			if (Value) {
 
-				AddControllerYawInput(Value);
+	if (!UGameplayStatics::IsGamePaused(GetWorld()) && !IsDiving && !IsGamepad) {
 
+		if (Value) {
+
+			AddControllerYawInput(Value);
+			if (!IsFreeCam) {
 				if (Value < 0.f) {
 					if (GetActorRotation().Roll > MinRollLimit) {
 						AddActorLocalRotation(FRotator(0, 0, Value));
@@ -224,11 +255,11 @@ void AFlying509GameCharacter::YawMovement(float Value)
 					}
 
 				}
-
-
-
 			}
-			else {
+
+		}
+		else {
+			if (!IsFreeCam) {
 				if (GetActorRotation().Roll > 1 || GetActorRotation().Roll < 1) {
 					if (GetActorRotation().Roll > 1) {
 						AddActorLocalRotation(FRotator(0, 0, -1));
@@ -245,12 +276,70 @@ void AFlying509GameCharacter::YawMovement(float Value)
 						AddActorLocalRotation(FRotator(0, 0, 0.1));
 					}
 				}
-
 			}
+
 		}
+		
 	}
 
 }
+
+void AFlying509GameCharacter::YawMovementGamepad(float Value)
+{
+
+	if (!UGameplayStatics::IsGamePaused(GetWorld()) && !IsDiving && IsGamepad) {
+
+		if (Value) {
+			
+			// find out which way is right
+			const FRotator Rotation = Controller->GetControlRotation();
+			const FRotator YawRotation(0, Rotation.Yaw, 0);
+
+			// get right vector 
+			const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+			// add movement in that direction
+			AddMovementInput(Direction, Value * YawTurnScale);
+
+			if (Value < 0.f) {
+				if (GetActorRotation().Roll > MinRollLimit) {
+					AddActorLocalRotation(FRotator(0, 0, Value));
+				}
+			}
+			else {
+				if (GetActorRotation().Roll < MaxRollLimit) {
+					AddActorLocalRotation(FRotator(0, 0, Value));
+				}
+
+			}
+			
+
+		}
+		else {
+			if (GetActorRotation().Roll > 1 || GetActorRotation().Roll < 1) {
+				if (GetActorRotation().Roll > 1) {
+					AddActorLocalRotation(FRotator(0, 0, -1));
+				}
+				else if (GetActorRotation().Roll < -1) {
+					AddActorLocalRotation(FRotator(0, 0, 1));
+				}
+			}
+			else {
+				if (GetActorRotation().Roll > 0) {
+					AddActorLocalRotation(FRotator(0, 0, -0.1));
+				}
+				else if (GetActorRotation().Roll < 0) {
+					AddActorLocalRotation(FRotator(0, 0, 0.1));
+				}
+			}
+			
+
+		}
+
+	}
+
+}
+
+
 
 void AFlying509GameCharacter::RollMovement(float Value)
 {
@@ -264,7 +353,8 @@ void AFlying509GameCharacter::RollMovement(float Value)
 
 void AFlying509GameCharacter::ForwardFlight()
 {
-	if (!IsFreeCam) {
+	if (!IsFreeCam && !IsGamepad) {
+
 		//**Forward flight follows mouse yaw movement
 		// find out which way is forward
 		const FRotator Rotation = Controller->GetControlRotation();
@@ -353,7 +443,7 @@ void AFlying509GameCharacter::DiveCatchSpeedAdjustment()
 {
 	if (OnDiveCatchSpeed) {
 		GetCharacterMovement()->MaxFlySpeed = GetCharacterMovement()->MaxFlySpeed - 1;
-		UE_LOG(LogTemp, Warning, TEXT("%f"), GetCharacterMovement()->MaxFlySpeed);
+		/*UE_LOG(LogTemp, Warning, TEXT("%f"), GetCharacterMovement()->MaxFlySpeed);*/
 		float tempSpeed = IsBoosting ? BoostFlightSpeed : NormalFlightSpeed;
 		if (GetCharacterMovement()->MaxFlySpeed <= tempSpeed) {
 			OnDiveCatchSpeed = false;
@@ -368,7 +458,7 @@ void AFlying509GameCharacter::FreeCamera()
 	}
 	else {
 		Controller->SetControlRotation(CurrentCameraRotate);
-		UE_LOG(LogTemp, Warning, TEXT("%f"), CurrentCameraRotate.Yaw);
+		/*UE_LOG(LogTemp, Warning, TEXT("%f"), CurrentCameraRotate.Yaw);*/
 	}
 	
 	IsFreeCam = !IsFreeCam;

@@ -40,6 +40,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Shooting");
 	TSubclassOf<class ABullet> BulletBP;
 
+	bool IsGamepad = false;
+
 	UPROPERTY(EditAnywhere, Category = Flying);
 	float MaxPitchLimit;
 	UPROPERTY(EditAnywhere, Category = Flying);
@@ -97,6 +99,7 @@ protected:
 
 	void PitchMovement(float Value);
 	void YawMovement(float Value);
+	void YawMovementGamepad(float Value);
 	void RollMovement(float Value);
 
 	void ForwardFlight();
@@ -111,7 +114,9 @@ protected:
 	void DiveCatchSpeedAdjustment();
 
 	void FreeCamera();
-	void FreeCameraOff();
+
+	void SetMouse(float Value);
+	void SetGamepad(float Value);
 
 
 	/** Resets HMD orientation in VR. */

@@ -13,6 +13,10 @@ ABullet::ABullet()
 	BulletMesh = CreateDefaultSubobject<UStaticMeshComponent>("BulletMesh");
 	SetRootComponent(BulletMesh);
 
+	BulletMesh2 = CreateDefaultSubobject<UStaticMeshComponent>("BulletMesh2");
+	BulletMesh3 = CreateDefaultSubobject<UStaticMeshComponent>("BulletMesh3");
+	BulletMesh3->SetupAttachment(BulletMesh2);
+
 	BulletMovement = CreateDefaultSubobject<UProjectileMovementComponent>("BulletMovement");
 	BulletMovement->InitialSpeed = 5000.0f;
 	BulletMovement->MaxSpeed = 5000.0f;

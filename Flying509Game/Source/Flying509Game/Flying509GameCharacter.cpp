@@ -392,6 +392,7 @@ void AFlying509GameCharacter::FallVelocityTick()
 void AFlying509GameCharacter::Boost()
 {
 	IsBoosting = true;
+	/*CameraBoom->TargetArmLength = 350.f;*/
 	if (OnDiveCatchSpeed) {
 		GetCharacterMovement()->MaxFlySpeed += BoostFlightSpeed;
 	}

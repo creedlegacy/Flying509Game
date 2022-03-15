@@ -17,6 +17,10 @@ public:
 
 	UPROPERTY(EditAnywhere, Category =  "Components");
 	class UStaticMeshComponent* BulletMesh;
+	UPROPERTY(EditAnywhere, Category = "Components");
+	class UStaticMeshComponent* BulletMesh2;
+	UPROPERTY(EditAnywhere, Category = "Components");
+	class UStaticMeshComponent* BulletMesh3;
 
 	UPROPERTY(EditAnywhere, Category = "Components");
 	class UProjectileMovementComponent* BulletMovement;

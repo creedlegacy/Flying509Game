@@ -43,6 +43,7 @@ AFlying509GameCharacter::AFlying509GameCharacter()
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
 	CameraBoom->TargetArmLength = 300.0f; // The camera follows at this distance behind the character	
+	DefaultCameraBoom = CameraBoom->TargetArmLength;
 	CameraBoom->bUsePawnControlRotation = true; // Rotate the arm based on the controller
 
 	// Create a follow camera
@@ -133,10 +134,13 @@ void AFlying509GameCharacter::BeginPlay()
 void AFlying509GameCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	AlphaFunction(DeltaTime);
+	BoostLerpOut(DeltaTime);
+	BoostLerpIn(DeltaTime);
 	ForwardFlight();
 	FallVelocityTick();
 	DiveCatchSpeedAdjustment();
+	DiveLerpOut(DeltaTime);
+	DiveLerpIn(DeltaTime);
 
 }
 
@@ -156,20 +160,6 @@ void AFlying509GameCharacter::SetGamepad(float Value)
 		IsGamepad = true;
 	}
 	
-}
-
-void AFlying509GameCharacter::AlphaFunction(float DeltaTime)
-{
-	if (CameraBoostLerpDuration > 0) {
-		if (CameraBoostTimeElapsed < CameraBoostLerpDuration) {
-			CameraBoom->TargetArmLength = FMath::Lerp(CameraBoom->TargetArmLength, 400.0f, CameraBoostTimeElapsed / CameraBoostLerpDuration);
-			/*UE_LOG(LogTemp, Warning, TEXT("%f"), CameraBoostAlpha);*/
-			CameraBoostTimeElapsed += DeltaTime;
-		}
-		
-	}
-	
-
 }
 
 void AFlying509GameCharacter::Shoot()
@@ -208,7 +198,7 @@ void AFlying509GameCharacter::PitchMovement(float Value)
 			if (!IsDiving) {
 				if (Value < 0.f) {
 					if (GetActorRotation().Pitch > MinPitchLimit) {
-						AddActorLocalRotation(FRotator(Value, 0, 0));
+						AddActorLocalRotation(FRotator(Value * 1.3, 0, 0));
 					}
 				}
 				else {
@@ -216,7 +206,7 @@ void AFlying509GameCharacter::PitchMovement(float Value)
 						if (IsDiving) {
 							DiveCatch();
 						}
-						AddActorLocalRotation(FRotator(Value, 0, 0));
+						AddActorLocalRotation(FRotator(Value * 1.3, 0, 0));
 					}
 
 				}
@@ -406,30 +396,75 @@ void AFlying509GameCharacter::FallVelocityTick()
 
 void AFlying509GameCharacter::Boost()
 {
-	IsBoosting = true;
-	
-	CameraBoostLerpDuration = 3.;
-	
-	if (OnDiveCatchSpeed) {
-		GetCharacterMovement()->MaxFlySpeed += BoostFlightSpeed;
-	}
-	else {
-		GetCharacterMovement()->MaxFlySpeed = BoostFlightSpeed;
+	if (!IsDiving) {
+		IsBoosting = true;
+		CurrentCameraBoom = CameraBoom->TargetArmLength;
+		CameraBoostInDuration = 0;
+		CameraBoostInTimeElapsed = 0;
+		CameraBoostOutDuration = 1.;
+
+		if (OnDiveCatchSpeed) {
+			GetCharacterMovement()->MaxFlySpeed += BoostFlightSpeed;
+		}
+		else {
+			GetCharacterMovement()->MaxFlySpeed = BoostFlightSpeed;
+		}
 	}
 	
 }
 
 void AFlying509GameCharacter::StopBoost()
 {
-	IsBoosting = false;
-	CameraBoom->TargetArmLength = CameraBoom->TargetArmLength - 100;
-	if (OnDiveCatchSpeed) {
-		GetCharacterMovement()->MaxFlySpeed -= BoostFlightSpeed;
+	if (!IsDiving) {
+		IsBoosting = false;
+		CurrentCameraBoom = CameraBoom->TargetArmLength;
+		CameraBoostOutDuration = 0;
+		CameraBoostOutTimeElapsed = 0;
+		CameraBoostInDuration = 1.;
+		if (OnDiveCatchSpeed) {
+			GetCharacterMovement()->MaxFlySpeed -= BoostFlightSpeed;
+		}
+		else {
+			GetCharacterMovement()->MaxFlySpeed = NormalFlightSpeed;
+		}
 	}
-	else {
-		GetCharacterMovement()->MaxFlySpeed = NormalFlightSpeed;
+}
+
+void AFlying509GameCharacter::BoostLerpOut(float DeltaTime)
+{
+	if (CameraBoostOutDuration > 0) {
+		if (CameraBoostOutTimeElapsed < CameraBoostOutDuration) {
+			float alpha = CameraBoostOutTimeElapsed / CameraBoostOutDuration;
+			if (alpha > 0 || alpha < 1) {
+				CameraBoom->TargetArmLength = FMath::Lerp(CurrentCameraBoom, DefaultCameraBoom + 80, alpha);
+				CameraBoostOutTimeElapsed += DeltaTime;
+			}
+			return;
+		}
+		
+		CameraBoostOutDuration = 0;
+		CameraBoostOutTimeElapsed = 0;
+		
 	}
+}
+
+void AFlying509GameCharacter::BoostLerpIn(float DeltaTime)
+{
+	if (CameraBoostInDuration > 0) {
+		if (CameraBoostInTimeElapsed < CameraBoostInDuration) {
+			float alpha = CameraBoostInTimeElapsed / CameraBoostInDuration;
+			if (alpha > 0 || alpha < 1) {
+				CameraBoom->TargetArmLength = FMath::Lerp(CurrentCameraBoom, DefaultCameraBoom, alpha);
+				CameraBoostInTimeElapsed += DeltaTime;
+			}
+			return;
+		}
 	
+		CameraBoostInDuration = 0;
+		CameraBoostInTimeElapsed = 0;
+		
+
+	}
 }
 
 void AFlying509GameCharacter::Dive()
@@ -437,6 +472,10 @@ void AFlying509GameCharacter::Dive()
 	IsDiving = true;
 	GetCharacterMovement()->MovementMode = MOVE_Falling;
 	DiveTimeline->PlayFromStart();
+	CurrentCameraBoom = CameraBoom->TargetArmLength;
+	CameraDiveInDuration = 0;
+	CameraDiveInTimeElapsed = 0;
+	CameraDiveOutDuration = 6.;
 	/*SetActorRelativeRotation(FRotator(-90, GetActorRotation().Yaw, GetActorRotation().Roll));*/
 	/*CameraBoom->bUsePawnControlRotation = false;*/
 	/*FollowCamera->SetRelativeRotation(FRotator(0, 0, 0));
@@ -450,7 +489,10 @@ void AFlying509GameCharacter::DiveCatch()
 	GetCharacterMovement()->MovementMode = MOVE_Flying;
 	GetCharacterMovement()->MaxFlySpeed = NormalFlightSpeed * (round(MaxZVelocity) / 200);
 	OnDiveCatchSpeed = true;
-	
+	CurrentCameraBoom = CameraBoom->TargetArmLength;
+	CameraDiveOutDuration = 0;
+	CameraDiveOutTimeElapsed = 0;
+	CameraDiveInDuration = 1.;
 	//CatchTimeline->PlayFromStart();
 	//AddActorLocalRotation(FMath::RInterpTo(FRotator(-90,NULL,NULL), FRotator(60, NULL, NULL), FApp::GetDeltaTime(), 10.0));
 	/*CameraBoom->bUsePawnControlRotation = true;*/
@@ -467,6 +509,43 @@ void AFlying509GameCharacter::DiveCatchSpeedAdjustment()
 		if (GetCharacterMovement()->MaxFlySpeed <= tempSpeed) {
 			OnDiveCatchSpeed = false;
 		}
+	}
+}
+
+void AFlying509GameCharacter::DiveLerpOut(float DeltaTime)
+{
+	if (CameraDiveOutDuration > 0 && CurrentCameraBoom) {
+		if (CameraDiveOutTimeElapsed < CameraDiveOutDuration) {
+			float alpha = CameraDiveOutTimeElapsed / CameraDiveOutDuration;
+			if (alpha > 0 || alpha < 1) {
+				GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%f"), alpha));
+				CameraBoom->TargetArmLength = FMath::Lerp(CurrentCameraBoom, DefaultCameraBoom + 200, alpha);
+				CameraDiveOutTimeElapsed += DeltaTime;
+			}
+			return;
+		}
+
+		CameraDiveOutDuration = 0;
+		CameraDiveOutTimeElapsed = 0;
+
+	}
+}
+
+void AFlying509GameCharacter::DiveLerpIn(float DeltaTime)
+{
+	if (CameraDiveInDuration > 0 && CurrentCameraBoom) {
+		if (CameraDiveInTimeElapsed < CameraDiveInDuration) {
+			float alpha = CameraDiveInTimeElapsed / CameraDiveInDuration;
+			if (alpha > 0 || alpha < 1) {
+				CameraBoom->TargetArmLength = FMath::Lerp(CurrentCameraBoom, DefaultCameraBoom, alpha);
+				CameraDiveInTimeElapsed += DeltaTime;
+			}
+			return;
+		}
+
+		CameraDiveInDuration = 0;
+		CameraDiveInTimeElapsed = 0;
+
 	}
 }
 

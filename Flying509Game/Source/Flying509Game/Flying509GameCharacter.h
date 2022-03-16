@@ -91,14 +91,24 @@ public:
 	FRotator defaultCameraRotation;
 	FVector defaultCameraLocation;
 
-	float CameraBoostLerpDuration = 0;
-	float CameraBoostAlpha = 0;
-	float CameraBoostTimeElapsed = 0;
+	//variables for cameraboom arm length
+	float DefaultCameraBoom;
+	float CurrentCameraBoom;
+
+	float CameraBoostOutDuration = 0;
+	float CameraBoostOutTimeElapsed = 0;
+
+	float CameraBoostInDuration = 0;
+	float CameraBoostInTimeElapsed = 0;
+
+	float CameraDiveOutDuration = 0;
+	float CameraDiveOutTimeElapsed = 0;
+
+	float CameraDiveInDuration = 0;
+	float CameraDiveInTimeElapsed = 0;
 
 protected:
 	virtual void BeginPlay() override;
-
-	void AlphaFunction(float DeltaTime);
 
 	void Shoot();
 
@@ -113,10 +123,14 @@ protected:
 
 	void Boost();
 	void StopBoost();
+	void BoostLerpOut(float DeltaTime);
+	void BoostLerpIn(float DeltaTime);
 
 	void Dive();
 	void DiveCatch();
 	void DiveCatchSpeedAdjustment();
+	void DiveLerpOut(float DeltaTime);
+	void DiveLerpIn(float DeltaTime);
 
 	void FreeCamera();
 

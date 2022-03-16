@@ -133,6 +133,7 @@ void AFlying509GameCharacter::BeginPlay()
 void AFlying509GameCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	AlphaFunction(DeltaTime);
 	ForwardFlight();
 	FallVelocityTick();
 	DiveCatchSpeedAdjustment();
@@ -155,6 +156,20 @@ void AFlying509GameCharacter::SetGamepad(float Value)
 		IsGamepad = true;
 	}
 	
+}
+
+void AFlying509GameCharacter::AlphaFunction(float DeltaTime)
+{
+	if (CameraBoostLerpDuration > 0) {
+		if (CameraBoostTimeElapsed < CameraBoostLerpDuration) {
+			CameraBoom->TargetArmLength = FMath::Lerp(CameraBoom->TargetArmLength, 400.0f, CameraBoostTimeElapsed / CameraBoostLerpDuration);
+			/*UE_LOG(LogTemp, Warning, TEXT("%f"), CameraBoostAlpha);*/
+			CameraBoostTimeElapsed += DeltaTime;
+		}
+		
+	}
+	
+
 }
 
 void AFlying509GameCharacter::Shoot()
@@ -392,7 +407,9 @@ void AFlying509GameCharacter::FallVelocityTick()
 void AFlying509GameCharacter::Boost()
 {
 	IsBoosting = true;
-	/*CameraBoom->TargetArmLength = 350.f;*/
+	
+	CameraBoostLerpDuration = 3.;
+	
 	if (OnDiveCatchSpeed) {
 		GetCharacterMovement()->MaxFlySpeed += BoostFlightSpeed;
 	}
@@ -405,6 +422,7 @@ void AFlying509GameCharacter::Boost()
 void AFlying509GameCharacter::StopBoost()
 {
 	IsBoosting = false;
+	CameraBoom->TargetArmLength = CameraBoom->TargetArmLength - 100;
 	if (OnDiveCatchSpeed) {
 		GetCharacterMovement()->MaxFlySpeed -= BoostFlightSpeed;
 	}

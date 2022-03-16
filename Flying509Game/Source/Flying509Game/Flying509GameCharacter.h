@@ -91,9 +91,14 @@ public:
 	FRotator defaultCameraRotation;
 	FVector defaultCameraLocation;
 
+	float CameraBoostLerpDuration = 0;
+	float CameraBoostAlpha = 0;
+	float CameraBoostTimeElapsed = 0;
 
 protected:
 	virtual void BeginPlay() override;
+
+	void AlphaFunction(float DeltaTime);
 
 	void Shoot();
 

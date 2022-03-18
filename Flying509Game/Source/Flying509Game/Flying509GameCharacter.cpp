@@ -96,7 +96,7 @@ void AFlying509GameCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	PlayerInputComponent->BindAxis("Turn", this, &AFlying509GameCharacter::YawMovement);
 	PlayerInputComponent->BindAxis("TurnGamepad", this, &AFlying509GameCharacter::YawMovementGamepad);
 	PlayerInputComponent->BindAxis("TurnRate", this, &AFlying509GameCharacter::TurnAtRate);
-	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+	PlayerInputComponent->BindAxis("LookUp", this, &AFlying509GameCharacter::LookUp);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AFlying509GameCharacter::LookUpAtRate);
 
 	// handle touch devices
@@ -420,7 +420,7 @@ void AFlying509GameCharacter::BoostLerpOut(float DeltaTime)
 		if (CameraBoostOutTimeElapsed < CameraBoostOutDuration) {
 			float alpha = CameraBoostOutTimeElapsed / CameraBoostOutDuration;
 			if (alpha > 0 || alpha < 1) {
-				CameraBoom->TargetArmLength = FMath::Lerp(CurrentCameraBoom, DefaultCameraBoom + 80, alpha);
+				CameraBoom->TargetArmLength = FMath::Lerp(CurrentCameraBoom, DefaultCameraBoom + 60, alpha);
 				CameraBoostOutTimeElapsed += DeltaTime;
 			}
 			return;
@@ -511,7 +511,7 @@ void AFlying509GameCharacter::DiveCatchTimelineFloatReturn(float value)
 	else {
 	
 		SetActorRotation(FMath::Lerp(CurrentControlRotation, FRotator(50, CurrentControlRotation.Yaw, CurrentControlRotation.Roll), value));
-		Controller->SetControlRotation(FMath::Lerp(CurrentControlRotation, FRotator(0, CurrentControlRotation.Yaw, CurrentControlRotation.Roll), value));
+		Controller->SetControlRotation(FMath::Lerp(CurrentControlRotation, FRotator(30, CurrentControlRotation.Yaw, CurrentControlRotation.Roll), value));
 	}
 	
 }
@@ -606,13 +606,18 @@ void AFlying509GameCharacter::TouchStopped(ETouchIndex::Type FingerIndex, FVecto
 void AFlying509GameCharacter::TurnAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
-	AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
+	if (!IsDiving) AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
+}
+
+void AFlying509GameCharacter::LookUp(float Value)
+{
+	if(!IsDiving) APawn::AddControllerPitchInput(Value);
 }
 
 void AFlying509GameCharacter::LookUpAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
-	AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
+	if (!IsDiving) AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
 }
 
 void AFlying509GameCharacter::MoveForward(float Value)

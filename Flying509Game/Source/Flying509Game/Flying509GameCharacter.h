@@ -85,11 +85,9 @@ public:
 		void DiveCatchTimelineFloatReturn(float value);
 	UFUNCTION()
 		void OnTimelineFinished();
-
-
-
-	FRotator defaultCameraRotation;
-	FVector defaultCameraLocation;
+	
+	FRotator CurrentControlRotation;
+	FRotator CurrentActorRotation;
 
 	//variables for cameraboom arm length
 	float DefaultCameraBoom;

@@ -1041,3 +1041,1309 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.03.21-12.24.30:778][800]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
 [2022.03.21-12.24.40:782][493]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (SM_GodRays)
 [2022.03.21-12.24.49:954][ 43]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-12.27.54:680][271]LogTemp: Repeating last play command: Selected Viewport
+[2022.03.21-12.27.54:697][271]LogPlayLevel: Warning: Cancelling Open Transaction 'Edit color' to start PIE session.
+[2022.03.21-12.27.54:697][271]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.03.21-12.27.54:698][271]PIE: New page: PIE session: Level2 (21 Mar 2022, 12:27:54)
+[2022.03.21-12.27.54:699][271]LogOnline: OSS: Creating online subsystem instance for: NULL
+[2022.03.21-12.27.54:700][271]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+[2022.03.21-12.27.54:700][271]LogPlayLevel: Creating play world package: /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2
+[2022.03.21-12.27.54:724][271]LogPlayLevel: PIE: StaticDuplicateObject took: (0.024239s)
+[2022.03.21-12.27.54:725][271]LogAIModule: Creating AISystem for world Level2
+[2022.03.21-12.27.54:726][271]LogPlayLevel: PIE: World Init took: (0.001459s)
+[2022.03.21-12.27.54:726][271]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPersonCPP/Maps/Level2.Level2 to /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2.Level2 (0.025935s)
+[2022.03.21-12.27.54:741][271]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2022.03.21-12.27.54:742][271]LogAudio: Display: Creating Audio Device:                 Id: 2, Scope: Unique, Realtime: True
+[2022.03.21-12.27.54:742][271]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.03.21-12.27.54:742][271]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.03.21-12.27.54:742][271]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.03.21-12.27.54:742][271]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.03.21-12.27.54:742][271]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.03.21-12.27.54:742][271]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.03.21-12.27.54:742][271]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.03.21-12.27.54:742][271]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.03.21-12.27.54:743][271]LogAudio: Display: Using built-in audio occlusion.
+[2022.03.21-12.27.54:743][271]LogAudioMixer: Display: Initializing audio mixer.
+[2022.03.21-12.27.54:753][271]LogAudioMixer: Display: 0: FrontLeft
+[2022.03.21-12.27.54:753][271]LogAudioMixer: Display: 1: FrontRight
+[2022.03.21-12.27.54:762][271]LogAudioMixer: Display: Using Audio Device Speakers (Synaptics HD Audio)
+[2022.03.21-12.27.54:762][271]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.03.21-12.27.54:762][271]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.03.21-12.27.54:762][271]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.03.21-12.27.54:762][271]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.03.21-12.27.54:762][271]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.03.21-12.27.54:762][271]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.03.21-12.27.54:774][271]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.03.21-12.27.54:774][271]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.03.21-12.27.54:774][271]LogInit: FAudioDevice initialized.
+[2022.03.21-12.27.54:774][271]LogAudio: Display: Audio Device (ID: 2) registered with world 'Level2'.
+[2022.03.21-12.27.54:832][271]LogLoad: Game class is 'GM_MyGameMode_C'
+[2022.03.21-12.27.54:841][271]LogWorld: Bringing World /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2.Level2 up for play (max tick rate 0) at 2022.03.21-12.27.54
+[2022.03.21-12.27.54:841][271]LogWorld: Bringing up level for play took: 0.007547
+[2022.03.21-12.27.54:841][271]LogOnline: OSS: Creating online subsystem instance for: :Context_6
+[2022.03.21-12.27.54:845][271]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'MovieSceneCapture' in 0.0003 seconds. Added 20 classes and 0 folders.
+[2022.03.21-12.27.54:846][271]PIE: Server logged in
+[2022.03.21-12.27.54:848][271]PIE: Play in editor total start time 0.16 seconds.
+[2022.03.21-12.31.19:404][545]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.03.21-12.31.19:404][545]LogWorld: BeginTearingDown for /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2
+[2022.03.21-12.31.19:404][545]LogWorld: UWorld::CleanupWorld for Level2, bSessionEnded=true, bCleanupResources=true
+[2022.03.21-12.31.19:406][545]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.03.21-12.31.19:411][545]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.03.21-12.31.19:417][545]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.03.21-12.31.19:421][545]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.03.21-12.31.19:422][545]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.03.21-12.31.19:423][545]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.03.21-12.31.19:439][545]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.03.21-12.31.19:442][545]LogUObjectHash: Compacting FUObjectHashTables data took   1.23ms
+[2022.03.21-12.31.19:480][546]LogPlayLevel: Display: Destroying online subsystem :Context_6
+[2022.03.21-12.31.22:598][752]LogTemp: Repeating last play command: Selected Viewport
+[2022.03.21-12.31.22:613][752]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.03.21-12.31.22:613][752]PIE: New page: PIE session: Level2 (21 Mar 2022, 12:31:22)
+[2022.03.21-12.31.22:613][752]LogPlayLevel: Creating play world package: /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2
+[2022.03.21-12.31.22:636][752]LogPlayLevel: PIE: StaticDuplicateObject took: (0.021941s)
+[2022.03.21-12.31.22:637][752]LogAIModule: Creating AISystem for world Level2
+[2022.03.21-12.31.22:637][752]LogPlayLevel: PIE: World Init took: (0.001404s)
+[2022.03.21-12.31.22:637][752]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPersonCPP/Maps/Level2.Level2 to /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2.Level2 (0.023493s)
+[2022.03.21-12.31.22:643][752]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2022.03.21-12.31.22:644][752]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2022.03.21-12.31.22:644][752]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.03.21-12.31.22:644][752]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.03.21-12.31.22:644][752]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.03.21-12.31.22:644][752]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.03.21-12.31.22:644][752]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.03.21-12.31.22:644][752]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.03.21-12.31.22:644][752]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.03.21-12.31.22:644][752]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.03.21-12.31.22:645][752]LogAudio: Display: Using built-in audio occlusion.
+[2022.03.21-12.31.22:645][752]LogAudioMixer: Display: Initializing audio mixer.
+[2022.03.21-12.31.22:655][752]LogAudioMixer: Display: 0: FrontLeft
+[2022.03.21-12.31.22:655][752]LogAudioMixer: Display: 1: FrontRight
+[2022.03.21-12.31.22:664][752]LogAudioMixer: Display: Using Audio Device Speakers (Synaptics HD Audio)
+[2022.03.21-12.31.22:664][752]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.03.21-12.31.22:664][752]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.03.21-12.31.22:664][752]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.03.21-12.31.22:664][752]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.03.21-12.31.22:664][752]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.03.21-12.31.22:664][752]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.03.21-12.31.22:665][752]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.03.21-12.31.22:665][752]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.03.21-12.31.22:665][752]LogInit: FAudioDevice initialized.
+[2022.03.21-12.31.22:665][752]LogAudio: Display: Audio Device (ID: 3) registered with world 'Level2'.
+[2022.03.21-12.31.22:681][752]LogLoad: Game class is 'GM_MyGameMode_C'
+[2022.03.21-12.31.22:689][752]LogWorld: Bringing World /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2.Level2 up for play (max tick rate 0) at 2022.03.21-12.31.22
+[2022.03.21-12.31.22:689][752]LogWorld: Bringing up level for play took: 0.007531
+[2022.03.21-12.31.22:690][752]LogOnline: OSS: Creating online subsystem instance for: :Context_7
+[2022.03.21-12.31.22:692][752]PIE: Server logged in
+[2022.03.21-12.31.22:693][752]PIE: Play in editor total start time 0.086 seconds.
+[2022.03.21-12.31.32:675][428]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.03.21-12.31.32:675][428]LogWorld: BeginTearingDown for /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2
+[2022.03.21-12.31.32:675][428]LogWorld: UWorld::CleanupWorld for Level2, bSessionEnded=true, bCleanupResources=true
+[2022.03.21-12.31.32:675][428]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.03.21-12.31.32:686][428]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.03.21-12.31.32:692][428]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.03.21-12.31.32:696][428]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.03.21-12.31.32:696][428]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.03.21-12.31.32:697][428]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.03.21-12.31.32:713][428]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2022.03.21-12.31.32:752][429]LogPlayLevel: Display: Destroying online subsystem :Context_7
+[2022.03.21-12.31.59:219][605]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2022.03.21-12.32.03:387][605]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/Level2_Auto1DFE81F1C4AD9FBC38A852098C17359B7.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/Autosaves/Game/ThirdPersonCPP/Maps/Level2_Auto1.umap'
+[2022.03.21-12.32.03:408][605]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/ThirdPersonCPP/Maps/Level2' took 4.197
+[2022.03.21-12.32.03:408][605]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 4.197
+[2022.03.21-12.32.03:410][605]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ThirdPersonCPP/Kevin_Test/Materials/MI_GodRays] ([1] browsable assets)...
+[2022.03.21-12.32.03:426][605]OBJ SavePackage:     Rendered thumbnail for [MaterialInstanceConstant /Game/ThirdPersonCPP/Kevin_Test/Materials/MI_GodRays.MI_GodRays]
+[2022.03.21-12.32.03:426][605]OBJ SavePackage: Finished generating thumbnails for package [/Game/ThirdPersonCPP/Kevin_Test/Materials/MI_GodRays]
+[2022.03.21-12.32.03:430][605]LogUObjectHash: Compacting FUObjectHashTables data took   0.20ms
+[2022.03.21-12.32.03:430][605]TextureStreamingBuild: Display: Compiling optional shaders took 0.000 seconds.
+[2022.03.21-12.32.03:436][605]LogUObjectHash: Compacting FUObjectHashTables data took   0.22ms
+[2022.03.21-12.32.03:492][605]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/MI_GodRays_Auto18246A0AB4C0DD6FB018770A48B19FE29.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/Autosaves/Game/ThirdPersonCPP/Kevin_Test/Materials/MI_GodRays_Auto1.uasset'
+[2022.03.21-12.32.03:500][605]LogFileHelpers: Auto-saving content packages took 0.092
+[2022.03.21-12.33.09:199][802]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Sphere104)
+[2022.03.21-12.37.32:452][122]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Sphere159)
+[2022.03.21-12.37.35:332][329]LogUObjectHash: Compacting FUObjectHashTables data took   0.26ms
+[2022.03.21-12.37.36:729][329]LogSlate: Window 'Save Content' being destroyed
+[2022.03.21-12.37.36:756][329]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonCPP/Maps/Level2" FILE="M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.03.21-12.37.36:760][329]LogUObjectHash: Compacting FUObjectHashTables data took   0.22ms
+[2022.03.21-12.37.40:616][329]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/Level2FB5CA7E144BA514DD295AB886CB2C0B8.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap'
+[2022.03.21-12.37.40:656][329]LogFileHelpers: Saving map 'Level2' took 3.900
+[2022.03.21-12.37.40:709][329]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/MI_GodRays20F40D72411E5F6B37833F927129DAFF.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Materials/MI_GodRays.uasset'
+[2022.03.21-12.37.40:790][329]AssetCheck: New page: Asset Save: multiple assets
+[2022.03.21-12.37.40:790][329]LogContentValidation: Display: Validating MaterialInstanceConstant /Game/ThirdPersonCPP/Kevin_Test/Materials/MI_GodRays.MI_GodRays
+[2022.03.21-12.37.40:790][329]LogContentValidation: Display: Validating World /Game/ThirdPersonCPP/Maps/Level2.Level2
+[2022.03.21-12.38.08:444][639]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Sphere109)
+[2022.03.21-12.38.09:970][720]LogAssetEditorSubsystem: Opening Asset editor for Material /Game/ThirdPersonCPP/Kevin_Test/Shaders/M_OpaqueClouds.M_OpaqueClouds
+[2022.03.21-12.38.09:984][720]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.38.10:168][720]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.38.10:185][720]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.38.10:205][720]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 40
+[2022.03.21-12.38.10:205][720]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 39
+[2022.03.21-12.38.10:205][720]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 38
+[2022.03.21-12.38.10:205][720]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 37
+[2022.03.21-12.38.10:205][720]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 36
+[2022.03.21-12.38.10:205][720]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 35
+[2022.03.21-12.38.10:205][720]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 34
+[2022.03.21-12.38.10:205][720]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 33
+[2022.03.21-12.38.10:208][720]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionVectorParameter_0, compiling. 
+[2022.03.21-12.38.10:211][720]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionPanner_0, compiling. 
+[2022.03.21-12.38.10:214][720]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_0, compiling. 
+[2022.03.21-12.38.10:217][720]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionNoise_1, compiling. 
+[2022.03.21-12.38.14:909][963]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 48
+[2022.03.21-12.38.14:941][965]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 47
+[2022.03.21-12.38.14:965][966]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 46
+[2022.03.21-12.38.14:980][967]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 45
+[2022.03.21-12.38.15:014][969]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 44
+[2022.03.21-12.38.15:095][973]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 43
+[2022.03.21-12.38.15:120][974]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 42
+[2022.03.21-12.38.15:238][980]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 41
+[2022.03.21-12.38.15:238][980]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 40
+[2022.03.21-12.38.15:238][980]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 39
+[2022.03.21-12.38.15:256][981]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 38
+[2022.03.21-12.38.15:337][985]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 37
+[2022.03.21-12.38.15:394][988]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 36
+[2022.03.21-12.38.15:458][990]LogSlate: Window 'Color Picker' being destroyed
+[2022.03.21-12.38.15:488][991]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 35
+[2022.03.21-12.38.15:527][993]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 34
+[2022.03.21-12.38.15:686][  1]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 33
+[2022.03.21-12.38.15:780][  6]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 32
+[2022.03.21-12.38.15:814][  8]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 31
+[2022.03.21-12.38.15:925][ 12]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 30
+[2022.03.21-12.38.15:925][ 12]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 29
+[2022.03.21-12.38.15:963][ 15]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 28
+[2022.03.21-12.38.16:007][ 17]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 27
+[2022.03.21-12.38.16:056][ 20]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 26
+[2022.03.21-12.38.16:108][ 23]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 25
+[2022.03.21-12.38.16:183][ 27]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 24
+[2022.03.21-12.38.16:261][ 31]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 23
+[2022.03.21-12.38.16:325][ 34]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 22
+[2022.03.21-12.38.16:341][ 35]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 21
+[2022.03.21-12.38.16:474][ 42]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 20
+[2022.03.21-12.38.16:474][ 42]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 19
+[2022.03.21-12.38.16:474][ 42]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 18
+[2022.03.21-12.38.16:487][ 43]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 17
+[2022.03.21-12.38.16:570][ 47]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 16
+[2022.03.21-12.38.16:572][ 47]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 15
+[2022.03.21-12.38.16:678][ 52]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 14
+[2022.03.21-12.38.16:700][ 53]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 13
+[2022.03.21-12.38.16:909][ 63]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 12
+[2022.03.21-12.38.16:910][ 63]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 11
+[2022.03.21-12.38.16:931][ 64]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 10
+[2022.03.21-12.38.17:035][ 70]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 9
+[2022.03.21-12.38.17:049][ 71]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 8
+[2022.03.21-12.38.17:109][ 73]MaterialEditorStats: Base pass shader: 120 instructions
+[2022.03.21-12.38.17:109][ 73]MaterialEditorStats: Base pass shader with Surface Lightmap: 147 instructions
+[2022.03.21-12.38.17:109][ 73]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 194 instructions
+[2022.03.21-12.38.17:109][ 73]MaterialEditorStats: Base pass vertex shader: 39 instructions
+[2022.03.21-12.38.17:109][ 73]MaterialEditorStats: Texture samplers: 2/16
+[2022.03.21-12.38.17:109][ 73]MaterialEditorStats: Texture Lookups (Est.): VS(1), PS(0)
+[2022.03.21-12.38.17:124][ 74]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 7
+[2022.03.21-12.38.17:164][ 75]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 6
+[2022.03.21-12.38.17:207][ 77]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 5
+[2022.03.21-12.38.17:336][ 83]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 4
+[2022.03.21-12.38.17:496][ 92]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 3
+[2022.03.21-12.38.17:496][ 92]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 2
+[2022.03.21-12.38.17:496][ 92]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 1
+[2022.03.21-12.40.39:513][588]LogFactory: FactoryCreateFile: Texture with ReimportTextureFactory (0 0 \\StuHomeEven\HomeDrive8$\2005898\Desktop\photo-1596986368270-b30eda6c4b84.jpg)
+[2022.03.21-12.40.39:639][588]LogTexture: Display: Building textures: photo-1596986368270-b30eda6c4b84 (BGRA8, 1000X667)
+[2022.03.21-12.40.39:659][588]LogFactory: FactoryCreateFile: Texture with ReimportTextureFactory (0 0 \\StuHomeEven\HomeDrive8$\2005898\Desktop\istockphoto-1092724368-170667a.jpg)
+[2022.03.21-12.40.39:666][588]LogTexture: Display: Building textures: istockphoto-1092724368-170667a (BGRA8, 509X339)
+[2022.03.21-12.40.47:286][923]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2022.03.21-12.40.48:653][923]LogSlate: Window 'Save Content' being destroyed
+[2022.03.21-12.40.48:722][923]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/istockphoto-1092724368-170667aAEEF9C3A4EAD383A9E3F9BA9A21DCF37.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Textures/istockphoto-1092724368-170667a.uasset'
+[2022.03.21-12.40.48:740][923]LogUObjectHash: Compacting FUObjectHashTables data took   0.57ms
+[2022.03.21-12.40.48:741][923]TextureStreamingBuild: Display: Compiling optional shaders took 0.000 seconds.
+[2022.03.21-12.40.48:746][923]LogUObjectHash: Compacting FUObjectHashTables data took   0.20ms
+[2022.03.21-12.40.48:792][923]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/MI_GodRays9619FA1A4C2D48C8492EB4B605E79F9A.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Materials/MI_GodRays.uasset'
+[2022.03.21-12.40.48:857][923]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/photo-1596986368270-b30eda6c4b8438C4FEFA427ED33308F49AB5B5A9D9F3.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Textures/photo-1596986368270-b30eda6c4b84.uasset'
+[2022.03.21-12.40.48:883][923]AssetCheck: New page: Asset Save: multiple assets
+[2022.03.21-12.40.48:883][923]LogContentValidation: Display: Validating MaterialInstanceConstant /Game/ThirdPersonCPP/Kevin_Test/Materials/MI_GodRays.MI_GodRays
+[2022.03.21-12.40.48:883][923]LogContentValidation: Display: Validating Texture2D /Game/ThirdPersonCPP/Kevin_Test/Textures/istockphoto-1092724368-170667a.istockphoto-1092724368-170667a
+[2022.03.21-12.40.48:883][923]LogContentValidation: Display: Validating Texture2D /Game/ThirdPersonCPP/Kevin_Test/Textures/photo-1596986368270-b30eda6c4b84.photo-1596986368270-b30eda6c4b84
+[2022.03.21-12.40.55:940][273]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.40.55:955][273]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_1, compiling. 
+[2022.03.21-12.40.55:961][273]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 40
+[2022.03.21-12.40.55:961][273]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 39
+[2022.03.21-12.40.55:961][273]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 38
+[2022.03.21-12.40.55:961][273]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 37
+[2022.03.21-12.40.55:961][273]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 36
+[2022.03.21-12.40.55:961][273]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 35
+[2022.03.21-12.40.55:961][273]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 34
+[2022.03.21-12.40.55:961][273]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 33
+[2022.03.21-12.40.55:964][273]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionVectorParameter_0, compiling. 
+[2022.03.21-12.40.55:967][273]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionPanner_0, compiling. 
+[2022.03.21-12.40.55:970][273]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_0, compiling. 
+[2022.03.21-12.40.55:972][273]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionNoise_1, compiling. 
+[2022.03.21-12.40.55:975][273]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_1, compiling. 
+[2022.03.21-12.40.55:985][273]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.40.56:000][273]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_2, compiling. 
+[2022.03.21-12.40.56:014][273]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionVectorParameter_0, compiling. 
+[2022.03.21-12.40.56:017][273]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionPanner_0, compiling. 
+[2022.03.21-12.40.56:020][273]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_0, compiling. 
+[2022.03.21-12.40.56:023][273]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionNoise_1, compiling. 
+[2022.03.21-12.40.56:027][273]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_1, compiling. 
+[2022.03.21-12.40.56:031][273]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_2, compiling. 
+[2022.03.21-12.40.59:881][476]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 64
+[2022.03.21-12.40.59:887][476]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 63
+[2022.03.21-12.40.59:887][476]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 62
+[2022.03.21-12.40.59:887][476]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 61
+[2022.03.21-12.40.59:918][478]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 60
+[2022.03.21-12.40.59:955][480]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 59
+[2022.03.21-12.41.00:116][488]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 58
+[2022.03.21-12.41.00:140][489]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 57
+[2022.03.21-12.41.00:243][494]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 56
+[2022.03.21-12.41.00:279][496]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 55
+[2022.03.21-12.41.00:300][497]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 54
+[2022.03.21-12.41.00:419][503]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 53
+[2022.03.21-12.41.00:486][506]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 52
+[2022.03.21-12.41.00:486][506]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 51
+[2022.03.21-12.41.00:486][506]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 50
+[2022.03.21-12.41.00:548][510]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 49
+[2022.03.21-12.41.00:587][512]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 48
+[2022.03.21-12.41.00:638][515]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 47
+[2022.03.21-12.41.00:683][517]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 46
+[2022.03.21-12.41.00:708][518]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 45
+[2022.03.21-12.41.00:827][524]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 44
+[2022.03.21-12.41.00:907][528]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 43
+[2022.03.21-12.41.01:005][532]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 42
+[2022.03.21-12.41.01:104][537]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 41
+[2022.03.21-12.41.01:161][540]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 40
+[2022.03.21-12.41.01:179][541]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 39
+[2022.03.21-12.41.01:268][546]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 38
+[2022.03.21-12.41.01:286][547]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 37
+[2022.03.21-12.41.01:356][551]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 36
+[2022.03.21-12.41.01:390][553]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 35
+[2022.03.21-12.41.01:487][558]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 34
+[2022.03.21-12.41.01:490][558]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 33
+[2022.03.21-12.41.01:556][561]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 32
+[2022.03.21-12.41.01:624][565]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 31
+[2022.03.21-12.41.01:646][566]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 30
+[2022.03.21-12.41.01:746][571]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 29
+[2022.03.21-12.41.01:828][575]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 28
+[2022.03.21-12.41.01:829][575]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 27
+[2022.03.21-12.41.01:867][577]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 26
+[2022.03.21-12.41.01:882][578]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 25
+[2022.03.21-12.41.01:958][582]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 24
+[2022.03.21-12.41.01:958][582]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 23
+[2022.03.21-12.41.02:071][587]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 22
+[2022.03.21-12.41.02:110][589]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 21
+[2022.03.21-12.41.02:247][595]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 20
+[2022.03.21-12.41.02:266][596]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 19
+[2022.03.21-12.41.02:362][600]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 18
+[2022.03.21-12.41.02:402][602]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 17
+[2022.03.21-12.41.02:454][605]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 16
+[2022.03.21-12.41.02:505][607]MaterialEditorStats: Base pass shader: 120 instructions
+[2022.03.21-12.41.02:505][607]MaterialEditorStats: Base pass shader with Surface Lightmap: 147 instructions
+[2022.03.21-12.41.02:505][607]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 194 instructions
+[2022.03.21-12.41.02:505][607]MaterialEditorStats: Base pass vertex shader: 39 instructions
+[2022.03.21-12.41.02:505][607]MaterialEditorStats: Texture samplers: 2/16
+[2022.03.21-12.41.02:505][607]MaterialEditorStats: Texture Lookups (Est.): VS(1), PS(0)
+[2022.03.21-12.41.02:539][609]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 15
+[2022.03.21-12.41.02:539][609]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 14
+[2022.03.21-12.41.02:591][612]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 13
+[2022.03.21-12.41.02:665][616]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 12
+[2022.03.21-12.41.02:822][621]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 11
+[2022.03.21-12.41.02:842][622]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 10
+[2022.03.21-12.41.02:879][624]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 9
+[2022.03.21-12.41.02:898][625]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 8
+[2022.03.21-12.41.03:030][632]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 7
+[2022.03.21-12.41.03:050][633]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 6
+[2022.03.21-12.41.03:112][636]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 5
+[2022.03.21-12.41.03:112][636]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 4
+[2022.03.21-12.41.03:318][646]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 3
+[2022.03.21-12.41.03:318][646]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 2
+[2022.03.21-12.41.03:436][652]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 1
+[2022.03.21-12.41.11:401][ 84]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.41.11:423][ 84]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 40
+[2022.03.21-12.41.11:423][ 84]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 39
+[2022.03.21-12.41.11:423][ 84]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 38
+[2022.03.21-12.41.11:423][ 84]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 37
+[2022.03.21-12.41.11:423][ 84]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 36
+[2022.03.21-12.41.11:423][ 84]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 35
+[2022.03.21-12.41.11:423][ 84]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 34
+[2022.03.21-12.41.11:424][ 84]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 33
+[2022.03.21-12.41.11:425][ 84]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_1, compiling. 
+[2022.03.21-12.41.11:763][100]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 32
+[2022.03.21-12.41.11:814][103]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 31
+[2022.03.21-12.41.11:835][104]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 30
+[2022.03.21-12.41.11:835][104]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 29
+[2022.03.21-12.41.11:852][105]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 28
+[2022.03.21-12.41.11:930][109]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 27
+[2022.03.21-12.41.12:036][114]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 26
+[2022.03.21-12.41.12:095][117]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 25
+[2022.03.21-12.41.12:095][117]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 24
+[2022.03.21-12.41.12:100][117]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 23
+[2022.03.21-12.41.12:193][120]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 22
+[2022.03.21-12.41.12:244][123]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 21
+[2022.03.21-12.41.12:261][124]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 20
+[2022.03.21-12.41.12:436][133]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 19
+[2022.03.21-12.41.12:436][133]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 18
+[2022.03.21-12.41.12:582][140]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 17
+[2022.03.21-12.41.12:728][147]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 16
+[2022.03.21-12.41.12:728][147]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 15
+[2022.03.21-12.41.12:777][150]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 14
+[2022.03.21-12.41.12:792][151]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 13
+[2022.03.21-12.41.12:809][152]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 12
+[2022.03.21-12.41.12:825][153]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 11
+[2022.03.21-12.41.12:921][158]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 10
+[2022.03.21-12.41.12:940][159]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 9
+[2022.03.21-12.41.13:153][169]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 8
+[2022.03.21-12.41.13:157][169]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 7
+[2022.03.21-12.41.13:171][169]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.41.13:173][169]LogMaterial: Warning: [AssetLog] /Engine/Transient.M_OpaqueClouds (no disk path found): Failed to compile Material for platform PCD3D_SM5, Default Material will be used in game.
+[2022.03.21-12.41.13:173][169]LogMaterial: Display: 	(Node TextureSample) Coercion failed: 	MaterialFloat3 Local2 = (GetWorldPosition(Parameters) + Local1);
+: float3 -> float2
+[2022.03.21-12.41.13:181][169]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_1, compiling. 
+[2022.03.21-12.41.13:190][169]MaterialEditorStats: Error: [SM5] (Node TextureSample) Coercion failed: 	MaterialFloat3 Local2 = (GetWorldPosition(Parameters) + Local1);
+: float3 -> float2
+[2022.03.21-12.41.30:663][135]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.41.30:682][135]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 40
+[2022.03.21-12.41.30:682][135]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 39
+[2022.03.21-12.41.30:682][135]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 38
+[2022.03.21-12.41.30:682][135]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 37
+[2022.03.21-12.41.30:682][135]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 36
+[2022.03.21-12.41.30:682][135]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 35
+[2022.03.21-12.41.30:682][135]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 34
+[2022.03.21-12.41.30:682][135]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 33
+[2022.03.21-12.41.30:684][135]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_1, compiling. 
+[2022.03.21-12.41.30:948][147]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 36
+[2022.03.21-12.41.31:068][153]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 35
+[2022.03.21-12.41.31:119][156]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 34
+[2022.03.21-12.41.31:119][156]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 33
+[2022.03.21-12.41.31:119][156]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 32
+[2022.03.21-12.41.31:151][158]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 31
+[2022.03.21-12.41.31:199][161]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 30
+[2022.03.21-12.41.31:358][169]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 29
+[2022.03.21-12.41.31:358][169]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 28
+[2022.03.21-12.41.31:358][169]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 27
+[2022.03.21-12.41.31:380][170]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 26
+[2022.03.21-12.41.31:432][173]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 25
+[2022.03.21-12.41.31:509][177]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 24
+[2022.03.21-12.41.31:743][186]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 23
+[2022.03.21-12.41.31:743][186]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 22
+[2022.03.21-12.41.31:743][186]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 21
+[2022.03.21-12.41.31:892][193]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 20
+[2022.03.21-12.41.31:994][199]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 19
+[2022.03.21-12.41.32:012][200]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 18
+[2022.03.21-12.41.32:029][201]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 17
+[2022.03.21-12.41.32:075][204]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 16
+[2022.03.21-12.41.32:075][204]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 15
+[2022.03.21-12.41.32:139][208]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 14
+[2022.03.21-12.41.32:179][210]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 13
+[2022.03.21-12.41.32:210][210]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 12
+[2022.03.21-12.41.32:331][216]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 11
+[2022.03.21-12.41.32:388][219]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 10
+[2022.03.21-12.41.32:405][220]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 9
+[2022.03.21-12.41.32:440][222]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 8
+[2022.03.21-12.41.32:573][229]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 7
+[2022.03.21-12.41.32:573][229]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 6
+[2022.03.21-12.41.32:627][232]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 5
+[2022.03.21-12.41.32:628][232]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 4
+[2022.03.21-12.41.32:628][232]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 3
+[2022.03.21-12.41.32:782][240]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 2
+[2022.03.21-12.41.32:782][240]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 1
+[2022.03.21-12.41.33:107][256]MaterialEditorStats: Base pass shader: 120 instructions
+[2022.03.21-12.41.33:107][256]MaterialEditorStats: Base pass shader with Surface Lightmap: 147 instructions
+[2022.03.21-12.41.33:107][256]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 194 instructions
+[2022.03.21-12.41.33:107][256]MaterialEditorStats: Base pass vertex shader: 43 instructions
+[2022.03.21-12.41.33:107][256]MaterialEditorStats: Texture samplers: 2/16
+[2022.03.21-12.41.33:107][256]MaterialEditorStats: Texture Lookups (Est.): VS(1), PS(0)
+[2022.03.21-12.41.33:107][256]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2022.03.21-12.41.42:186][754]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.41.42:220][755]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 40
+[2022.03.21-12.41.42:220][755]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 39
+[2022.03.21-12.41.42:220][755]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 38
+[2022.03.21-12.41.42:220][755]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 37
+[2022.03.21-12.41.42:220][755]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 36
+[2022.03.21-12.41.42:220][755]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 35
+[2022.03.21-12.41.42:220][755]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 34
+[2022.03.21-12.41.42:220][755]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 33
+[2022.03.21-12.41.42:570][774]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 32
+[2022.03.21-12.41.42:609][776]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 31
+[2022.03.21-12.41.42:609][776]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 30
+[2022.03.21-12.41.42:631][777]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 29
+[2022.03.21-12.41.42:631][777]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 28
+[2022.03.21-12.41.42:729][782]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 27
+[2022.03.21-12.41.42:768][784]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 26
+[2022.03.21-12.41.42:852][788]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 25
+[2022.03.21-12.41.42:887][790]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 24
+[2022.03.21-12.41.42:887][790]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 23
+[2022.03.21-12.41.42:962][794]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 22
+[2022.03.21-12.41.43:009][796]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 21
+[2022.03.21-12.41.43:082][800]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 20
+[2022.03.21-12.41.43:152][803]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 19
+[2022.03.21-12.41.43:194][805]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 18
+[2022.03.21-12.41.43:375][814]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 17
+[2022.03.21-12.41.43:445][818]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 16
+[2022.03.21-12.41.43:445][818]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 15
+[2022.03.21-12.41.43:563][824]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 14
+[2022.03.21-12.41.43:563][824]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 13
+[2022.03.21-12.41.43:588][825]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 12
+[2022.03.21-12.41.43:588][825]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 11
+[2022.03.21-12.41.43:719][832]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 10
+[2022.03.21-12.41.43:744][833]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 9
+[2022.03.21-12.41.43:799][836]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 8
+[2022.03.21-12.41.43:901][841]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 7
+[2022.03.21-12.41.43:960][844]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 6
+[2022.03.21-12.41.43:989][845]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 5
+[2022.03.21-12.41.44:039][848]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 4
+[2022.03.21-12.41.44:111][852]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 3
+[2022.03.21-12.41.44:111][852]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 2
+[2022.03.21-12.41.44:140][853]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 1
+[2022.03.21-12.41.44:669][877]MaterialEditorStats: Base pass shader: 120 instructions
+[2022.03.21-12.41.44:669][877]MaterialEditorStats: Base pass shader with Surface Lightmap: 147 instructions
+[2022.03.21-12.41.44:669][877]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 194 instructions
+[2022.03.21-12.41.44:669][877]MaterialEditorStats: Base pass vertex shader: 39 instructions
+[2022.03.21-12.41.44:669][877]MaterialEditorStats: Texture samplers: 2/16
+[2022.03.21-12.41.44:669][877]MaterialEditorStats: Texture Lookups (Est.): VS(1), PS(0)
+[2022.03.21-12.41.53:266][349]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.41.53:288][349]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_1, compiling. 
+[2022.03.21-12.41.53:290][349]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 40
+[2022.03.21-12.41.53:290][349]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 39
+[2022.03.21-12.41.53:290][349]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 38
+[2022.03.21-12.41.53:290][349]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 37
+[2022.03.21-12.41.53:290][349]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 36
+[2022.03.21-12.41.53:290][349]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 35
+[2022.03.21-12.41.53:290][349]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 34
+[2022.03.21-12.41.53:290][349]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 33
+[2022.03.21-12.41.53:660][368]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 36
+[2022.03.21-12.41.53:729][372]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 35
+[2022.03.21-12.41.53:747][373]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 34
+[2022.03.21-12.41.53:747][373]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 33
+[2022.03.21-12.41.53:762][374]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 32
+[2022.03.21-12.41.53:886][381]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 31
+[2022.03.21-12.41.53:886][381]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 30
+[2022.03.21-12.41.53:985][386]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 29
+[2022.03.21-12.41.53:989][386]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 28
+[2022.03.21-12.41.54:007][387]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 27
+[2022.03.21-12.41.54:066][390]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 26
+[2022.03.21-12.41.54:180][396]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 25
+[2022.03.21-12.41.54:225][398]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 24
+[2022.03.21-12.41.54:306][402]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 23
+[2022.03.21-12.41.54:345][404]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 22
+[2022.03.21-12.41.54:487][411]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 21
+[2022.03.21-12.41.54:558][413]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 20
+[2022.03.21-12.41.54:668][419]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 19
+[2022.03.21-12.41.54:668][419]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 18
+[2022.03.21-12.41.54:711][422]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 17
+[2022.03.21-12.41.54:711][422]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 16
+[2022.03.21-12.41.54:729][423]LogMaterialEditor: Saving and Compiling material M_OpaqueClouds
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 15
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 14
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 13
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 12
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 11
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 10
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 9
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 8
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 7
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 6
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 5
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 4
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 3
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 2
+[2022.03.21-12.41.55:843][423]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 1
+[2022.03.21-12.41.55:869][423]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.41.55:950][423]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 40
+[2022.03.21-12.41.55:950][423]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 39
+[2022.03.21-12.41.55:950][423]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 38
+[2022.03.21-12.41.55:950][423]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 37
+[2022.03.21-12.41.55:950][423]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 36
+[2022.03.21-12.41.55:950][423]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 35
+[2022.03.21-12.41.55:951][423]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 34
+[2022.03.21-12.41.55:951][423]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 33
+[2022.03.21-12.41.55:963][423]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.41.56:078][423]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2022.03.21-12.41.56:084][423]LogMaterial: Display: Missing cached shader map for material DebugViewMode MaterialTexCoordScale, compiling. 
+[2022.03.21-12.41.56:654][423]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 110
+[2022.03.21-12.41.56:654][423]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 109
+[2022.03.21-12.41.56:654][423]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 108
+[2022.03.21-12.41.56:654][423]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 107
+[2022.03.21-12.41.56:654][423]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 106
+[2022.03.21-12.41.56:654][423]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 105
+[2022.03.21-12.41.56:654][423]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 104
+[2022.03.21-12.41.56:654][423]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 103
+[2022.03.21-12.41.56:654][423]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 102
+[2022.03.21-12.41.56:654][423]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 101
+[2022.03.21-12.41.56:654][423]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 100
+[2022.03.21-12.41.56:654][423]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 99
+[2022.03.21-12.41.56:654][423]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 98
+[2022.03.21-12.41.57:213][423]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 97
+[2022.03.21-12.41.57:213][423]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 96
+[2022.03.21-12.41.57:213][423]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 95
+[2022.03.21-12.41.57:213][423]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 94
+[2022.03.21-12.41.57:213][423]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 93
+[2022.03.21-12.41.57:213][423]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 92
+[2022.03.21-12.41.57:213][423]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 91
+[2022.03.21-12.41.57:213][423]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 90
+[2022.03.21-12.41.57:213][423]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 89
+[2022.03.21-12.41.57:213][423]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 88
+[2022.03.21-12.41.57:772][423]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 87
+[2022.03.21-12.41.57:772][423]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 86
+[2022.03.21-12.41.57:772][423]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 85
+[2022.03.21-12.41.57:772][423]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 84
+[2022.03.21-12.41.57:772][423]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 83
+[2022.03.21-12.41.57:772][423]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 82
+[2022.03.21-12.41.57:772][423]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 81
+[2022.03.21-12.41.57:772][423]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 80
+[2022.03.21-12.41.57:772][423]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 79
+[2022.03.21-12.41.57:772][423]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 78
+[2022.03.21-12.41.57:772][423]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 77
+[2022.03.21-12.41.57:772][423]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 76
+[2022.03.21-12.41.58:080][423]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 75
+[2022.03.21-12.41.58:080][423]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 74
+[2022.03.21-12.41.58:080][423]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 64
+[2022.03.21-12.41.58:080][423]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 54
+[2022.03.21-12.41.58:080][423]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 47
+[2022.03.21-12.41.58:080][423]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 41
+[2022.03.21-12.41.58:080][423]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 35
+[2022.03.21-12.41.58:080][423]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 30
+[2022.03.21-12.41.58:080][423]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 26
+[2022.03.21-12.41.58:091][423]TextureStreamingBuild: Display: Compiling optional shaders took 2.013 seconds.
+[2022.03.21-12.41.58:137][423]LogUObjectHash: Compacting FUObjectHashTables data took   0.28ms
+[2022.03.21-12.41.59:300][423]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 22
+[2022.03.21-12.41.59:858][423]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 19
+[2022.03.21-12.41.59:858][423]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 16
+[2022.03.21-12.41.59:858][423]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 13
+[2022.03.21-12.42.00:416][423]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 11
+[2022.03.21-12.42.00:416][423]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 9
+[2022.03.21-12.42.00:416][423]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 7
+[2022.03.21-12.42.00:416][423]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 6
+[2022.03.21-12.42.00:973][423]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 5
+[2022.03.21-12.42.00:973][423]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 4
+[2022.03.21-12.42.00:973][423]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 3
+[2022.03.21-12.42.00:973][423]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 2
+[2022.03.21-12.42.00:973][423]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 1
+[2022.03.21-12.42.01:341][423]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/M_OpaqueClouds63D8D7204D6F5671D62CBBA3EC85012D.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Shaders/M_OpaqueClouds.uasset'
+[2022.03.21-12.42.01:380][423]AssetCheck: New page: Asset Save: M_OpaqueClouds
+[2022.03.21-12.42.01:380][423]LogContentValidation: Display: Validating Material /Game/ThirdPersonCPP/Kevin_Test/Shaders/M_OpaqueClouds.M_OpaqueClouds
+[2022.03.21-12.42.01:381][423]MaterialEditorStats: Base pass shader: 120 instructions
+[2022.03.21-12.42.01:381][423]MaterialEditorStats: Base pass shader with Surface Lightmap: 147 instructions
+[2022.03.21-12.42.01:381][423]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 194 instructions
+[2022.03.21-12.42.01:381][423]MaterialEditorStats: Base pass vertex shader: 43 instructions
+[2022.03.21-12.42.01:381][423]MaterialEditorStats: Texture samplers: 3/16
+[2022.03.21-12.42.01:381][423]MaterialEditorStats: Texture Lookups (Est.): VS(2), PS(0)
+[2022.03.21-12.42.01:381][423]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2022.03.21-12.42.03:681][535]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-12.42.29:982][172]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.42.30:007][173]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 40
+[2022.03.21-12.42.30:007][173]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 39
+[2022.03.21-12.42.30:008][173]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 38
+[2022.03.21-12.42.30:008][173]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 37
+[2022.03.21-12.42.30:008][173]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 36
+[2022.03.21-12.42.30:008][173]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 35
+[2022.03.21-12.42.30:008][173]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 34
+[2022.03.21-12.42.30:008][173]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 33
+[2022.03.21-12.42.33:959][406]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 32
+[2022.03.21-12.42.33:959][406]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 31
+[2022.03.21-12.42.33:960][406]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 30
+[2022.03.21-12.42.33:977][407]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 29
+[2022.03.21-12.42.34:013][409]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 28
+[2022.03.21-12.42.34:078][413]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 27
+[2022.03.21-12.42.34:185][419]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 26
+[2022.03.21-12.42.34:220][421]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 25
+[2022.03.21-12.42.34:238][422]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 24
+[2022.03.21-12.42.34:238][422]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 23
+[2022.03.21-12.42.34:323][427]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 22
+[2022.03.21-12.42.34:375][430]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 21
+[2022.03.21-12.42.34:391][431]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 20
+[2022.03.21-12.42.34:551][438]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 19
+[2022.03.21-12.42.34:573][439]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 18
+[2022.03.21-12.42.34:733][447]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 17
+[2022.03.21-12.42.34:807][451]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 16
+[2022.03.21-12.42.34:807][451]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 15
+[2022.03.21-12.42.34:937][458]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 14
+[2022.03.21-12.42.34:937][458]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 13
+[2022.03.21-12.42.34:953][459]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 12
+[2022.03.21-12.42.34:972][460]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 11
+[2022.03.21-12.42.35:135][469]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 10
+[2022.03.21-12.42.35:174][471]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 9
+[2022.03.21-12.42.35:322][479]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 8
+[2022.03.21-12.42.35:393][483]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 7
+[2022.03.21-12.42.35:473][488]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 6
+[2022.03.21-12.42.35:473][488]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 5
+[2022.03.21-12.42.35:574][495]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 4
+[2022.03.21-12.42.35:598][496]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 3
+[2022.03.21-12.42.35:598][496]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 2
+[2022.03.21-12.42.35:612][497]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 1
+[2022.03.21-12.42.36:033][521]MaterialEditorStats: Base pass shader: 120 instructions
+[2022.03.21-12.42.36:033][521]MaterialEditorStats: Base pass shader with Surface Lightmap: 147 instructions
+[2022.03.21-12.42.36:033][521]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 194 instructions
+[2022.03.21-12.42.36:033][521]MaterialEditorStats: Base pass vertex shader: 39 instructions
+[2022.03.21-12.42.36:033][521]MaterialEditorStats: Texture samplers: 2/16
+[2022.03.21-12.42.36:033][521]MaterialEditorStats: Texture Lookups (Est.): VS(1), PS(0)
+[2022.03.21-12.42.40:011][758]LogMaterialEditor: Saving and Compiling material M_OpaqueClouds
+[2022.03.21-12.42.40:690][758]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.42.40:767][758]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 40
+[2022.03.21-12.42.40:768][758]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 39
+[2022.03.21-12.42.40:768][758]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 38
+[2022.03.21-12.42.40:768][758]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 37
+[2022.03.21-12.42.40:768][758]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 36
+[2022.03.21-12.42.40:768][758]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 35
+[2022.03.21-12.42.40:768][758]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 34
+[2022.03.21-12.42.40:768][758]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 33
+[2022.03.21-12.42.40:779][758]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.42.40:891][758]LogUObjectHash: Compacting FUObjectHashTables data took   1.04ms
+[2022.03.21-12.42.40:898][758]LogMaterial: Display: Missing cached shader map for material DebugViewMode MaterialTexCoordScale, compiling. 
+[2022.03.21-12.42.41:468][758]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 110
+[2022.03.21-12.42.41:468][758]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 109
+[2022.03.21-12.42.41:468][758]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 108
+[2022.03.21-12.42.41:468][758]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 107
+[2022.03.21-12.42.41:468][758]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 106
+[2022.03.21-12.42.41:468][758]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 105
+[2022.03.21-12.42.41:468][758]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 104
+[2022.03.21-12.42.41:468][758]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 103
+[2022.03.21-12.42.41:468][758]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 102
+[2022.03.21-12.42.41:468][758]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 101
+[2022.03.21-12.42.41:468][758]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 100
+[2022.03.21-12.42.41:468][758]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 99
+[2022.03.21-12.42.41:468][758]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 98
+[2022.03.21-12.42.42:028][758]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 97
+[2022.03.21-12.42.42:028][758]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 96
+[2022.03.21-12.42.42:028][758]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 95
+[2022.03.21-12.42.42:028][758]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 94
+[2022.03.21-12.42.42:028][758]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 93
+[2022.03.21-12.42.42:028][758]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 92
+[2022.03.21-12.42.42:028][758]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 91
+[2022.03.21-12.42.42:028][758]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 90
+[2022.03.21-12.42.42:028][758]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 89
+[2022.03.21-12.42.42:028][758]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 88
+[2022.03.21-12.42.42:028][758]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 87
+[2022.03.21-12.42.42:587][758]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 86
+[2022.03.21-12.42.42:587][758]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 85
+[2022.03.21-12.42.42:587][758]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 84
+[2022.03.21-12.42.42:587][758]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 83
+[2022.03.21-12.42.42:587][758]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 82
+[2022.03.21-12.42.42:587][758]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 81
+[2022.03.21-12.42.42:587][758]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 80
+[2022.03.21-12.42.42:587][758]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 79
+[2022.03.21-12.42.42:587][758]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 78
+[2022.03.21-12.42.42:587][758]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 77
+[2022.03.21-12.42.42:587][758]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 76
+[2022.03.21-12.42.42:587][758]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 75
+[2022.03.21-12.42.42:831][758]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 74
+[2022.03.21-12.42.42:832][758]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 64
+[2022.03.21-12.42.42:832][758]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 55
+[2022.03.21-12.42.42:832][758]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 48
+[2022.03.21-12.42.42:832][758]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 41
+[2022.03.21-12.42.42:832][758]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 35
+[2022.03.21-12.42.42:832][758]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 30
+[2022.03.21-12.42.42:832][758]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 26
+[2022.03.21-12.42.42:840][758]TextureStreamingBuild: Display: Compiling optional shaders took 1.948 seconds.
+[2022.03.21-12.42.42:845][758]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2022.03.21-12.42.44:581][758]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 22
+[2022.03.21-12.42.44:581][758]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 19
+[2022.03.21-12.42.44:581][758]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 16
+[2022.03.21-12.42.44:581][758]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 13
+[2022.03.21-12.42.45:139][758]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 11
+[2022.03.21-12.42.45:139][758]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 9
+[2022.03.21-12.42.45:139][758]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 7
+[2022.03.21-12.42.45:139][758]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 6
+[2022.03.21-12.42.45:696][758]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 5
+[2022.03.21-12.42.45:696][758]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 4
+[2022.03.21-12.42.45:696][758]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 3
+[2022.03.21-12.42.45:696][758]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 2
+[2022.03.21-12.42.45:696][758]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 1
+[2022.03.21-12.42.46:008][758]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/M_OpaqueClouds732A3E2E4E62ECC10EF30DB122B3E84B.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Shaders/M_OpaqueClouds.uasset'
+[2022.03.21-12.42.46:046][758]AssetCheck: New page: Asset Save: M_OpaqueClouds
+[2022.03.21-12.42.46:046][758]LogContentValidation: Display: Validating Material /Game/ThirdPersonCPP/Kevin_Test/Shaders/M_OpaqueClouds.M_OpaqueClouds
+[2022.03.21-12.42.46:047][758]MaterialEditorStats: Base pass shader: 120 instructions
+[2022.03.21-12.42.46:047][758]MaterialEditorStats: Base pass shader with Surface Lightmap: 147 instructions
+[2022.03.21-12.42.46:047][758]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 194 instructions
+[2022.03.21-12.42.46:047][758]MaterialEditorStats: Base pass vertex shader: 39 instructions
+[2022.03.21-12.42.46:047][758]MaterialEditorStats: Texture samplers: 3/16
+[2022.03.21-12.42.46:047][758]MaterialEditorStats: Texture Lookups (Est.): VS(1), PS(0)
+[2022.03.21-12.53.32:298][774]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 \\StuHomeEven\HomeDrive8$\2005898\Desktop\M_TestCloud.fbx)
+[2022.03.21-12.53.32:315][774]LogFbx: Loading FBX Scene from \\StuHomeEven\HomeDrive8$\2005898\Desktop\M_TestCloud.fbx
+[2022.03.21-12.53.32:319][774]LogFbx: FBX Scene Loaded Succesfully
+[2022.03.21-12.53.32:320][774]FBXImport: Warning: Can't detect import type. No mesh is found or animation track. 
+[2022.03.21-12.53.41:811][774]LogSlate: Window 'Message' being destroyed
+[2022.03.21-12.53.41:816][774]Message dialog closed, result: Ok, title: Message, text: Failed to import '\\StuHomeEven\HomeDrive8$\2005898\Desktop\M_TestCloud.fbx'. Failed to create asset '/Game/ThirdPersonCPP/Kevin_Test/Mesh/M_TestCloud'.
+Please see Output Log for details.
+[2022.03.21-12.53.41:816][774]LogAssetTools: Warning: Failed to import '\\StuHomeEven\HomeDrive8$\2005898\Desktop\M_TestCloud.fbx'. Failed to create asset '/Game/ThirdPersonCPP/Kevin_Test/Mesh/M_TestCloud'.
+Please see Output Log for details.
+[2022.03.21-12.54.11:816][863]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 \\StuHomeEven\HomeDrive8$\2005898\Desktop\SM_TestCloud.fbx)
+[2022.03.21-12.54.11:832][863]LogFbx: Loading FBX Scene from \\StuHomeEven\HomeDrive8$\2005898\Desktop\SM_TestCloud.fbx
+[2022.03.21-12.54.11:835][863]LogFbx: FBX Scene Loaded Succesfully
+[2022.03.21-12.54.11:837][863]FBXImport: Warning: Can't detect import type. No mesh is found or animation track. 
+[2022.03.21-12.54.16:501][863]LogSlate: Window 'Message' being destroyed
+[2022.03.21-12.54.16:505][863]Message dialog closed, result: Ok, title: Message, text: Failed to import '\\StuHomeEven\HomeDrive8$\2005898\Desktop\SM_TestCloud.fbx'. Failed to create asset '/Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud'.
+Please see Output Log for details.
+[2022.03.21-12.54.16:505][863]LogAssetTools: Warning: Failed to import '\\StuHomeEven\HomeDrive8$\2005898\Desktop\SM_TestCloud.fbx'. Failed to create asset '/Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud'.
+Please see Output Log for details.
+[2022.03.21-12.54.20:128][ 86]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonCPP/Maps/Level2" FILE="M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.03.21-12.54.20:133][ 86]LogUObjectHash: Compacting FUObjectHashTables data took   0.32ms
+[2022.03.21-12.54.23:658][ 86]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/Level286036A794541BCB9E46C6B828A56E1DE.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap'
+[2022.03.21-12.54.23:763][ 86]AssetCheck: New page: Asset Save: Level2
+[2022.03.21-12.54.23:763][ 86]LogContentValidation: Display: Validating World /Game/ThirdPersonCPP/Maps/Level2.Level2
+[2022.03.21-12.55.35:903][397]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 \\StuHomeEven\HomeDrive8$\2005898\Desktop\SM_TestCloud.fbx)
+[2022.03.21-12.55.35:917][397]LogFbx: Loading FBX Scene from \\StuHomeEven\HomeDrive8$\2005898\Desktop\SM_TestCloud.fbx
+[2022.03.21-12.55.35:925][397]LogFbx: FBX Scene Loaded Succesfully
+[2022.03.21-12.55.42:991][397]LogSlate: Window 'FBX Import Options' being destroyed
+[2022.03.21-12.55.43:036][397]LogStaticMesh: Building static mesh SM_TestCloud_Icosphere...
+[2022.03.21-12.55.43:037][397]LogStaticMesh: Built static mesh [0.00s] /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere.SM_TestCloud_Icosphere
+[2022.03.21-12.55.43:045][397]LogStaticMesh: Building static mesh SM_TestCloud_Icosphere_001...
+[2022.03.21-12.55.43:046][397]LogStaticMesh: Built static mesh [0.00s] /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_001.SM_TestCloud_Icosphere_001
+[2022.03.21-12.55.43:053][397]LogStaticMesh: Building static mesh SM_TestCloud_Icosphere_002...
+[2022.03.21-12.55.43:054][397]LogStaticMesh: Built static mesh [0.00s] /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_002.SM_TestCloud_Icosphere_002
+[2022.03.21-12.55.43:060][397]LogStaticMesh: Building static mesh SM_TestCloud_Icosphere_003...
+[2022.03.21-12.55.43:061][397]LogStaticMesh: Built static mesh [0.00s] /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_003.SM_TestCloud_Icosphere_003
+[2022.03.21-12.55.43:067][397]LogStaticMesh: Building static mesh SM_TestCloud_Icosphere_004...
+[2022.03.21-12.55.43:068][397]LogStaticMesh: Built static mesh [0.00s] /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_004.SM_TestCloud_Icosphere_004
+[2022.03.21-12.55.43:075][397]LogStaticMesh: Building static mesh SM_TestCloud_Icosphere_005...
+[2022.03.21-12.55.43:076][397]LogStaticMesh: Built static mesh [0.00s] /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_005.SM_TestCloud_Icosphere_005
+[2022.03.21-12.55.43:082][397]LogStaticMesh: Building static mesh SM_TestCloud_Icosphere_006...
+[2022.03.21-12.55.43:083][397]LogStaticMesh: Built static mesh [0.00s] /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_006.SM_TestCloud_Icosphere_006
+[2022.03.21-12.55.43:090][397]LogStaticMesh: Building static mesh SM_TestCloud_Icosphere_007...
+[2022.03.21-12.55.43:091][397]LogStaticMesh: Built static mesh [0.00s] /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_007.SM_TestCloud_Icosphere_007
+[2022.03.21-12.55.43:098][397]LogStaticMesh: Building static mesh SM_TestCloud_Icosphere_008...
+[2022.03.21-12.55.43:099][397]LogStaticMesh: Built static mesh [0.00s] /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_008.SM_TestCloud_Icosphere_008
+[2022.03.21-12.55.43:105][397]LogStaticMesh: Building static mesh SM_TestCloud_Icosphere_009...
+[2022.03.21-12.55.43:107][397]LogStaticMesh: Built static mesh [0.00s] /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_009.SM_TestCloud_Icosphere_009
+[2022.03.21-12.55.43:113][397]LogStaticMesh: Building static mesh SM_TestCloud_Icosphere_010...
+[2022.03.21-12.55.43:114][397]LogStaticMesh: Built static mesh [0.00s] /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_010.SM_TestCloud_Icosphere_010
+[2022.03.21-12.55.43:120][397]LogFbx: Display: Triangulating static mesh Icosphere.011
+[2022.03.21-12.55.43:129][397]LogStaticMesh: Building static mesh SM_TestCloud_Icosphere_011...
+[2022.03.21-12.55.43:142][397]LogStaticMesh: Built static mesh [0.01s] /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_011.SM_TestCloud_Icosphere_011
+[2022.03.21-12.55.43:162][397]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2022.03.21-12.55.58:738][174]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2022.03.21-12.55.59:880][174]LogSlate: Window 'Delete Assets' being destroyed
+[2022.03.21-12.55.59:970][174]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
+[2022.03.21-12.56.06:872][542]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_011.SM_TestCloud_Icosphere_011
+[2022.03.21-12.56.07:547][543]LogRenderer: Reallocating scene render targets to support 1432x920 Format 10 NumSamples 1 (Frame:1).
+[2022.03.21-12.56.16:613][ 17]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2022.03.21-12.56.16:613][ 17]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.03.21-12.56.22:531][326]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Sphere161)
+[2022.03.21-12.56.24:920][468]LogActorFactory: Actor Factory created SM_TestCloud_Icosphere_011
+[2022.03.21-12.56.41:675][580]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-12.57.28:094][614]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.57.28:121][615]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 40
+[2022.03.21-12.57.28:121][615]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 39
+[2022.03.21-12.57.28:121][615]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 38
+[2022.03.21-12.57.28:121][615]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 37
+[2022.03.21-12.57.28:121][615]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 36
+[2022.03.21-12.57.28:121][615]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 35
+[2022.03.21-12.57.28:121][615]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 34
+[2022.03.21-12.57.28:121][615]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 33
+[2022.03.21-12.57.29:018][659]LogMaterialEditor: Saving and Compiling material M_OpaqueClouds
+[2022.03.21-12.57.29:886][659]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.57.29:996][659]LogMaterial: Display: Missing cached shader map for material M_OpaqueClouds, compiling. 
+[2022.03.21-12.57.30:116][659]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2022.03.21-12.57.30:123][659]LogMaterial: Display: Missing cached shader map for material DebugViewMode MaterialTexCoordScale, compiling. 
+[2022.03.21-12.57.32:366][659]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 118
+[2022.03.21-12.57.32:366][659]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 117
+[2022.03.21-12.57.32:366][659]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 116
+[2022.03.21-12.57.32:366][659]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 115
+[2022.03.21-12.57.32:366][659]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 114
+[2022.03.21-12.57.32:366][659]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 113
+[2022.03.21-12.57.32:366][659]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 112
+[2022.03.21-12.57.32:366][659]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 111
+[2022.03.21-12.57.32:366][659]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 110
+[2022.03.21-12.57.32:366][659]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 109
+[2022.03.21-12.57.32:924][659]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 108
+[2022.03.21-12.57.32:924][659]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 107
+[2022.03.21-12.57.32:924][659]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 106
+[2022.03.21-12.57.32:924][659]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 105
+[2022.03.21-12.57.32:924][659]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 104
+[2022.03.21-12.57.32:924][659]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 103
+[2022.03.21-12.57.32:924][659]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 102
+[2022.03.21-12.57.32:924][659]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 101
+[2022.03.21-12.57.32:924][659]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 100
+[2022.03.21-12.57.32:924][659]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 99
+[2022.03.21-12.57.32:924][659]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 98
+[2022.03.21-12.57.33:484][659]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 97
+[2022.03.21-12.57.33:484][659]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 96
+[2022.03.21-12.57.33:484][659]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 95
+[2022.03.21-12.57.33:484][659]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 94
+[2022.03.21-12.57.33:484][659]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 93
+[2022.03.21-12.57.33:484][659]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 92
+[2022.03.21-12.57.33:484][659]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 91
+[2022.03.21-12.57.33:484][659]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 90
+[2022.03.21-12.57.33:484][659]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 89
+[2022.03.21-12.57.33:484][659]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 88
+[2022.03.21-12.57.33:484][659]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 87
+[2022.03.21-12.57.33:484][659]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 86
+[2022.03.21-12.57.33:484][659]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 85
+[2022.03.21-12.57.33:484][659]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 84
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 83
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 82
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 81
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 80
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 79
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 78
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 77
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 76
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 75
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 74
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 64
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 55
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 48
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 41
+[2022.03.21-12.57.34:043][659]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 35
+[2022.03.21-12.57.34:133][659]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 30
+[2022.03.21-12.57.34:133][659]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 26
+[2022.03.21-12.57.34:143][659]TextureStreamingBuild: Display: Compiling optional shaders took 4.025 seconds.
+[2022.03.21-12.57.34:148][659]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2022.03.21-12.57.35:341][659]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 22
+[2022.03.21-12.57.35:899][659]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 19
+[2022.03.21-12.57.35:899][659]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 16
+[2022.03.21-12.57.35:899][659]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 13
+[2022.03.21-12.57.35:899][659]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 11
+[2022.03.21-12.57.35:899][659]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 9
+[2022.03.21-12.57.36:457][659]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 7
+[2022.03.21-12.57.36:457][659]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 6
+[2022.03.21-12.57.36:457][659]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 5
+[2022.03.21-12.57.36:457][659]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 4
+[2022.03.21-12.57.36:457][659]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 3
+[2022.03.21-12.57.36:457][659]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 2
+[2022.03.21-12.57.36:849][659]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 1
+[2022.03.21-12.57.37:037][659]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/M_OpaqueClouds9F5118264AF023C697A6BA8425B76A1D.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Shaders/M_OpaqueClouds.uasset'
+[2022.03.21-12.57.37:128][659]AssetCheck: New page: Asset Save: M_OpaqueClouds
+[2022.03.21-12.57.37:128][659]LogContentValidation: Display: Validating Material /Game/ThirdPersonCPP/Kevin_Test/Shaders/M_OpaqueClouds.M_OpaqueClouds
+[2022.03.21-12.57.37:129][659]MaterialEditorStats: Base pass shader: 120 instructions
+[2022.03.21-12.57.37:129][659]MaterialEditorStats: Base pass shader with Surface Lightmap: 147 instructions
+[2022.03.21-12.57.37:129][659]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 194 instructions
+[2022.03.21-12.57.37:129][659]MaterialEditorStats: Base pass vertex shader: 39 instructions
+[2022.03.21-12.57.37:129][659]MaterialEditorStats: Texture samplers: 3/16
+[2022.03.21-12.57.44:913][404]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-12.57.51:075][823]LogMaterialEditor: Saving and Compiling material M_OpaqueClouds
+[2022.03.21-12.57.51:230][823]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/M_OpaqueCloudsA19C153C4D75401DB12191A1F9D9E693.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Shaders/M_OpaqueClouds.uasset'
+[2022.03.21-12.57.51:258][823]AssetCheck: New page: Asset Save: M_OpaqueClouds
+[2022.03.21-12.57.51:258][823]LogContentValidation: Display: Validating Material /Game/ThirdPersonCPP/Kevin_Test/Shaders/M_OpaqueClouds.M_OpaqueClouds
+[2022.03.21-12.58.05:940][159]LogTemp: Repeating last play command: Selected Viewport
+[2022.03.21-12.58.05:956][159]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.03.21-12.58.05:956][159]PIE: New page: PIE session: Level2 (21 Mar 2022, 12:58:05)
+[2022.03.21-12.58.05:956][159]LogPlayLevel: Creating play world package: /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2
+[2022.03.21-12.58.05:980][159]LogPlayLevel: PIE: StaticDuplicateObject took: (0.022894s)
+[2022.03.21-12.58.05:981][159]LogAIModule: Creating AISystem for world Level2
+[2022.03.21-12.58.05:981][159]LogPlayLevel: PIE: World Init took: (0.001369s)
+[2022.03.21-12.58.05:981][159]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPersonCPP/Maps/Level2.Level2 to /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2.Level2 (0.024430s)
+[2022.03.21-12.58.05:988][159]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2022.03.21-12.58.05:990][159]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2022.03.21-12.58.05:991][159]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.03.21-12.58.05:991][159]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.03.21-12.58.05:991][159]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.03.21-12.58.05:991][159]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.03.21-12.58.05:991][159]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.03.21-12.58.05:991][159]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.03.21-12.58.05:991][159]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.03.21-12.58.05:991][159]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.03.21-12.58.05:991][159]LogAudio: Display: Using built-in audio occlusion.
+[2022.03.21-12.58.05:991][159]LogAudioMixer: Display: Initializing audio mixer.
+[2022.03.21-12.58.06:000][159]LogAudioMixer: Display: 0: FrontLeft
+[2022.03.21-12.58.06:000][159]LogAudioMixer: Display: 1: FrontRight
+[2022.03.21-12.58.06:008][159]LogAudioMixer: Display: Using Audio Device Speakers (Synaptics HD Audio)
+[2022.03.21-12.58.06:008][159]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.03.21-12.58.06:008][159]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.03.21-12.58.06:008][159]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.03.21-12.58.06:008][159]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.03.21-12.58.06:009][159]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.03.21-12.58.06:009][159]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.03.21-12.58.06:020][159]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.03.21-12.58.06:020][159]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.03.21-12.58.06:020][159]LogInit: FAudioDevice initialized.
+[2022.03.21-12.58.06:020][159]LogAudio: Display: Audio Device (ID: 4) registered with world 'Level2'.
+[2022.03.21-12.58.06:030][159]LogLoad: Game class is 'GM_MyGameMode_C'
+[2022.03.21-12.58.06:038][159]LogWorld: Bringing World /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2.Level2 up for play (max tick rate 0) at 2022.03.21-12.58.06
+[2022.03.21-12.58.06:038][159]LogWorld: Bringing up level for play took: 0.007438
+[2022.03.21-12.58.06:038][159]LogOnline: OSS: Creating online subsystem instance for: :Context_10
+[2022.03.21-12.58.06:041][159]PIE: Server logged in
+[2022.03.21-12.58.06:042][159]PIE: Play in editor total start time 0.093 seconds.
+[2022.03.21-12.58.29:905][  7]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.03.21-12.58.29:905][  7]LogWorld: BeginTearingDown for /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2
+[2022.03.21-12.58.29:905][  7]LogWorld: UWorld::CleanupWorld for Level2, bSessionEnded=true, bCleanupResources=true
+[2022.03.21-12.58.29:906][  7]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.03.21-12.58.29:912][  7]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.03.21-12.58.29:919][  7]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.03.21-12.58.29:924][  7]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.03.21-12.58.29:924][  7]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.03.21-12.58.29:925][  7]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.03.21-12.58.29:939][  7]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.03.21-12.58.29:942][  7]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2022.03.21-12.58.29:981][  8]LogPlayLevel: Display: Destroying online subsystem :Context_10
+[2022.03.21-12.58.40:097][  4]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2022.03.21-12.58.41:247][  4]LogSlate: Window 'Save Content' being destroyed
+[2022.03.21-12.58.41:272][  4]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonCPP/Maps/Level2" FILE="M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.03.21-12.58.41:277][  4]LogUObjectHash: Compacting FUObjectHashTables data took   0.24ms
+[2022.03.21-12.58.44:915][  4]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/Level2BF3334D24CB9AE002FD4F7AF7FE450BD.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap'
+[2022.03.21-12.58.44:956][  4]LogFileHelpers: Saving map 'Level2' took 3.685
+[2022.03.21-12.58.45:050][  4]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/SM_TestCloud_Icosphere_0115E4A961C4E3EED06E373068DBCB8EF9C.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_011.uasset'
+[2022.03.21-12.58.45:124][  4]AssetCheck: New page: Asset Save: multiple assets
+[2022.03.21-12.58.45:124][  4]LogContentValidation: Display: Validating World /Game/ThirdPersonCPP/Maps/Level2.Level2
+[2022.03.21-12.58.45:125][  4]LogContentValidation: Display: Validating StaticMesh /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_011.SM_TestCloud_Icosphere_011
+[2022.03.21-12.59.04:265][ 48]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Sphere161)
+[2022.03.21-12.59.48:418][415]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.00.08:631][662]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Sphere160)
+[2022.03.21-13.00.10:579][868]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Sphere159)
+[2022.03.21-13.00.11:805][997]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Sphere157)
+[2022.03.21-13.00.13:439][173]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Sphere175)
+[2022.03.21-13.00.14:227][255]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Sphere162)
+[2022.03.21-13.06.02:366][193]LogEditorFactories: Performing atomic reimport of [//StuHomeEven/HomeDrive8$/2005898/Desktop/SM_TestCloud.fbx]
+[2022.03.21-13.06.02:455][193]LogFbx: Loading FBX Scene from //StuHomeEven/HomeDrive8$/2005898/Desktop/SM_TestCloud.fbx
+[2022.03.21-13.06.02:462][193]LogFbx: FBX Scene Loaded Succesfully
+[2022.03.21-13.06.02:502][193]LogFbx: Display: Triangulating static mesh Sphere.009
+[2022.03.21-13.06.02:719][193]LogStaticMesh: Building static mesh SM_TestCloud_Icosphere_011...
+[2022.03.21-13.06.02:941][193]LogStaticMesh: Built static mesh [0.22s] /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_011.SM_TestCloud_Icosphere_011
+[2022.03.21-13.06.02:993][193]LogEditorFactories: -- imported successfully
+[2022.03.21-13.06.02:996][193]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2022.03.21-13.06.18:841][ 14]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Sphere161)
+[2022.03.21-13.06.32:635][633]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.06.46:733][681]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Blk_31)
+[2022.03.21-13.07.27:120][803]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2022.03.21-13.07.28:226][803]LogSlate: Window 'Save Content' being destroyed
+[2022.03.21-13.07.28:255][803]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonCPP/Maps/Level2" FILE="M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.03.21-13.07.28:259][803]LogUObjectHash: Compacting FUObjectHashTables data took   0.20ms
+[2022.03.21-13.07.32:271][803]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/Level2379A894944AABE1F3E4DA5BC3C7652BB.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap'
+[2022.03.21-13.07.32:313][803]LogFileHelpers: Saving map 'Level2' took 4.059
+[2022.03.21-13.07.32:439][803]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/SM_TestCloud_Icosphere_011DF9E6A2D4883BC64CE5706A802BC8381.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_011.uasset'
+[2022.03.21-13.07.32:537][803]AssetCheck: New page: Asset Save: multiple assets
+[2022.03.21-13.07.32:537][803]LogContentValidation: Display: Validating World /Game/ThirdPersonCPP/Maps/Level2.Level2
+[2022.03.21-13.07.32:537][803]LogContentValidation: Display: Validating StaticMesh /Game/ThirdPersonCPP/Kevin_Test/Mesh/SM_TestCloud_Icosphere_011.SM_TestCloud_Icosphere_011
+[2022.03.21-13.08.03:719][ 86]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Sphere161)
+[2022.03.21-13.08.06:753][333]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.08.30:420][914]LogAssetEditorSubsystem: Opening Asset editor for Material /Game/ThirdPersonCPP/Kevin_Test/Shaders/M_CellShader_Test.M_CellShader_Test
+[2022.03.21-13.08.30:424][914]LogMaterial: Display: Missing cached shader map for material M_CellShader_Test, compiling. 
+[2022.03.21-13.08.30:541][914]LogMaterial: Display: Missing cached shader map for material M_CellShader_Test, compiling. 
+[2022.03.21-13.08.30:545][914]LogMaterial: Display: Missing cached shader map for material M_CellShader_Test, compiling. 
+[2022.03.21-13.08.30:554][914]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 4
+[2022.03.21-13.08.30:554][914]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 3
+[2022.03.21-13.08.30:554][914]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 2
+[2022.03.21-13.08.30:554][914]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 1
+[2022.03.21-13.08.30:556][914]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionDesaturation_0, compiling. 
+[2022.03.21-13.08.30:561][914]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionDesaturation_1, compiling. 
+[2022.03.21-13.08.30:709][915]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 4
+[2022.03.21-13.08.30:709][915]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 3
+[2022.03.21-13.08.30:709][915]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 2
+[2022.03.21-13.08.30:709][915]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 1
+[2022.03.21-13.08.34:233][161]MaterialEditorStats: Base pass shader without light map: 33 instructions
+[2022.03.21-13.08.34:233][161]MaterialEditorStats: Base pass vertex shader: 42 instructions
+[2022.03.21-13.08.34:233][161]MaterialEditorStats: Texture samplers: 2/16
+[2022.03.21-13.08.34:233][161]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(12)
+[2022.03.21-13.09.27:820][839]LogContentBrowser: Attempting asset rename: M_I_CellShader_Test -> MI_CellShader_Test
+[2022.03.21-13.09.27:897][839]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/MI_CellShader_Test78A6029B4F1ED5D78E682BA7D3866D98.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Shaders/MI_CellShader_Test.uasset'
+[2022.03.21-13.09.27:912][839]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/M_I_CellShader_Test17510BAE49372F34D9C143A76459E83D.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Shaders/M_I_CellShader_Test.uasset'
+[2022.03.21-13.09.27:962][839]AssetCheck: New page: Asset Save: multiple assets
+[2022.03.21-13.09.27:962][839]LogContentValidation: Display: Validating ObjectRedirector /Game/ThirdPersonCPP/Kevin_Test/Shaders/M_I_CellShader_Test.M_I_CellShader_Test
+[2022.03.21-13.09.27:963][839]LogContentValidation: Display: Validating MaterialInstanceConstant /Game/ThirdPersonCPP/Kevin_Test/Shaders/MI_CellShader_Test.MI_CellShader_Test
+[2022.03.21-13.09.36:154][453]LogAssetEditorSubsystem: Opening Asset editor for MaterialInstanceConstant /Game/ThirdPersonCPP/Kevin_Test/Shaders/MI_CellShader_Test.MI_CellShader_Test
+[2022.03.21-13.14.06:495][982]LogEditorViewport: Clicking on Actor (context menu): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.15.56:892][363]LogTemp: Repeating last play command: Selected Viewport
+[2022.03.21-13.15.56:908][363]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.03.21-13.15.56:908][363]PIE: New page: PIE session: Level2 (21 Mar 2022, 13:15:56)
+[2022.03.21-13.15.56:958][363]LogPlayLevel: Creating play world package: /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2
+[2022.03.21-13.15.56:988][363]LogPlayLevel: PIE: StaticDuplicateObject took: (0.030076s)
+[2022.03.21-13.15.56:990][363]LogAIModule: Creating AISystem for world Level2
+[2022.03.21-13.15.56:990][363]LogPlayLevel: PIE: World Init took: (0.001604s)
+[2022.03.21-13.15.56:990][363]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPersonCPP/Maps/Level2.Level2 to /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2.Level2 (0.031923s)
+[2022.03.21-13.15.57:007][363]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2022.03.21-13.15.57:009][363]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2022.03.21-13.15.57:009][363]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.03.21-13.15.57:009][363]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.03.21-13.15.57:009][363]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.03.21-13.15.57:009][363]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.03.21-13.15.57:009][363]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.03.21-13.15.57:009][363]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.03.21-13.15.57:009][363]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.03.21-13.15.57:009][363]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.03.21-13.15.57:009][363]LogAudio: Display: Using built-in audio occlusion.
+[2022.03.21-13.15.57:009][363]LogAudioMixer: Display: Initializing audio mixer.
+[2022.03.21-13.15.57:019][363]LogAudioMixer: Display: 0: FrontLeft
+[2022.03.21-13.15.57:020][363]LogAudioMixer: Display: 1: FrontRight
+[2022.03.21-13.15.57:032][363]LogAudioMixer: Display: Using Audio Device Speakers (Synaptics HD Audio)
+[2022.03.21-13.15.57:033][363]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.03.21-13.15.57:033][363]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.03.21-13.15.57:033][363]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.03.21-13.15.57:033][363]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.03.21-13.15.57:033][363]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.03.21-13.15.57:033][363]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.03.21-13.15.57:045][363]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.03.21-13.15.57:045][363]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.03.21-13.15.57:045][363]LogInit: FAudioDevice initialized.
+[2022.03.21-13.15.57:045][363]LogAudio: Display: Audio Device (ID: 5) registered with world 'Level2'.
+[2022.03.21-13.15.57:054][363]LogLoad: Game class is 'GM_MyGameMode_C'
+[2022.03.21-13.15.57:063][363]LogWorld: Bringing World /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2.Level2 up for play (max tick rate 0) at 2022.03.21-13.15.57
+[2022.03.21-13.15.57:063][363]LogWorld: Bringing up level for play took: 0.007380
+[2022.03.21-13.15.57:063][363]LogOnline: OSS: Creating online subsystem instance for: :Context_13
+[2022.03.21-13.15.57:066][363]PIE: Server logged in
+[2022.03.21-13.15.57:066][363]PIE: Play in editor total start time 0.164 seconds.
+[2022.03.21-13.16.15:319][531]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.03.21-13.16.15:319][531]LogWorld: BeginTearingDown for /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2
+[2022.03.21-13.16.15:319][531]LogWorld: UWorld::CleanupWorld for Level2, bSessionEnded=true, bCleanupResources=true
+[2022.03.21-13.16.15:320][531]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.03.21-13.16.15:331][531]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.03.21-13.16.15:338][531]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.03.21-13.16.15:342][531]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.03.21-13.16.15:343][531]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.03.21-13.16.15:344][531]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.03.21-13.16.15:357][531]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.03.21-13.16.15:361][531]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2022.03.21-13.16.15:398][532]LogPlayLevel: Display: Destroying online subsystem :Context_13
+[2022.03.21-13.20.12:249][688]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.20.33:137][951]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonCPP/Maps/Level2" FILE="M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.03.21-13.20.33:142][951]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2022.03.21-13.20.38:019][951]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/Level2E8BBAB744AC31549CAB9D78A33148D72.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap'
+[2022.03.21-13.20.38:135][951]AssetCheck: New page: Asset Save: Level2
+[2022.03.21-13.20.38:135][951]LogContentValidation: Display: Validating World /Game/ThirdPersonCPP/Maps/Level2.Level2
+[2022.03.21-13.20.39:168][ 42]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Blk_15)
+[2022.03.21-13.20.45:113][657]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.21.26:836][458]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Blk_15)
+[2022.03.21-13.21.30:185][774]LogAssetEditorSubsystem: Opening Asset editor for MaterialInstanceConstant /Game/ThirdPersonCPP/Kevin_Test/Materials/MI_TestColor.MI_TestColor
+[2022.03.21-13.21.46:720][431]LogSlate: Window 'Color Picker' being destroyed
+[2022.03.21-13.21.48:288][572]LogAssetEditorSubsystem: Opening Asset editor for Material /Game/ThirdPersonCPP/Kevin_Test/Materials/M_Water.M_Water
+[2022.03.21-13.21.48:289][572]LogMaterial: Display: Missing cached shader map for material M_Water, compiling. 
+[2022.03.21-13.21.48:408][572]LogMaterial: Display: Missing cached shader map for material M_Water, compiling. 
+[2022.03.21-13.21.48:414][572]LogMaterial: Display: Missing cached shader map for material M_Water, compiling. 
+[2022.03.21-13.21.48:426][572]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 11
+[2022.03.21-13.21.48:426][572]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 10
+[2022.03.21-13.21.48:426][572]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 9
+[2022.03.21-13.21.48:426][572]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 8
+[2022.03.21-13.21.48:426][572]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 7
+[2022.03.21-13.21.48:426][572]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 6
+[2022.03.21-13.21.48:426][572]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 5
+[2022.03.21-13.21.48:426][572]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 4
+[2022.03.21-13.21.48:426][572]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionConstant4Vector_0, compiling. 
+[2022.03.21-13.21.48:429][572]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionVectorParameter_0, compiling. 
+[2022.03.21-13.21.53:060][886]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 11
+[2022.03.21-13.21.53:126][888]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 10
+[2022.03.21-13.21.55:328][970]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 9
+[2022.03.21-13.21.55:548][981]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 8
+[2022.03.21-13.21.55:695][989]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 7
+[2022.03.21-13.21.55:714][990]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 6
+[2022.03.21-13.21.55:793][995]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 5
+[2022.03.21-13.21.55:793][995]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 4
+[2022.03.21-13.21.55:809][996]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 3
+[2022.03.21-13.21.55:980][  5]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 2
+[2022.03.21-13.21.56:001][  6]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 1
+[2022.03.21-13.21.56:188][ 13]MaterialEditorStats: Base pass shader: 564 instructions
+[2022.03.21-13.21.56:188][ 13]MaterialEditorStats: Base pass shader with Surface Lightmap: 588 instructions
+[2022.03.21-13.21.56:188][ 13]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 630 instructions
+[2022.03.21-13.21.56:188][ 13]MaterialEditorStats: Base pass vertex shader: 42 instructions
+[2022.03.21-13.21.56:188][ 13]MaterialEditorStats: Texture samplers: 4/16
+[2022.03.21-13.22.00:918][445]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionConstant4Vector_0, compiling. 
+[2022.03.21-13.22.00:921][445]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 4
+[2022.03.21-13.22.00:921][445]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 3
+[2022.03.21-13.22.00:921][445]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 2
+[2022.03.21-13.22.00:921][445]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 1
+[2022.03.21-13.22.00:921][445]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionVectorParameter_0, compiling. 
+[2022.03.21-13.22.00:926][445]LogMaterial: Display: Missing cached shader map for material M_Water, compiling. 
+[2022.03.21-13.22.00:935][445]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 4
+[2022.03.21-13.22.00:935][445]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 3
+[2022.03.21-13.22.00:935][445]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 2
+[2022.03.21-13.22.00:935][445]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 1
+[2022.03.21-13.22.00:941][445]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionConstant4Vector_0, compiling. 
+[2022.03.21-13.22.00:946][445]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionVectorParameter_0, compiling. 
+[2022.03.21-13.22.00:954][445]LogMaterial: Display: Missing cached shader map for material M_Water, compiling. 
+[2022.03.21-13.22.00:962][445]LogSlate: Window 'Color Picker' being destroyed
+[2022.03.21-13.22.01:373][469]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 19
+[2022.03.21-13.22.01:390][470]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 18
+[2022.03.21-13.22.01:407][471]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 17
+[2022.03.21-13.22.01:407][471]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 16
+[2022.03.21-13.22.01:482][476]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 15
+[2022.03.21-13.22.01:518][479]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 14
+[2022.03.21-13.22.01:518][479]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 13
+[2022.03.21-13.22.01:530][480]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 12
+[2022.03.21-13.22.01:788][494]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 11
+[2022.03.21-13.22.01:859][498]LogShaderCompilers: Display: Worker (4/9): shaders left to compile 10
+[2022.03.21-13.22.01:938][503]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 9
+[2022.03.21-13.22.01:952][504]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 8
+[2022.03.21-13.22.01:953][504]LogShaderCompilers: Display: Worker (8/9): shaders left to compile 7
+[2022.03.21-13.22.01:965][505]LogShaderCompilers: Display: Worker (6/9): shaders left to compile 6
+[2022.03.21-13.22.02:034][510]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 5
+[2022.03.21-13.22.02:034][510]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 4
+[2022.03.21-13.22.02:557][534]LogShaderCompilers: Display: Worker (3/9): shaders left to compile 3
+[2022.03.21-13.22.02:579][535]LogShaderCompilers: Display: Worker (7/9): shaders left to compile 2
+[2022.03.21-13.22.04:893][654]LogShaderCompilers: Display: Worker (5/9): shaders left to compile 1
+[2022.03.21-13.22.05:533][704]MaterialEditorStats: Base pass shader: 564 instructions
+[2022.03.21-13.22.05:533][704]MaterialEditorStats: Base pass shader with Surface Lightmap: 588 instructions
+[2022.03.21-13.22.05:533][704]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 630 instructions
+[2022.03.21-13.22.05:533][704]MaterialEditorStats: Base pass vertex shader: 42 instructions
+[2022.03.21-13.22.05:533][704]MaterialEditorStats: Texture samplers: 4/16
+[2022.03.21-13.22.10:369][218]LogSlate: Window 'Color Picker' being destroyed
+[2022.03.21-13.22.12:696][490]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.22.21:824][506]LogTemp: Repeating last play command: Selected Viewport
+[2022.03.21-13.22.21:840][506]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.03.21-13.22.21:840][506]PIE: New page: PIE session: Level2 (21 Mar 2022, 13:22:21)
+[2022.03.21-13.22.21:867][506]LogPlayLevel: Creating play world package: /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2
+[2022.03.21-13.22.21:890][506]LogPlayLevel: PIE: StaticDuplicateObject took: (0.023395s)
+[2022.03.21-13.22.21:891][506]LogAIModule: Creating AISystem for world Level2
+[2022.03.21-13.22.21:892][506]LogPlayLevel: PIE: World Init took: (0.001361s)
+[2022.03.21-13.22.21:892][506]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPersonCPP/Maps/Level2.Level2 to /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2.Level2 (0.024969s)
+[2022.03.21-13.22.21:908][506]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2022.03.21-13.22.21:909][506]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2022.03.21-13.22.21:909][506]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.03.21-13.22.21:909][506]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.03.21-13.22.21:909][506]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.03.21-13.22.21:909][506]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.03.21-13.22.21:909][506]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.03.21-13.22.21:909][506]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.03.21-13.22.21:909][506]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.03.21-13.22.21:909][506]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.03.21-13.22.21:910][506]LogAudio: Display: Using built-in audio occlusion.
+[2022.03.21-13.22.21:910][506]LogAudioMixer: Display: Initializing audio mixer.
+[2022.03.21-13.22.21:917][506]LogAudioMixer: Display: 0: FrontLeft
+[2022.03.21-13.22.21:917][506]LogAudioMixer: Display: 1: FrontRight
+[2022.03.21-13.22.21:925][506]LogAudioMixer: Display: Using Audio Device Speakers (Synaptics HD Audio)
+[2022.03.21-13.22.21:926][506]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.03.21-13.22.21:926][506]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.03.21-13.22.21:926][506]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.03.21-13.22.21:926][506]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.03.21-13.22.21:926][506]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.03.21-13.22.21:926][506]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.03.21-13.22.21:938][506]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.03.21-13.22.21:938][506]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.03.21-13.22.21:938][506]LogInit: FAudioDevice initialized.
+[2022.03.21-13.22.21:938][506]LogAudio: Display: Audio Device (ID: 6) registered with world 'Level2'.
+[2022.03.21-13.22.21:952][506]LogLoad: Game class is 'GM_MyGameMode_C'
+[2022.03.21-13.22.21:959][506]LogWorld: Bringing World /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2.Level2 up for play (max tick rate 0) at 2022.03.21-13.22.21
+[2022.03.21-13.22.21:959][506]LogWorld: Bringing up level for play took: 0.007419
+[2022.03.21-13.22.21:960][506]LogOnline: OSS: Creating online subsystem instance for: :Context_16
+[2022.03.21-13.22.21:962][506]PIE: Server logged in
+[2022.03.21-13.22.21:963][506]PIE: Play in editor total start time 0.13 seconds.
+[2022.03.21-13.22.49:317][775]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.03.21-13.22.49:317][775]LogWorld: BeginTearingDown for /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2
+[2022.03.21-13.22.49:318][775]LogWorld: UWorld::CleanupWorld for Level2, bSessionEnded=true, bCleanupResources=true
+[2022.03.21-13.22.49:319][775]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.03.21-13.22.49:325][775]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.03.21-13.22.49:330][775]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.03.21-13.22.49:335][775]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.03.21-13.22.49:335][775]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.03.21-13.22.49:336][775]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.03.21-13.22.49:350][775]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.03.21-13.22.49:353][775]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2022.03.21-13.22.49:392][776]LogPlayLevel: Display: Destroying online subsystem :Context_16
+[2022.03.21-13.23.50:417][535]LogTemp: Repeating last play command: Selected Viewport
+[2022.03.21-13.23.50:434][535]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.03.21-13.23.50:434][535]PIE: New page: PIE session: Level2 (21 Mar 2022, 13:23:50)
+[2022.03.21-13.23.50:434][535]LogPlayLevel: Creating play world package: /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2
+[2022.03.21-13.23.50:456][535]LogPlayLevel: PIE: StaticDuplicateObject took: (0.021877s)
+[2022.03.21-13.23.50:457][535]LogAIModule: Creating AISystem for world Level2
+[2022.03.21-13.23.50:457][535]LogPlayLevel: PIE: World Init took: (0.001443s)
+[2022.03.21-13.23.50:457][535]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPersonCPP/Maps/Level2.Level2 to /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2.Level2 (0.023528s)
+[2022.03.21-13.23.50:463][535]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2022.03.21-13.23.50:464][535]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2022.03.21-13.23.50:465][535]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.03.21-13.23.50:465][535]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.03.21-13.23.50:465][535]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.03.21-13.23.50:465][535]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.03.21-13.23.50:465][535]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.03.21-13.23.50:465][535]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.03.21-13.23.50:465][535]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.03.21-13.23.50:465][535]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.03.21-13.23.50:465][535]LogAudio: Display: Using built-in audio occlusion.
+[2022.03.21-13.23.50:465][535]LogAudioMixer: Display: Initializing audio mixer.
+[2022.03.21-13.23.50:473][535]LogAudioMixer: Display: 0: FrontLeft
+[2022.03.21-13.23.50:473][535]LogAudioMixer: Display: 1: FrontRight
+[2022.03.21-13.23.50:481][535]LogAudioMixer: Display: Using Audio Device Speakers (Synaptics HD Audio)
+[2022.03.21-13.23.50:481][535]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.03.21-13.23.50:481][535]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.03.21-13.23.50:481][535]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.03.21-13.23.50:482][535]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.03.21-13.23.50:482][535]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.03.21-13.23.50:482][535]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.03.21-13.23.50:494][535]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.03.21-13.23.50:494][535]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.03.21-13.23.50:494][535]LogInit: FAudioDevice initialized.
+[2022.03.21-13.23.50:494][535]LogAudio: Display: Audio Device (ID: 7) registered with world 'Level2'.
+[2022.03.21-13.23.50:500][535]LogLoad: Game class is 'GM_MyGameMode_C'
+[2022.03.21-13.23.50:508][535]LogWorld: Bringing World /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2.Level2 up for play (max tick rate 0) at 2022.03.21-13.23.50
+[2022.03.21-13.23.50:509][535]LogWorld: Bringing up level for play took: 0.007433
+[2022.03.21-13.23.50:509][535]LogOnline: OSS: Creating online subsystem instance for: :Context_17
+[2022.03.21-13.23.50:511][535]PIE: Server logged in
+[2022.03.21-13.23.50:512][535]PIE: Play in editor total start time 0.085 seconds.
+[2022.03.21-13.23.54:016][943]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.03.21-13.23.54:016][943]LogWorld: BeginTearingDown for /Game/ThirdPersonCPP/Maps/UEDPIE_0_Level2
+[2022.03.21-13.23.54:016][943]LogWorld: UWorld::CleanupWorld for Level2, bSessionEnded=true, bCleanupResources=true
+[2022.03.21-13.23.54:018][943]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.03.21-13.23.54:027][943]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.03.21-13.23.54:035][943]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.03.21-13.23.54:041][943]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.03.21-13.23.54:041][943]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.03.21-13.23.54:042][943]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.03.21-13.23.54:059][943]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2022.03.21-13.23.54:091][944]LogPlayLevel: Display: Destroying online subsystem :Context_17
+[2022.03.21-13.23.58:979][431]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
+[2022.03.21-13.23.58:979][431]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.03.21-13.24.09:568][347]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2022.03.21-13.24.09:569][347]TextureStreamingBuild: Display: Compiling optional shaders took 0.000 seconds.
+[2022.03.21-13.24.09:573][347]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2022.03.21-13.24.09:722][347]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/MI_CellShader_Test724635214351F1E652D2A7ADD1CA8083.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Shaders/MI_CellShader_Test.uasset'
+[2022.03.21-13.24.09:751][347]AssetCheck: New page: Asset Save: MI_CellShader_Test
+[2022.03.21-13.24.09:751][347]LogContentValidation: Display: Validating MaterialInstanceConstant /Game/ThirdPersonCPP/Kevin_Test/Shaders/MI_CellShader_Test.MI_CellShader_Test
+[2022.03.21-13.24.12:163][599]LogUObjectHash: Compacting FUObjectHashTables data took   0.22ms
+[2022.03.21-13.24.12:164][599]LogMaterial: Display: Missing cached shader map for material DebugViewMode MaterialTexCoordScale, compiling. 
+[2022.03.21-13.24.12:726][599]LogShaderCompilers: Display: Worker (1/9): shaders left to compile 2
+[2022.03.21-13.24.12:726][599]LogShaderCompilers: Display: Worker (2/9): shaders left to compile 1
+[2022.03.21-13.24.13:297][599]TextureStreamingBuild: Display: Compiling optional shaders took 1.133 seconds.
+[2022.03.21-13.24.13:301][599]LogUObjectHash: Compacting FUObjectHashTables data took   0.22ms
+[2022.03.21-13.24.13:333][599]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/MI_TestColorECDDFF914CFE3C62466C8BAAD6346C06.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Materials/MI_TestColor.uasset'
+[2022.03.21-13.24.13:417][599]AssetCheck: New page: Asset Save: MI_TestColor
+[2022.03.21-13.24.13:417][599]LogContentValidation: Display: Validating MaterialInstanceConstant /Game/ThirdPersonCPP/Kevin_Test/Materials/MI_TestColor.MI_TestColor
+[2022.03.21-13.25.42:517][249]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.25.43:217][318]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.25.43:619][352]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.26.03:169][625]LogEditorViewport: Clicking on Actor (context menu): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.26.04:496][781]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.27.00:346][971]LogUObjectHash: Compacting FUObjectHashTables data took   0.28ms
+[2022.03.21-13.27.01:765][971]LogSlate: Window 'Save Content' being destroyed
+[2022.03.21-13.27.01:788][971]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonCPP/Maps/Level2" FILE="M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.03.21-13.27.01:792][971]LogUObjectHash: Compacting FUObjectHashTables data took   0.23ms
+[2022.03.21-13.27.05:770][971]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/Level2AC03433B400D0856872BADA0523B8731.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap'
+[2022.03.21-13.27.05:800][971]LogFileHelpers: Saving map 'Level2' took 4.013
+[2022.03.21-13.27.05:819][971]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2022.03.21-13.27.05:819][971]TextureStreamingBuild: Display: Compiling optional shaders took 0.000 seconds.
+[2022.03.21-13.27.05:823][971]LogUObjectHash: Compacting FUObjectHashTables data took   0.22ms
+[2022.03.21-13.27.05:964][971]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/MI_CellShader_Test9389040140AC56B1339094973F36221D.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Shaders/MI_CellShader_Test.uasset'
+[2022.03.21-13.27.06:068][971]AssetCheck: New page: Asset Save: multiple assets
+[2022.03.21-13.27.06:068][971]LogContentValidation: Display: Validating World /Game/ThirdPersonCPP/Maps/Level2.Level2
+[2022.03.21-13.27.06:068][971]LogContentValidation: Display: Validating MaterialInstanceConstant /Game/ThirdPersonCPP/Kevin_Test/Shaders/MI_CellShader_Test.MI_CellShader_Test
+[2022.03.21-13.27.39:103][686]LogEditorViewport: Clicking on Actor (context menu): StaticMeshActor (Sphere132)
+[2022.03.21-13.27.40:334][825]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.28.11:430][732]LogContentBrowser: Deferred new asset file creation: MI_TestColor1
+[2022.03.21-13.28.11:470][732]LogContentBrowser: Creating deferred item: MI_TestColor1
+[2022.03.21-13.28.18:280][293]LogContentBrowser: Attempting asset rename: MI_TestColor1 -> MI_TestColor2
+[2022.03.21-13.28.18:284][293]LogContentBrowser: End creating deferred item MI_TestColor1
+[2022.03.21-13.28.19:830][412]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2022.03.21-13.28.21:336][412]LogSlate: Window 'Save Content' being destroyed
+[2022.03.21-13.28.21:373][412]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonCPP/Maps/Level2" FILE="M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.03.21-13.28.21:377][412]LogUObjectHash: Compacting FUObjectHashTables data took   0.22ms
+[2022.03.21-13.28.26:508][412]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/Level2760D3FA144140D1E742B26BD69A9C346.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap'
+[2022.03.21-13.28.26:561][412]LogFileHelpers: Saving map 'Level2' took 5.189
+[2022.03.21-13.28.26:625][412]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/MI_TestColor21DBCB8B5493CA2FF0A6C1D9E0B228956.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Materials/MI_TestColor2.uasset'
+[2022.03.21-13.28.26:744][412]AssetCheck: New page: Asset Save: multiple assets
+[2022.03.21-13.28.26:744][412]LogContentValidation: Display: Validating World /Game/ThirdPersonCPP/Maps/Level2.Level2
+[2022.03.21-13.28.26:744][412]LogContentValidation: Display: Validating MaterialInstanceConstant /Game/ThirdPersonCPP/Kevin_Test/Materials/MI_TestColor2.MI_TestColor2
+[2022.03.21-13.28.29:072][572]LogAssetEditorSubsystem: Opening Asset editor for MaterialInstanceConstant /Game/ThirdPersonCPP/Kevin_Test/Materials/MI_TestColor2.MI_TestColor2
+[2022.03.21-13.29.02:138][427]LogSlate: Window 'Color Picker' being destroyed
+[2022.03.21-13.30.33:430][816]LogSlate: Window 'Color Picker' being destroyed
+[2022.03.21-13.34.39:048][867]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.35.14:902][118]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.21-13.38.20:296][743]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2022.03.21-13.38.25:128][743]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/Level2_Auto275710EA54F15D65C0C826EACC4B6B33D.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/Autosaves/Game/ThirdPersonCPP/Maps/Level2_Auto2.umap'
+[2022.03.21-13.38.25:147][743]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/ThirdPersonCPP/Maps/Level2' took 4.857
+[2022.03.21-13.38.25:147][743]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 4.857
+[2022.03.21-13.38.25:160][743]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ThirdPersonCPP/Kevin_Test/Materials/MI_TestColor2] ([1] browsable assets)...
+[2022.03.21-13.38.25:179][743]OBJ SavePackage:     Rendered thumbnail for [MaterialInstanceConstant /Game/ThirdPersonCPP/Kevin_Test/Materials/MI_TestColor2.MI_TestColor2]
+[2022.03.21-13.38.25:179][743]OBJ SavePackage: Finished generating thumbnails for package [/Game/ThirdPersonCPP/Kevin_Test/Materials/MI_TestColor2]
+[2022.03.21-13.38.25:183][743]LogUObjectHash: Compacting FUObjectHashTables data took   0.23ms
+[2022.03.21-13.38.25:184][743]TextureStreamingBuild: Display: Compiling optional shaders took 0.000 seconds.
+[2022.03.21-13.38.25:188][743]LogUObjectHash: Compacting FUObjectHashTables data took   0.22ms
+[2022.03.21-13.38.25:224][743]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/MI_TestColor2_Auto2DD657E1047DC70391037D9B02EF8527A.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/Autosaves/Game/ThirdPersonCPP/Kevin_Test/Materials/MI_TestColor2_Auto2.uasset'
+[2022.03.21-13.38.25:234][743]LogFileHelpers: Auto-saving content packages took 0.087
+[2022.03.21-13.39.06:614][970]LogUObjectHash: Compacting FUObjectHashTables data took   0.24ms
+[2022.03.21-13.39.07:974][970]LogSlate: Window 'Save Content' being destroyed
+[2022.03.21-13.39.08:004][970]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonCPP/Maps/Level2" FILE="M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.03.21-13.39.08:008][970]LogUObjectHash: Compacting FUObjectHashTables data took   0.23ms
+[2022.03.21-13.39.12:411][970]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/Level28533FF2F45B777096DA3BFB065E33855.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Maps/Level2.umap'
+[2022.03.21-13.39.12:437][970]LogEditorTransaction: Non zero active count in UTransBuffer::Reset
+ActiveCount : 2
+SessionName : 
+Reason      : Map Saved
+
+Purging the undo buffer...
+
+[2022.03.21-13.39.12:442][970]LogFileHelpers: Saving map 'Level2' took 4.439
+[2022.03.21-13.39.12:448][970]LogUObjectHash: Compacting FUObjectHashTables data took   0.24ms
+[2022.03.21-13.39.12:448][970]TextureStreamingBuild: Display: Compiling optional shaders took 0.000 seconds.
+[2022.03.21-13.39.12:453][970]LogUObjectHash: Compacting FUObjectHashTables data took   0.26ms
+[2022.03.21-13.39.12:484][970]LogSavePackage: Moving 'M:/Flying509Game/Flying509Game/Flying509Game/Saved/MI_TestColor2CE0EDE7B4E2D2CE14F091495F67F942D.tmp' to 'M:/Flying509Game/Flying509Game/Flying509Game/Content/ThirdPersonCPP/Kevin_Test/Materials/MI_TestColor2.uasset'
+[2022.03.21-13.39.12:571][970]AssetCheck: New page: Asset Save: multiple assets
+[2022.03.21-13.39.12:571][970]LogContentValidation: Display: Validating World /Game/ThirdPersonCPP/Maps/Level2.Level2
+[2022.03.21-13.39.12:571][970]LogContentValidation: Display: Validating MaterialInstanceConstant /Game/ThirdPersonCPP/Kevin_Test/Materials/MI_TestColor2.MI_TestColor2

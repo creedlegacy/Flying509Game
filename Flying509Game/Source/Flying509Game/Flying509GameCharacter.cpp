@@ -511,7 +511,7 @@ void AFlying509GameCharacter::DiveCatchTimelineFloatReturn(float value)
 	else {
 	
 		SetActorRotation(FMath::Lerp(CurrentControlRotation, FRotator(50, CurrentControlRotation.Yaw, CurrentControlRotation.Roll), value));
-		Controller->SetControlRotation(FMath::Lerp(CurrentControlRotation, FRotator(30, CurrentControlRotation.Yaw, CurrentControlRotation.Roll), value));
+		Controller->SetControlRotation(FMath::Lerp(CurrentControlRotation, FRotator(35, CurrentControlRotation.Yaw, CurrentControlRotation.Roll), value));
 	}
 	
 }

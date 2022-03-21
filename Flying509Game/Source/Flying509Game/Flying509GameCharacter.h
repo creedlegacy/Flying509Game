@@ -85,12 +85,25 @@ public:
 		void DiveCatchTimelineFloatReturn(float value);
 	UFUNCTION()
 		void OnTimelineFinished();
+	
+	FRotator CurrentControlRotation;
+	FRotator CurrentActorRotation;
 
+	//variables for cameraboom arm length
+	float DefaultCameraBoom;
+	float CurrentCameraBoom;
 
+	float CameraBoostOutDuration = 0;
+	float CameraBoostOutTimeElapsed = 0;
 
-	FRotator defaultCameraRotation;
-	FVector defaultCameraLocation;
+	float CameraBoostInDuration = 0;
+	float CameraBoostInTimeElapsed = 0;
 
+	float CameraDiveOutDuration = 0;
+	float CameraDiveOutTimeElapsed = 0;
+
+	float CameraDiveInDuration = 0;
+	float CameraDiveInTimeElapsed = 0;
 
 protected:
 	virtual void BeginPlay() override;
@@ -108,10 +121,14 @@ protected:
 
 	void Boost();
 	void StopBoost();
+	void BoostLerpOut(float DeltaTime);
+	void BoostLerpIn(float DeltaTime);
 
 	void Dive();
 	void DiveCatch();
 	void DiveCatchSpeedAdjustment();
+	void DiveLerpOut(float DeltaTime);
+	void DiveLerpIn(float DeltaTime);
 
 	void FreeCamera();
 
@@ -133,6 +150,8 @@ protected:
 	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
 	 */
 	void TurnAtRate(float Rate);
+
+	void LookUp(float Value);
 
 	/**
 	 * Called via input to turn look up/down at a given rate. 

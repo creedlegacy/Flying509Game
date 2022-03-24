@@ -111,6 +111,7 @@ void AFlying509GameCharacter::SetupPlayerInputComponent(class UInputComponent* P
 void AFlying509GameCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	
 	//Check if curve asset is valid
 	if (diveCurve && catchCurve) {
 		//Add the float curve to the timeline and connect it to the interpfunction's delegate 

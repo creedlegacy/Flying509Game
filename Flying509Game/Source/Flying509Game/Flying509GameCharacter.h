@@ -39,7 +39,7 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Shooting");
 	TSubclassOf<class ABullet> BulletBP;
-
+	
 	bool IsGamepad = false;
 
 	UPROPERTY(EditAnywhere, Category = Flying);

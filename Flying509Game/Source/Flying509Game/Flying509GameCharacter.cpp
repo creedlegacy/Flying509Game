@@ -111,6 +111,7 @@ void AFlying509GameCharacter::SetupPlayerInputComponent(class UInputComponent* P
 void AFlying509GameCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	
 	//Check if curve asset is valid
 	if (diveCurve && catchCurve) {
 		//Add the float curve to the timeline and connect it to the interpfunction's delegate 
@@ -511,7 +512,7 @@ void AFlying509GameCharacter::DiveCatchTimelineFloatReturn(float value)
 	else {
 	
 		SetActorRotation(FMath::Lerp(CurrentControlRotation, FRotator(50, CurrentControlRotation.Yaw, CurrentControlRotation.Roll), value));
-		Controller->SetControlRotation(FMath::Lerp(CurrentControlRotation, FRotator(30, CurrentControlRotation.Yaw, CurrentControlRotation.Roll), value));
+		Controller->SetControlRotation(FMath::Lerp(CurrentControlRotation, FRotator(35, CurrentControlRotation.Yaw, CurrentControlRotation.Roll), value));
 	}
 	
 }

@@ -18,9 +18,6 @@ public:
 	// Sets default values for this actor's properties
 	ACollectible();
 
-	/*UPROPERTY(EditAnywhere, Category = "Components");
-	class UStaticMeshComponent* CollectibleMesh;*/
-
 	UPROPERTY(EditAnywhere, Category = "Components");
 	class UParticleSystemComponent* CollectibleParticle;
 

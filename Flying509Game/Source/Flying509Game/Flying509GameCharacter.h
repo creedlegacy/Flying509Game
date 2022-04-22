@@ -93,6 +93,10 @@ public:
 	float DefaultCameraBoom;
 	float CurrentCameraBoom;
 
+	//variables for FOV manipulation
+	float DefaultFOV;
+	float CurrentFOV;
+
 	float CameraBoostOutDuration = 0;
 	float CameraBoostOutTimeElapsed = 0;
 
@@ -104,6 +108,10 @@ public:
 
 	float CameraDiveInDuration = 0;
 	float CameraDiveInTimeElapsed = 0;
+
+	//boolean to tell whether guide is activated or not
+	UPROPERTY(EditAnywhere, BlueprintReadWrite);
+	bool ShowGuide = false;
 
 protected:
 	virtual void BeginPlay() override;
@@ -129,6 +137,9 @@ protected:
 	void DiveCatchSpeedAdjustment();
 	void DiveLerpOut(float DeltaTime);
 	void DiveLerpIn(float DeltaTime);
+
+	void GuideOn();
+	void GuideOff();
 
 	void FreeCamera();
 

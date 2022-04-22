@@ -2,7 +2,7 @@
 
 
 #include "Collectible.h"
-#include "Components/BoxComponent.h"
+#include "Components/SphereComponent.h"
 #include "Flying509GameInstance.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 
@@ -13,9 +13,8 @@ ACollectible::ACollectible()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	BoxComponent = CreateDefaultSubobject<UBoxComponent>("BoxComponent");
-	RootComponent = BoxComponent;
+	SphereComponent = CreateDefaultSubobject<USphereComponent>("SphereComponent");
+	RootComponent = SphereComponent;
 
 	
 	
@@ -30,7 +29,7 @@ void ACollectible::BeginPlay()
 {
 	Super::BeginPlay();
 	GameInstance = Cast<UFlying509GameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
-	BoxComponent->OnComponentBeginOverlap.AddDynamic(this, &ACollectible::OnOverlap);
+	SphereComponent->OnComponentBeginOverlap.AddDynamic(this, &ACollectible::OnOverlap);
 	
 	
 	

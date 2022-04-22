@@ -19,10 +19,10 @@ public:
 	ACollectible();
 
 	UPROPERTY(EditAnywhere, Category = "Components");
-	class UParticleSystemComponent* CollectibleParticle;
+	class UStaticMeshComponent* CollectibleMesh;
 
 	UPROPERTY(EditAnywhere, Category = "Components");
-	class USphereComponent* SphereComponent;
+	class UBoxComponent* BoxComponent;
 
 	UFlying509GameInstance* GameInstance;
 

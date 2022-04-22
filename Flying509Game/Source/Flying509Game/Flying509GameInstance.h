@@ -15,7 +15,7 @@ class FLYING509GAME_API UFlying509GameInstance : public UGameInstance
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite);
-	int SolarFlaresTotal = 0;
+
+	 int SolarFlaresTotal = 0;
 	
 };

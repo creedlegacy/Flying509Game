@@ -93,10 +93,13 @@ public:
 	float DefaultCameraBoom;
 	float CurrentCameraBoom;
 
+<<<<<<< HEAD
 	//variables for FOV manipulation
 	float DefaultFOV;
 	float CurrentFOV;
 
+=======
+>>>>>>> parent of 6adeffe (Del)
 	float CameraBoostOutDuration = 0;
 	float CameraBoostOutTimeElapsed = 0;
 
@@ -109,10 +112,13 @@ public:
 	float CameraDiveInDuration = 0;
 	float CameraDiveInTimeElapsed = 0;
 
+<<<<<<< HEAD
 	//boolean to tell whether guide is activated or not
 	UPROPERTY(EditAnywhere, BlueprintReadWrite);
 	bool ShowGuide = false;
 
+=======
+>>>>>>> parent of 6adeffe (Del)
 protected:
 	virtual void BeginPlay() override;
 
@@ -138,9 +144,12 @@ protected:
 	void DiveLerpOut(float DeltaTime);
 	void DiveLerpIn(float DeltaTime);
 
+<<<<<<< HEAD
 	void GuideOn();
 	void GuideOff();
 
+=======
+>>>>>>> parent of 6adeffe (Del)
 	void FreeCamera();
 
 	void SetMouse(float Value);

@@ -43,14 +43,21 @@ AFlying509GameCharacter::AFlying509GameCharacter()
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
 	CameraBoom->TargetArmLength = 300.0f; // The camera follows at this distance behind the character	
+<<<<<<< HEAD
 	DefaultCameraBoom = CameraBoom->TargetArmLength; // Assign default arm length to this variable
+=======
+	DefaultCameraBoom = CameraBoom->TargetArmLength;
+>>>>>>> parent of 6adeffe (Del)
 	CameraBoom->bUsePawnControlRotation = true; // Rotate the arm based on the controller
 
 	// Create a follow camera
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
+<<<<<<< HEAD
 	DefaultFOV = FollowCamera->FieldOfView; // Assign default FOV to this variable
+=======
+>>>>>>> parent of 6adeffe (Del)
 
 
 	DiveTimeline = CreateDefaultSubobject<UTimelineComponent>(TEXT("DiveTimeline"));
@@ -81,9 +88,12 @@ void AFlying509GameCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	PlayerInputComponent->BindAction("Dive", IE_Pressed, this, &AFlying509GameCharacter::Dive);
 	PlayerInputComponent->BindAction("Dive", IE_Released, this, &AFlying509GameCharacter::DiveCatch);
 
+<<<<<<< HEAD
 	PlayerInputComponent->BindAction("Guide", IE_Pressed, this, &AFlying509GameCharacter::GuideOn);
 	PlayerInputComponent->BindAction("Guide", IE_Released, this, &AFlying509GameCharacter::GuideOff);
 
+=======
+>>>>>>> parent of 6adeffe (Del)
 	PlayerInputComponent->BindAction("FreeCamera", IE_Pressed, this, &AFlying509GameCharacter::FreeCamera);
 	PlayerInputComponent->BindAction("FreeCamera", IE_Released, this, &AFlying509GameCharacter::FreeCamera);
 
@@ -387,8 +397,11 @@ void AFlying509GameCharacter::Boost()
 {
 	if (!IsDiving) {
 		IsBoosting = true;
+<<<<<<< HEAD
 		//Assign current FOV
 		CurrentFOV = FollowCamera->FieldOfView;
+=======
+>>>>>>> parent of 6adeffe (Del)
 		CurrentCameraBoom = CameraBoom->TargetArmLength;
 		CameraBoostInDuration = 0;
 		CameraBoostInTimeElapsed = 0;
@@ -408,8 +421,11 @@ void AFlying509GameCharacter::StopBoost()
 {
 	if (!IsDiving) {
 		IsBoosting = false;
+<<<<<<< HEAD
 		//Assign current FOV
 		CurrentFOV = FollowCamera->FieldOfView;
+=======
+>>>>>>> parent of 6adeffe (Del)
 		CurrentCameraBoom = CameraBoom->TargetArmLength;
 		CameraBoostOutDuration = 0;
 		CameraBoostOutTimeElapsed = 0;
@@ -429,7 +445,10 @@ void AFlying509GameCharacter::BoostLerpOut(float DeltaTime)
 		if (CameraBoostOutTimeElapsed < CameraBoostOutDuration) {
 			float alpha = CameraBoostOutTimeElapsed / CameraBoostOutDuration;
 			if (alpha > 0 || alpha < 1) {
+<<<<<<< HEAD
 				FollowCamera->FieldOfView = FMath::Lerp(CurrentFOV, DefaultFOV + 10, alpha);
+=======
+>>>>>>> parent of 6adeffe (Del)
 				CameraBoom->TargetArmLength = FMath::Lerp(CurrentCameraBoom, DefaultCameraBoom + 60, alpha);
 				CameraBoostOutTimeElapsed += DeltaTime;
 			}
@@ -448,7 +467,10 @@ void AFlying509GameCharacter::BoostLerpIn(float DeltaTime)
 		if (CameraBoostInTimeElapsed < CameraBoostInDuration) {
 			float alpha = CameraBoostInTimeElapsed / CameraBoostInDuration;
 			if (alpha > 0 || alpha < 1) {
+<<<<<<< HEAD
 				FollowCamera->FieldOfView = FMath::Lerp(CurrentFOV, DefaultFOV, alpha);
+=======
+>>>>>>> parent of 6adeffe (Del)
 				CameraBoom->TargetArmLength = FMath::Lerp(CurrentCameraBoom, DefaultCameraBoom, alpha);
 				CameraBoostInTimeElapsed += DeltaTime;
 			}
@@ -471,11 +493,18 @@ void AFlying509GameCharacter::Dive()
 	CurrentActorRotation = GetActorRotation();
 	DiveTimeline->PlayFromStart();
 
+<<<<<<< HEAD
 	CurrentFOV = FollowCamera->FieldOfView;
 	CurrentCameraBoom = CameraBoom->TargetArmLength;
 	CameraDiveInDuration = 0;
 	CameraDiveInTimeElapsed = 0;
 	CameraDiveOutDuration = 2.;
+=======
+	CurrentCameraBoom = CameraBoom->TargetArmLength;
+	CameraDiveInDuration = 0;
+	CameraDiveInTimeElapsed = 0;
+	CameraDiveOutDuration = 6.;
+>>>>>>> parent of 6adeffe (Del)
 	/*SetActorRelativeRotation(FRotator(-90, GetActorRotation().Yaw, GetActorRotation().Roll));*/
 	/*CameraBoom->bUsePawnControlRotation = false;*/
 	/*FollowCamera->SetRelativeRotation(FRotator(0, 0, 0));
@@ -493,8 +522,11 @@ void AFlying509GameCharacter::DiveCatch()
 
 	GetCharacterMovement()->MaxFlySpeed = NormalFlightSpeed * (round(MaxZVelocity) / 200);
 	OnDiveCatchSpeed = true;
+<<<<<<< HEAD
 
 	CurrentFOV = FollowCamera->FieldOfView;
+=======
+>>>>>>> parent of 6adeffe (Del)
 	CurrentCameraBoom = CameraBoom->TargetArmLength;
 	CameraDiveOutDuration = 0;
 	CameraDiveOutTimeElapsed = 0;
@@ -537,7 +569,11 @@ void AFlying509GameCharacter::OnTimelineFinished()
 void AFlying509GameCharacter::DiveCatchSpeedAdjustment()
 {
 	if (OnDiveCatchSpeed) {
+<<<<<<< HEAD
 		GetCharacterMovement()->MaxFlySpeed = GetCharacterMovement()->MaxFlySpeed - 2;
+=======
+		GetCharacterMovement()->MaxFlySpeed = GetCharacterMovement()->MaxFlySpeed - 1;
+>>>>>>> parent of 6adeffe (Del)
 		float tempSpeed = IsBoosting ? BoostFlightSpeed : NormalFlightSpeed;
 		if (GetCharacterMovement()->MaxFlySpeed <= tempSpeed) {
 			OnDiveCatchSpeed = false;
@@ -552,7 +588,10 @@ void AFlying509GameCharacter::DiveLerpOut(float DeltaTime)
 			float alpha = CameraDiveOutTimeElapsed / CameraDiveOutDuration;
 			if (alpha > 0 || alpha < 1) {
 				/*GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%f"), alpha));*/
+<<<<<<< HEAD
 				FollowCamera->FieldOfView = FMath::Lerp(CurrentFOV, DefaultFOV + 15, alpha);
+=======
+>>>>>>> parent of 6adeffe (Del)
 				CameraBoom->TargetArmLength = FMath::Lerp(CurrentCameraBoom, DefaultCameraBoom + 200, alpha);
 				CameraDiveOutTimeElapsed += DeltaTime;
 			}
@@ -571,7 +610,10 @@ void AFlying509GameCharacter::DiveLerpIn(float DeltaTime)
 		if (CameraDiveInTimeElapsed < CameraDiveInDuration) {
 			float alpha = CameraDiveInTimeElapsed / CameraDiveInDuration;
 			if (alpha > 0 || alpha < 1) {
+<<<<<<< HEAD
 				FollowCamera->FieldOfView = FMath::Lerp(CurrentFOV, DefaultFOV, alpha);
+=======
+>>>>>>> parent of 6adeffe (Del)
 				CameraBoom->TargetArmLength = FMath::Lerp(CurrentCameraBoom, DefaultCameraBoom, alpha);
 				CameraDiveInTimeElapsed += DeltaTime;
 			}
@@ -584,6 +626,7 @@ void AFlying509GameCharacter::DiveLerpIn(float DeltaTime)
 	}
 }
 
+<<<<<<< HEAD
 void AFlying509GameCharacter::GuideOn()
 {
 	ShowGuide = true;
@@ -594,6 +637,8 @@ void AFlying509GameCharacter::GuideOff()
 	ShowGuide = false;
 }
 
+=======
+>>>>>>> parent of 6adeffe (Del)
 void AFlying509GameCharacter::FreeCamera()
 {
 	if (!IsFreeCam) {

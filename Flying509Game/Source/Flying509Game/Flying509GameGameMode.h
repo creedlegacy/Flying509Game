@@ -13,6 +13,8 @@ class AFlying509GameGameMode : public AGameModeBase
 
 public:
 	AFlying509GameGameMode();
+
+
 };
 
 

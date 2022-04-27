@@ -50,7 +50,7 @@ void ACollectible::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* O
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OverlapCheck) ) {
 		if (GameInstance) {
 			GameInstance->SolarFlaresTotal += 1;
-			PrintString(FString::Printf(TEXT("%d"), GameInstance->SolarFlaresTotal));
+			/*PrintString(FString::Printf(TEXT("%d"), GameInstance->SolarFlaresTotal));*/
 		}
 
 		Destroy();

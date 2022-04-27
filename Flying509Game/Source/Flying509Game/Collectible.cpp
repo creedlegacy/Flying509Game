@@ -4,6 +4,7 @@
 #include "Collectible.h"
 #include "Components/SphereComponent.h"
 #include "Flying509GameInstance.h"
+#include "Flying509GameCharacter.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 
 #define PrintString(String) GEngine->AddOnScreenDebugMessage(-1,10.0f,FColor::Red,String)
@@ -45,10 +46,11 @@ void ACollectible::Tick(float DeltaTime)
 
 void ACollectible::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr)) {
+	AFlying509GameCharacter* OverlapCheck = Cast<AFlying509GameCharacter>(OtherActor);
+	if ((OtherActor != nullptr) && (OtherActor != this) && (OverlapCheck) ) {
 		if (GameInstance) {
 			GameInstance->SolarFlaresTotal += 1;
-			PrintString(FString::Printf(TEXT("%d"), GameInstance->SolarFlaresTotal));
+			/*PrintString(FString::Printf(TEXT("%d"), GameInstance->SolarFlaresTotal));*/
 		}
 
 		Destroy();

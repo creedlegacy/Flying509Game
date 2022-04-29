@@ -57,8 +57,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = Flying);
 	float NormalFlightSpeed;
 
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Flying);
 	bool IsDiving = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Flying);
 	bool IsBoosting = false;
 	bool IsFreeCam = false;
 

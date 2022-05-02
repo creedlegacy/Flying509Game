@@ -24,6 +24,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Components");
 	class USphereComponent* SphereComponent;
 
+	UPROPERTY(EditAnywhere, Category = "Components");
+	class USoundBase* CollectSound;
+
 	UFlying509GameInstance* GameInstance;
 
 

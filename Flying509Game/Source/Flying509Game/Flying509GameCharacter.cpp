@@ -537,7 +537,7 @@ void AFlying509GameCharacter::OnTimelineFinished()
 void AFlying509GameCharacter::DiveCatchSpeedAdjustment()
 {
 	if (OnDiveCatchSpeed) {
-		GetCharacterMovement()->MaxFlySpeed = GetCharacterMovement()->MaxFlySpeed - 2;
+		GetCharacterMovement()->MaxFlySpeed = GetCharacterMovement()->MaxFlySpeed - SpeedDecrementAdjuster;
 		float tempSpeed = IsBoosting ? BoostFlightSpeed : NormalFlightSpeed;
 		if (GetCharacterMovement()->MaxFlySpeed <= tempSpeed) {
 			OnDiveCatchSpeed = false;

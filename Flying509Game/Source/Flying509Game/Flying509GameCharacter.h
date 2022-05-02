@@ -56,6 +56,8 @@ public:
 	float BoostFlightSpeed;
 	UPROPERTY(EditAnywhere, Category = Flying);
 	float NormalFlightSpeed;
+	UPROPERTY(EditAnywhere, Category = Flying);
+	float SpeedDecrementAdjuster = 1.6;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Flying);
 	bool IsDiving = false;
@@ -111,7 +113,7 @@ public:
 	float CameraDiveInTimeElapsed = 0;
 
 	//boolean to tell whether guide is activated or not
-	UPROPERTY(EditAnywhere, BlueprintReadWrite);
+	UPROPERTY(BlueprintReadWrite);
 	bool ShowGuide = false;
 
 protected:

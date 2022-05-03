@@ -552,8 +552,8 @@ void AFlying509GameCharacter::DiveLerpOut(float DeltaTime)
 			float alpha = CameraDiveOutTimeElapsed / CameraDiveOutDuration;
 			if (alpha > 0 || alpha < 1) {
 				/*GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%f"), alpha));*/
-				FollowCamera->FieldOfView = FMath::Lerp(CurrentFOV, DefaultFOV - 3, alpha); //15
-				CameraBoom->TargetArmLength = FMath::Lerp(CurrentCameraBoom, DefaultCameraBoom - 20, alpha); //200
+				FollowCamera->FieldOfView = FMath::Lerp(CurrentFOV, DefaultFOV - 8, alpha); //15
+				CameraBoom->TargetArmLength = FMath::Lerp(CurrentCameraBoom, DefaultCameraBoom - 40, alpha); //200
 				CameraDiveOutTimeElapsed += DeltaTime;
 			}
 			return;

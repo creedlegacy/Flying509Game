@@ -48,14 +48,15 @@ void ACollectible::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* O
 {
 	AFlying509GameCharacter* OverlapCheck = Cast<AFlying509GameCharacter>(OtherActor);
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OverlapCheck) ) {
+		Destroy();
 		UGameplayStatics::SpawnSoundAtLocation(this, CollectSound, GetActorLocation());
+		UGameplayStatics::SpawnEmitterAtLocation(this, CollectedParticle, GetActorLocation());
 
 		if (GameInstance) {
 			GameInstance->SolarFlaresTotal += 1;
 			/*PrintString(FString::Printf(TEXT("%d"), GameInstance->SolarFlaresTotal));*/
 		}
 		
-		Destroy();
 	}
 
 }

@@ -18,6 +18,8 @@ ACollectible::ACollectible()
 	RootComponent = SphereComponent;
 
 	
+
+	
 	
 	
 
@@ -46,11 +48,13 @@ void ACollectible::Tick(float DeltaTime)
 
 void ACollectible::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	AFlying509GameCharacter* OverlapCheck = Cast<AFlying509GameCharacter>(OtherActor);
-	if ((OtherActor != nullptr) && (OtherActor != this) && (OverlapCheck) ) {
+	AFlying509GameCharacter* OverlappedCharacter = Cast<AFlying509GameCharacter>(OtherActor);
+	
+	if ((OtherActor != nullptr) && (OtherActor != this) && (OverlappedCharacter) ) {
 		Destroy();
 		UGameplayStatics::SpawnSoundAtLocation(this, CollectSound, GetActorLocation());
 		UGameplayStatics::SpawnEmitterAtLocation(this, CollectedParticle, GetActorLocation());
+		OverlappedCharacter->UpdateDynamicMaterial();
 
 		if (GameInstance) {
 			GameInstance->SolarFlaresTotal += 1;

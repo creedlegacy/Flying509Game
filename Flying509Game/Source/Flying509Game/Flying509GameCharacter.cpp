@@ -12,6 +12,8 @@
 #include "Runtime/Engine/Classes/Components/TimelineComponent.h"
 #include "Bullet.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
+#include "Runtime/Engine/Classes/Kismet/KismetMaterialLibrary.h"
+#include "Runtime/Engine/Classes/Materials/MaterialInstanceDynamic.h"
 
 //////////////////////////////////////////////////////////////////////////
 // AFlying509GameCharacter
@@ -116,6 +118,9 @@ void AFlying509GameCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	//Creates dynamic material for the wings at start
+	CreateDynamicMaterial();
+
 	//Check if curve asset is valid
 	if (diveCurve && catchCurve) {
 		//Add the float curve to the timeline and connect it to the interpfunction's delegate 
@@ -165,14 +170,30 @@ void AFlying509GameCharacter::SetGamepad(float Value)
 	
 }
 
-void AFlying509GameCharacter::Shoot()
+void AFlying509GameCharacter::CreateDynamicMaterial()
 {
-	UE_LOG(LogTemp, Warning, TEXT("SHOOSTED"));
-	FTransform SpawnTransform = GetActorTransform();
-	SpawnTransform.SetLocation(FollowCamera->GetComponentRotation().Vector() * 200.f + GetActorLocation());
-	FActorSpawnParameters SpawnParameters;
-	GetWorld()->SpawnActor<ABullet>(BulletBP, SpawnTransform, SpawnParameters);
+	//material 3 is the wings
+	UMaterialInterface* CurrentMaterial = GetMesh()->GetMaterial(3);
+	if (!CurrentMaterial) return;
+	WingsDynamicMaterial = UKismetMaterialLibrary::CreateDynamicMaterialInstance(this, GetMesh()->GetMaterial(3));
+
 }
+
+void AFlying509GameCharacter::UpdateDynamicMaterial()
+{
+	WingGlowIntensity += 0.25; //0.2 is a nice number
+	WingsDynamicMaterial->SetScalarParameterValue("Intensity", WingGlowIntensity); 
+	GetMesh()->SetMaterial(3, WingsDynamicMaterial);
+}
+
+//void AFlying509GameCharacter::Shoot()
+//{
+//	UE_LOG(LogTemp, Warning, TEXT("SHOOSTED"));
+//	FTransform SpawnTransform = GetActorTransform();
+//	SpawnTransform.SetLocation(FollowCamera->GetComponentRotation().Vector() * 200.f + GetActorLocation());
+//	FActorSpawnParameters SpawnParameters;
+//	GetWorld()->SpawnActor<ABullet>(BulletBP, SpawnTransform, SpawnParameters);
+//}
 
 
 void AFlying509GameCharacter::PitchMovement(float Value)

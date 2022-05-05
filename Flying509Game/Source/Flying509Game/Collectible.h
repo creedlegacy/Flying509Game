@@ -19,13 +19,13 @@ public:
 	ACollectible();
 
 	UPROPERTY(EditAnywhere, Category = "Components");
-	class UParticleSystemComponent* CollectibleParticle;
-
-	UPROPERTY(EditAnywhere, Category = "Components");
 	class USphereComponent* SphereComponent;
 
-	UPROPERTY(EditAnywhere, Category = "Components");
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Collectible Variables");
 	class USoundBase* CollectSound;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Collectible Variables");
+	class UParticleSystem* CollectedParticle;
 
 	UFlying509GameInstance* GameInstance;
 

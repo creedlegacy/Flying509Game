@@ -56,9 +56,12 @@ public:
 	float BoostFlightSpeed;
 	UPROPERTY(EditAnywhere, Category = Flying);
 	float NormalFlightSpeed;
+	UPROPERTY(EditAnywhere, Category = Flying);
+	float SpeedDecrementAdjuster = 1.6;
 
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Flying);
 	bool IsDiving = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Flying);
 	bool IsBoosting = false;
 	bool IsFreeCam = false;
 
@@ -110,13 +113,20 @@ public:
 	float CameraDiveInTimeElapsed = 0;
 
 	//boolean to tell whether guide is activated or not
-	UPROPERTY(EditAnywhere, BlueprintReadWrite);
+	UPROPERTY(BlueprintReadWrite);
 	bool ShowGuide = false;
+
+	//New dynamic material instance for the wings
+	class UMaterialInstanceDynamic* WingsDynamicMaterial;
+	float WingGlowIntensity = 0;
+
+	/** Updates dynamic material */
+	void UpdateDynamicMaterial();
 
 protected:
 	virtual void BeginPlay() override;
 
-	void Shoot();
+	/*void Shoot();*/
 
 	void PitchMovement(float Value);
 	void YawMovement(float Value);
@@ -146,6 +156,8 @@ protected:
 	void SetMouse(float Value);
 	void SetGamepad(float Value);
 
+	/** Creates dynamic instance material to be updated in game */
+	void CreateDynamicMaterial();
 
 	/** Resets HMD orientation in VR. */
 	void OnResetVR();

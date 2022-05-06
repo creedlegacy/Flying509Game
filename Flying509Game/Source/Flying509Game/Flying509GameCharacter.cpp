@@ -12,6 +12,8 @@
 #include "Runtime/Engine/Classes/Components/TimelineComponent.h"
 #include "Bullet.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
+#include "Runtime/Engine/Classes/Kismet/KismetMaterialLibrary.h"
+#include "Runtime/Engine/Classes/Materials/MaterialInstanceDynamic.h"
 
 //////////////////////////////////////////////////////////////////////////
 // AFlying509GameCharacter
@@ -116,6 +118,9 @@ void AFlying509GameCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	//Creates dynamic material for the wings at start
+	CreateDynamicMaterial();
+
 	//Check if curve asset is valid
 	if (diveCurve && catchCurve) {
 		//Add the float curve to the timeline and connect it to the interpfunction's delegate 
@@ -165,14 +170,31 @@ void AFlying509GameCharacter::SetGamepad(float Value)
 	
 }
 
-void AFlying509GameCharacter::Shoot()
+void AFlying509GameCharacter::CreateDynamicMaterial()
 {
-	UE_LOG(LogTemp, Warning, TEXT("SHOOSTED"));
-	FTransform SpawnTransform = GetActorTransform();
-	SpawnTransform.SetLocation(FollowCamera->GetComponentRotation().Vector() * 200.f + GetActorLocation());
-	FActorSpawnParameters SpawnParameters;
-	GetWorld()->SpawnActor<ABullet>(BulletBP, SpawnTransform, SpawnParameters);
+	//material index 3 is the wings
+	UMaterialInterface* CurrentMaterial = GetMesh()->GetMaterial(3);
+	if (!CurrentMaterial) return;
+	WingsDynamicMaterial = UKismetMaterialLibrary::CreateDynamicMaterialInstance(this, GetMesh()->GetMaterial(3));
+
 }
+
+void AFlying509GameCharacter::UpdateDynamicMaterial()
+{
+	if (!WingsDynamicMaterial) return;
+	WingGlowIntensity += 0.15; //0.15 is a nice number
+	WingsDynamicMaterial->SetScalarParameterValue("Intensity", WingGlowIntensity); 
+	GetMesh()->SetMaterial(3, WingsDynamicMaterial);
+}
+
+//void AFlying509GameCharacter::Shoot()
+//{
+//	UE_LOG(LogTemp, Warning, TEXT("SHOOSTED"));
+//	FTransform SpawnTransform = GetActorTransform();
+//	SpawnTransform.SetLocation(FollowCamera->GetComponentRotation().Vector() * 200.f + GetActorLocation());
+//	FActorSpawnParameters SpawnParameters;
+//	GetWorld()->SpawnActor<ABullet>(BulletBP, SpawnTransform, SpawnParameters);
+//}
 
 
 void AFlying509GameCharacter::PitchMovement(float Value)
@@ -537,7 +559,7 @@ void AFlying509GameCharacter::OnTimelineFinished()
 void AFlying509GameCharacter::DiveCatchSpeedAdjustment()
 {
 	if (OnDiveCatchSpeed) {
-		GetCharacterMovement()->MaxFlySpeed = GetCharacterMovement()->MaxFlySpeed - 2;
+		GetCharacterMovement()->MaxFlySpeed = GetCharacterMovement()->MaxFlySpeed - SpeedDecrementAdjuster;
 		float tempSpeed = IsBoosting ? BoostFlightSpeed : NormalFlightSpeed;
 		if (GetCharacterMovement()->MaxFlySpeed <= tempSpeed) {
 			OnDiveCatchSpeed = false;
@@ -552,8 +574,8 @@ void AFlying509GameCharacter::DiveLerpOut(float DeltaTime)
 			float alpha = CameraDiveOutTimeElapsed / CameraDiveOutDuration;
 			if (alpha > 0 || alpha < 1) {
 				/*GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%f"), alpha));*/
-				FollowCamera->FieldOfView = FMath::Lerp(CurrentFOV, DefaultFOV + 15, alpha);
-				CameraBoom->TargetArmLength = FMath::Lerp(CurrentCameraBoom, DefaultCameraBoom + 200, alpha);
+				FollowCamera->FieldOfView = FMath::Lerp(CurrentFOV, DefaultFOV - 8, alpha); //15
+				CameraBoom->TargetArmLength = FMath::Lerp(CurrentCameraBoom, DefaultCameraBoom - 40, alpha); //200
 				CameraDiveOutTimeElapsed += DeltaTime;
 			}
 			return;

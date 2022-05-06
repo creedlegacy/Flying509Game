@@ -172,7 +172,7 @@ void AFlying509GameCharacter::SetGamepad(float Value)
 
 void AFlying509GameCharacter::CreateDynamicMaterial()
 {
-	//material 3 is the wings
+	//material index 3 is the wings
 	UMaterialInterface* CurrentMaterial = GetMesh()->GetMaterial(3);
 	if (!CurrentMaterial) return;
 	WingsDynamicMaterial = UKismetMaterialLibrary::CreateDynamicMaterialInstance(this, GetMesh()->GetMaterial(3));
@@ -181,7 +181,8 @@ void AFlying509GameCharacter::CreateDynamicMaterial()
 
 void AFlying509GameCharacter::UpdateDynamicMaterial()
 {
-	WingGlowIntensity += 0.25; //0.2 is a nice number
+	if (!WingsDynamicMaterial) return;
+	WingGlowIntensity += 0.15; //0.15 is a nice number
 	WingsDynamicMaterial->SetScalarParameterValue("Intensity", WingGlowIntensity); 
 	GetMesh()->SetMaterial(3, WingsDynamicMaterial);
 }

@@ -17,14 +17,6 @@ ACollectible::ACollectible()
 	SphereComponent = CreateDefaultSubobject<USphereComponent>("SphereComponent");
 	RootComponent = SphereComponent;
 
-	
-
-	
-	
-	
-
-
-
 }
 
 // Called when the game starts or when spawned
@@ -34,15 +26,12 @@ void ACollectible::BeginPlay()
 	GameInstance = Cast<UFlying509GameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
 	SphereComponent->OnComponentBeginOverlap.AddDynamic(this, &ACollectible::OnOverlap);
 	
-	
-	
 }
 
 // Called every frame
 void ACollectible::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
 	
 }
 

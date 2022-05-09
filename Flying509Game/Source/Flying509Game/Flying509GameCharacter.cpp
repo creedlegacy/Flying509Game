@@ -59,7 +59,6 @@ AFlying509GameCharacter::AFlying509GameCharacter()
 	CatchTimeline = CreateDefaultSubobject<UTimelineComponent>(TEXT("CatchTimeline"));
 	DiveInterpFunction.BindUFunction(this, FName("DiveTimelineFloatReturn"));
 	CatchInterpFunction.BindUFunction(this, FName("DiveCatchTimelineFloatReturn"));
-	TimelineFinished.BindUFunction(this, FName("OnTimelineFinished")); 
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
@@ -83,8 +82,8 @@ void AFlying509GameCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	PlayerInputComponent->BindAction("Dive", IE_Pressed, this, &AFlying509GameCharacter::Dive);
 	PlayerInputComponent->BindAction("Dive", IE_Released, this, &AFlying509GameCharacter::DiveCatch);
 
-	PlayerInputComponent->BindAction("Guide", IE_Pressed, this, &AFlying509GameCharacter::GuideOn);
-	PlayerInputComponent->BindAction("Guide", IE_Released, this, &AFlying509GameCharacter::GuideOff);
+	PlayerInputComponent->BindAction("Guide", IE_Pressed, this, &AFlying509GameCharacter::Guide);
+	PlayerInputComponent->BindAction("Guide", IE_Released, this, &AFlying509GameCharacter::Guide);
 
 	PlayerInputComponent->BindAction("FreeCamera", IE_Pressed, this, &AFlying509GameCharacter::FreeCamera);
 	PlayerInputComponent->BindAction("FreeCamera", IE_Released, this, &AFlying509GameCharacter::FreeCamera);
@@ -95,11 +94,11 @@ void AFlying509GameCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
 	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
-	//PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("Pitch", this, &AFlying509GameCharacter::PitchMovement);
 	/*PlayerInputComponent->BindAxis("Yaw", this, &AFlying509GameCharacter::MoveRight);*/
 	/*PlayerInputComponent->BindAxis("Roll", this, &AFlying509GameCharacter::RollMovement);*/
 	PlayerInputComponent->BindAxis("Turn", this, &AFlying509GameCharacter::YawMovement);
+	//PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("TurnGamepad", this, &AFlying509GameCharacter::YawMovementGamepad);
 	PlayerInputComponent->BindAxis("TurnRate", this, &AFlying509GameCharacter::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUp", this, &AFlying509GameCharacter::LookUp);
@@ -126,8 +125,6 @@ void AFlying509GameCharacter::BeginPlay()
 		//Add the float curve to the timeline and connect it to the interpfunction's delegate 
 		DiveTimeline->AddInterpFloat(diveCurve,DiveInterpFunction,FName("Alpha"));
 		CatchTimeline->AddInterpFloat(catchCurve, CatchInterpFunction, FName("Alpha"));
-		//Add our timeline finished function
-		DiveTimeline->SetTimelineFinishedFunc(TimelineFinished);
 
 		//Timeline settings
 		DiveTimeline->SetLooping(false);
@@ -135,6 +132,7 @@ void AFlying509GameCharacter::BeginPlay()
 		CatchTimeline->SetLooping(false);
 		CatchTimeline->SetIgnoreTimeDilation(true);
 	}
+	//Set MaxFlySpeed to NormalFlightSpeed
 	GetCharacterMovement()->MaxFlySpeed = NormalFlightSpeed;
 }
 
@@ -202,7 +200,6 @@ void AFlying509GameCharacter::PitchMovement(float Value)
 	
 	if (!UGameplayStatics::IsGamePaused(GetWorld())) {
 		if (Value) {
-			/*UE_LOG(LogTemp, Warning, TEXT("%f"), Value);*/
 			if (!IsDiving) {
 				if (Value < 0.f) {
 					if (GetActorRotation().Pitch > MinPitchLimit) {
@@ -211,20 +208,10 @@ void AFlying509GameCharacter::PitchMovement(float Value)
 				}
 				else {
 					if (GetActorRotation().Pitch < MaxPitchLimit) {
-						/*if (IsDiving) {
-							DiveCatch();
-						}*/
 						AddActorLocalRotation(FRotator(Value * 1.3, 0, 0));
 					}
 
 				}
-			}
-			else {
-				//0.5 to avoid "micro movement" as in just to make sure the player commits to end dive
-				/*if (Value > 0.5f) {
-					DiveCatch();
-				}*/
-				
 			}
 
 		}
@@ -272,6 +259,7 @@ void AFlying509GameCharacter::YawMovement(float Value)
 
 		}
 		else {
+			//Return roll position back to normal
 			if (!IsFreeCam) {
 				if (GetActorRotation().Roll > 1 || GetActorRotation().Roll < 1) {
 					if (GetActorRotation().Roll > 1) {
@@ -281,6 +269,7 @@ void AFlying509GameCharacter::YawMovement(float Value)
 						AddActorLocalRotation(FRotator(0, 0, 1));
 					}
 				}
+				//0.1 to make more finer adjustments
 				else {
 					if (GetActorRotation().Roll > 0) {
 						AddActorLocalRotation(FRotator(0, 0, -0.1));
@@ -327,6 +316,7 @@ void AFlying509GameCharacter::YawMovementGamepad(float Value)
 			
 
 		}
+		//Return roll position back to normal
 		else {
 			if (GetActorRotation().Roll > 1 || GetActorRotation().Roll < 1) {
 				if (GetActorRotation().Roll > 1) {
@@ -336,6 +326,7 @@ void AFlying509GameCharacter::YawMovementGamepad(float Value)
 					AddActorLocalRotation(FRotator(0, 0, 1));
 				}
 			}
+			//0.1 to make more finer adjustments
 			else {
 				if (GetActorRotation().Roll > 0) {
 					AddActorLocalRotation(FRotator(0, 0, -0.1));
@@ -409,7 +400,7 @@ void AFlying509GameCharacter::Boost()
 {
 	if (!IsDiving) {
 		IsBoosting = true;
-		//Assign current FOV
+
 		CurrentFOV = FollowCamera->FieldOfView;
 		CurrentCameraBoom = CameraBoom->TargetArmLength;
 		CameraBoostInDuration = 0;
@@ -430,7 +421,7 @@ void AFlying509GameCharacter::StopBoost()
 {
 	if (!IsDiving) {
 		IsBoosting = false;
-		//Assign current FOV
+
 		CurrentFOV = FollowCamera->FieldOfView;
 		CurrentCameraBoom = CameraBoom->TargetArmLength;
 		CameraBoostOutDuration = 0;
@@ -498,10 +489,7 @@ void AFlying509GameCharacter::Dive()
 	CameraDiveInDuration = 0;
 	CameraDiveInTimeElapsed = 0;
 	CameraDiveOutDuration = 2.;
-	/*SetActorRelativeRotation(FRotator(-90, GetActorRotation().Yaw, GetActorRotation().Roll));*/
-	/*CameraBoom->bUsePawnControlRotation = false;*/
-	/*FollowCamera->SetRelativeRotation(FRotator(0, 0, 0));
-	FollowCamera->SetRelativeLocation(FVector(defaultCameraLocation.X, 0, 0));*/
+
 
 }
 
@@ -522,11 +510,6 @@ void AFlying509GameCharacter::DiveCatch()
 	CameraDiveOutTimeElapsed = 0;
 	CameraDiveInDuration = 1.;
 	
-
-	//AddActorLocalRotation(FMath::RInterpTo(FRotator(-90,NULL,NULL), FRotator(60, NULL, NULL), FApp::GetDeltaTime(), 10.0));
-	/*CameraBoom->bUsePawnControlRotation = true;*/
-	/*FollowCamera->SetRelativeRotation(defaultCameraRotation);
-	FollowCamera->SetRelativeLocation(defaultCameraLocation);*/
 }
 
 void AFlying509GameCharacter::DiveTimelineFloatReturn(float value)
@@ -550,10 +533,6 @@ void AFlying509GameCharacter::DiveCatchTimelineFloatReturn(float value)
 		Controller->SetControlRotation(FMath::Lerp(CurrentControlRotation, FRotator(35, CurrentControlRotation.Yaw, CurrentControlRotation.Roll), value));
 	}
 	
-}
-
-void AFlying509GameCharacter::OnTimelineFinished()
-{
 }
 
 void AFlying509GameCharacter::DiveCatchSpeedAdjustment()
@@ -606,14 +585,9 @@ void AFlying509GameCharacter::DiveLerpIn(float DeltaTime)
 	}
 }
 
-void AFlying509GameCharacter::GuideOn()
+void AFlying509GameCharacter::Guide()
 {
-	ShowGuide = true;
-}
-
-void AFlying509GameCharacter::GuideOff()
-{
-	ShowGuide = false;
+	ShowGuide = !ShowGuide;
 }
 
 void AFlying509GameCharacter::FreeCamera()

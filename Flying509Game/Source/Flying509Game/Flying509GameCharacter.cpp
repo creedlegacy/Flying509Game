@@ -54,7 +54,7 @@ AFlying509GameCharacter::AFlying509GameCharacter()
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 	DefaultFOV = FollowCamera->FieldOfView; // Assign default FOV to this variable
 
-
+	// Create timeline components
 	DiveTimeline = CreateDefaultSubobject<UTimelineComponent>(TEXT("DiveTimeline"));
 	CatchTimeline = CreateDefaultSubobject<UTimelineComponent>(TEXT("CatchTimeline"));
 	DiveInterpFunction.BindUFunction(this, FName("DiveTimelineFloatReturn"));
@@ -198,23 +198,20 @@ void AFlying509GameCharacter::UpdateDynamicMaterial()
 void AFlying509GameCharacter::PitchMovement(float Value)
 {
 	
-	if (!UGameplayStatics::IsGamePaused(GetWorld())) {
-		if (Value) {
-			if (!IsDiving) {
-				if (Value < 0.f) {
-					if (GetActorRotation().Pitch > MinPitchLimit) {
-						AddActorLocalRotation(FRotator(Value * 1.3, 0, 0));
-					}
-				}
-				else {
-					if (GetActorRotation().Pitch < MaxPitchLimit) {
-						AddActorLocalRotation(FRotator(Value * 1.3, 0, 0));
-					}
+	if (UGameplayStatics::IsGamePaused(GetWorld()) || !Value || IsDiving) {
+		return;
+	}
 
-				}
-			}
-
+	if (Value < 0.f) {
+		if (GetActorRotation().Pitch > MinPitchLimit) {
+			AddActorLocalRotation(FRotator(Value * 1.3, 0, 0));
 		}
+	}
+	else {
+		if (GetActorRotation().Pitch < MaxPitchLimit) {
+			AddActorLocalRotation(FRotator(Value * 1.3, 0, 0));
+		}
+
 	}
 
 }
@@ -238,48 +235,46 @@ void AFlying509GameCharacter::YawMovement(float Value)
 		
 	}*/
 
-	if (!UGameplayStatics::IsGamePaused(GetWorld()) && !IsDiving && !IsGamepad) {
+	if (UGameplayStatics::IsGamePaused(GetWorld()) || IsDiving || IsGamepad) {
+		return;
+	}
+	if (Value) {
 
-		if (Value) {
-
-			AddControllerYawInput(Value);
-			if (!IsFreeCam) {
-				if (Value < 0.f) {
-					if (GetActorRotation().Roll > MinRollLimit) {
-						AddActorLocalRotation(FRotator(0, 0, Value));
-					}
-				}
-				else {
-					if (GetActorRotation().Roll < MaxRollLimit) {
-						AddActorLocalRotation(FRotator(0, 0, Value));
-					}
-
-				}
+		AddControllerYawInput(Value);
+		if (IsFreeCam) return;
+		
+		if (Value < 0.f) {
+			if (GetActorRotation().Roll > MinRollLimit) {
+				AddActorLocalRotation(FRotator(0, 0, Value));
+			}
+		}
+		else {
+			if (GetActorRotation().Roll < MaxRollLimit) {
+				AddActorLocalRotation(FRotator(0, 0, Value));
 			}
 
 		}
-		else {
-			//Return roll position back to normal
-			if (!IsFreeCam) {
-				if (GetActorRotation().Roll > 1 || GetActorRotation().Roll < 1) {
-					if (GetActorRotation().Roll > 1) {
-						AddActorLocalRotation(FRotator(0, 0, -1));
-					}
-					else if (GetActorRotation().Roll < -1) {
-						AddActorLocalRotation(FRotator(0, 0, 1));
-					}
-				}
-				//0.1 to make more finer adjustments
-				else {
-					if (GetActorRotation().Roll > 0) {
-						AddActorLocalRotation(FRotator(0, 0, -0.1));
-					}
-					else if (GetActorRotation().Roll < 0) {
-						AddActorLocalRotation(FRotator(0, 0, 0.1));
-					}
-				}
-			}
+	}
+	else {
+		//Returns roll position back to normal
+		if (IsFreeCam) return;
 
+		if (GetActorRotation().Roll > 1 || GetActorRotation().Roll < 1) {
+			if (GetActorRotation().Roll > 1) {
+				AddActorLocalRotation(FRotator(0, 0, -1));
+			}
+			else if (GetActorRotation().Roll < -1) {
+				AddActorLocalRotation(FRotator(0, 0, 1));
+			}
+		}
+		//0.1 to make more finer adjustments
+		else {
+			if (GetActorRotation().Roll > 0) {
+				AddActorLocalRotation(FRotator(0, 0, -0.1));
+			}
+			else if (GetActorRotation().Roll < 0) {
+				AddActorLocalRotation(FRotator(0, 0, 0.1));
+			}
 		}
 		
 	}
@@ -289,54 +284,51 @@ void AFlying509GameCharacter::YawMovement(float Value)
 void AFlying509GameCharacter::YawMovementGamepad(float Value)
 {
 
-	if (!UGameplayStatics::IsGamePaused(GetWorld()) && !IsDiving && IsGamepad) {
+	if (UGameplayStatics::IsGamePaused(GetWorld()) || IsDiving || !IsGamepad) {
+		return;
+	}
+	if (Value) {
 
-		if (Value) {
-			
-			// find out which way is right
-			const FRotator Rotation = Controller->GetControlRotation();
-			const FRotator YawRotation(0, Rotation.Yaw, 0);
+		// find out which way is right
+		const FRotator Rotation = Controller->GetControlRotation();
+		const FRotator YawRotation(0, Rotation.Yaw, 0);
 
-			// get right vector 
-			const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
-			// add movement in that direction
-			AddMovementInput(Direction, Value * YawTurnScale);
+		// get right vector 
+		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+		// add movement in that direction
+		AddMovementInput(Direction, Value * YawTurnScale);
 
-			if (Value < 0.f) {
-				if (GetActorRotation().Roll > MinRollLimit) {
-					AddActorLocalRotation(FRotator(0, 0, Value));
-				}
+		if (Value < 0.f) {
+			if (GetActorRotation().Roll > MinRollLimit) {
+				AddActorLocalRotation(FRotator(0, 0, Value));
 			}
-			else {
-				if (GetActorRotation().Roll < MaxRollLimit) {
-					AddActorLocalRotation(FRotator(0, 0, Value));
-				}
-
+		}
+		else {
+			if (GetActorRotation().Roll < MaxRollLimit) {
+				AddActorLocalRotation(FRotator(0, 0, Value));
 			}
-			
 
 		}
-		//Return roll position back to normal
-		else {
-			if (GetActorRotation().Roll > 1 || GetActorRotation().Roll < 1) {
-				if (GetActorRotation().Roll > 1) {
-					AddActorLocalRotation(FRotator(0, 0, -1));
-				}
-				else if (GetActorRotation().Roll < -1) {
-					AddActorLocalRotation(FRotator(0, 0, 1));
-				}
-			}
-			//0.1 to make more finer adjustments
-			else {
-				if (GetActorRotation().Roll > 0) {
-					AddActorLocalRotation(FRotator(0, 0, -0.1));
-				}
-				else if (GetActorRotation().Roll < 0) {
-					AddActorLocalRotation(FRotator(0, 0, 0.1));
-				}
-			}
-			
 
+	}
+	//Return roll position back to normal
+	else {
+		if (GetActorRotation().Roll > 1 || GetActorRotation().Roll < 1) {
+			if (GetActorRotation().Roll > 1) {
+				AddActorLocalRotation(FRotator(0, 0, -1));
+			}
+			else if (GetActorRotation().Roll < -1) {
+				AddActorLocalRotation(FRotator(0, 0, 1));
+			}
+		}
+		//0.1 to make more finer adjustments
+		else {
+			if (GetActorRotation().Roll > 0) {
+				AddActorLocalRotation(FRotator(0, 0, -0.1));
+			}
+			else if (GetActorRotation().Roll < 0) {
+				AddActorLocalRotation(FRotator(0, 0, 0.1));
+			}
 		}
 
 	}
@@ -383,17 +375,18 @@ void AFlying509GameCharacter::ForwardFlight()
 
 void AFlying509GameCharacter::FallVelocityTick()
 {
-	if (IsDiving) {
-		//if flying speed is less or the same with boost speed, reset the maxzvelocity variable, so that dive speed returns back to normal
-		if (GetCharacterMovement()->MaxFlySpeed <= BoostFlightSpeed) {
-			MaxZVelocity = 1;
-		}
-		float tickVelocity = fabs(GetCharacterMovement()->Velocity.Z);
-		if (tickVelocity > MaxZVelocity) {
-			MaxZVelocity = tickVelocity;
-		}
-		
+	if (!IsDiving) return;
+
+	//if flying speed is less or the same with boost speed, reset the maxzvelocity variable, so that dive speed returns back to normal
+	if (GetCharacterMovement()->MaxFlySpeed <= BoostFlightSpeed) {
+		MaxZVelocity = 1;
 	}
+	float tickVelocity = fabs(GetCharacterMovement()->Velocity.Z);
+	if (tickVelocity > MaxZVelocity) {
+		MaxZVelocity = tickVelocity;
+	}
+		
+	
 }
 
 void AFlying509GameCharacter::Boost()
@@ -501,7 +494,7 @@ void AFlying509GameCharacter::DiveCatch()
 	CurrentActorRotation = GetActorRotation();
 	CatchTimeline->PlayFromStart();
 
-	GetCharacterMovement()->MaxFlySpeed = NormalFlightSpeed * (round(MaxZVelocity) / 200);
+	GetCharacterMovement()->MaxFlySpeed = NormalFlightSpeed * (round(MaxZVelocity) / 200); //200 cause it's a nice number
 	OnDiveCatchSpeed = true;
 
 	CurrentFOV = FollowCamera->FieldOfView;
